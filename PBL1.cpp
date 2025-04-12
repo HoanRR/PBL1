@@ -2,8 +2,7 @@
 #include <fstream>
 #include <sstream>
 using namespace std;
-// ALo ALo Thấy không
-
+// vao duoc roi 
 
 struct Book {
     string ID;
