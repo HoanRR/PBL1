@@ -313,9 +313,6 @@ int main() {
     Node* head = Head();
     r_lib(head);
     print_lib(head);
-   cout << "SAU KHI XOA : \n";
-    XoaCuoi(head);
-    print_lib(head);
 
     save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
     // Giải phóng bộ nhớ
