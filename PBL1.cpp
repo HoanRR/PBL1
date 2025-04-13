@@ -2,7 +2,6 @@
 #include <fstream>
 #include <sstream>
 using namespace std;
-// alo
 
 struct Book {
     string ID;
@@ -309,10 +308,60 @@ Node *Head(){
     return head;
 }
 
+void tt1(Node *head){
+    
+    string ID,tensach, tacgia,NXB;
+    long namsx ,sluong;
+    cout << "Nhap ID : " ; getline(cin,ID);
+    cout << "Nhap ten sach : " ; getline(cin,tensach);
+    cout << "Nhap ten tac gia : " ; getline(cin,tacgia);
+    cout << "Nhap Nha xuat ban : "; getline(cin,NXB);
+    cout << "Nhap Nam San Xuat : "; cin >> namsx;
+    cout << "Nhap So Luong : "; cin >> sluong;
+    Book *C = tao_sach(ID,tensach,tacgia,NXB,namsx,sluong);
+    cout << "1.Them vao dau\n"
+         << "2.Them vao cuoi\n";
+    int tt;cout << "Nhap thao tac: "; cin >> tt;
+    while(tt!=1 && tt!=2){
+        cout << "Thao tac khong hop le\n";
+        cout << "Nhap lai thao tac :"  ; cin >> tt;
+    }
+    if (tt==1){
+        pushhead(head,C);
+        cout << "Da them thanh cong\n";
+    }
+    else if (tt==2){
+        pushend(head,C);
+        cout << "Da them thanh cong\n";
+    }
+}
+
+
+
 int main() {
     Node* head = Head();
     r_lib(head);
-    print_lib(head);
+    bool cnt = true;
+    while(cnt){
+        cout << "\n\n --------- Quan ly thu vien ---------------\n";
+        cout << "1.Them sach vao danh sach\n"
+             << "2.Xoa mot cuon sach khoi danh sach\n"
+             << "3.Tim kiem sach\n"
+             << "4.Xem sach\n"
+             << "5.Exit\n";
+        int tt; cout << "Nhap thao tac : ";cin >> tt;
+        cin.ignore();
+        if (tt==1){
+           tt1(head);
+        }
+        if (tt==3){
+            
+        }
+        if (tt==4){
+            print_lib(head);
+        }
+        if (tt==5) cnt = false;
+    }
 
     save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
     // Giải phóng bộ nhớ
