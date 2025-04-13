@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 using namespace std;
 
 struct Book {
@@ -85,10 +86,15 @@ void showtt(Node *head){
              << "\nNam san xuat: " << head->sach->namsx
              << "\nSo luong: " << head->sach->sl << "\n\n";
 }
-
+string Vietthuong(string c){
+    transform(c.begin(),c.end(),c.begin(),::tolower);
+    return c;
+}
 void LietKebyTenSach(Node *head,string tensach){
+    head = head->next;
+    string t = Vietthuong(tensach);
     while(head!=NULL){
-        if (head->sach->ten == tensach){
+        if (Vietthuong(head->sach->ten) == t){
             showtt(head);
         }
         head = head->next;
@@ -96,16 +102,20 @@ void LietKebyTenSach(Node *head,string tensach){
 }
 
 void LietKebyTacGia(Node *head,string tg){
+    head = head->next;
+    string t = Vietthuong(tg);
     while(head!=NULL){
-        if (head->sach->tac_gia == tg){
+        if (Vietthuong(head->sach->tac_gia) == t){
             showtt(head);
         }
         head = head->next;
     }
 }
 void LietKebyNXB(Node *head,string NXB){
+    head = head->next;
+    string t = Vietthuong(NXB);
     while(head!=NULL){
-        if (head->sach->nxb == NXB){
+        if (Vietthuong(head->sach->nxb) == t){
             showtt(head);
         }
         head = head->next;
@@ -308,6 +318,9 @@ Node *Head(){
     return head;
 }
 
+
+// ------------------------------- Các thao tác -----------------------------
+
 void tt1(Node *head){
     
     string ID,tensach, tacgia,NXB;
@@ -336,7 +349,37 @@ void tt1(Node *head){
     }
 }
 
-
+void tt4(Node *head){
+    cout << "1.Theo ten sach\n"
+         << "2.Theo ten tac gia\n"
+         << "3.Theo ten Nha xuat ban\n";
+    int tt;cout << "Nhap thao tac: "; cin >> tt;
+    while(tt!=1 && tt!=2 && tt!=3){
+        cout << "Thao tac khong hop le\n";
+        cout << "Nhap lai thao tac :"  ; cin >> tt;
+    }
+    cin.ignore();
+    if (tt==1){
+        cout << "Nhap ten sach : ";
+        string tensach ; getline(cin,tensach);
+        cout << "------------Danh sach liet ke --------------------\n";
+        LietKebyTenSach(head,tensach);
+    }
+    else if (tt==2){
+        // cin.ignore();
+        cout << "Nhap ten tac gia : ";
+        string tg ; getline(cin,tg);
+        cout << "------------Danh sach liet ke --------------------\n";
+        LietKebyTacGia(head,tg);
+    }
+    else if (tt==3){
+        // cin.ignore();
+        cout << "Nhap ten NXB : ";
+        string nxb ; getline(cin,nxb);
+        cout << "------------Danh sach liet ke --------------------\n";
+        LietKebyNXB(head,nxb);
+    }
+}
 
 int main() {
     Node* head = Head();
@@ -346,9 +389,10 @@ int main() {
         cout << "\n\n --------- Quan ly thu vien ---------------\n";
         cout << "1.Them sach vao danh sach\n"
              << "2.Xoa mot cuon sach khoi danh sach\n"
-             << "3.Tim kiem sach\n"
-             << "4.Xem sach\n"
-             << "5.Exit\n";
+             << "3.Xoa sach\n"
+             << "4.Tim kiem sach\n"
+             << "5.Xem sach\n"
+             << "6.Exit\n";
         int tt; cout << "Nhap thao tac : ";cin >> tt;
         cin.ignore();
         if (tt==1){
@@ -358,9 +402,12 @@ int main() {
             
         }
         if (tt==4){
+            tt4(head);
+        }
+        if (tt==5){
             print_lib(head);
         }
-        if (tt==5) cnt = false;
+        if (tt==6) cnt = false;
     }
 
     save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file

@@ -1,3 +1,4 @@
 101|Sach giao khoa Toan|Nguyen Van A|NXB GDDT|1994|3|
 002|Dac Nhan Tam|Dale Carnegie|NXB Tre|2010|5|
 003|Nha Gia Kim|Paulo Coelho|NXB VH|2015|3|
+008|Viet Nam|Paulo Coelho|NXB VN|2022|1|
