@@ -130,7 +130,7 @@ void SapXepTheoTenSach(Node *head){ // tăng dần
     for (Node *i = head;i!=NULL;i=i->next){
         Node *minNode = i;
         for (Node * j = i->next ; j!=NULL;j=j->next){
-            if (j->sach->ten < i->sach->ten){
+            if (j->sach->ten < minNode->sach->ten){
                 minNode = j;
             }
         }
@@ -143,7 +143,7 @@ void SapXepTheoTenTacGia(Node *head){ // tăng dần
     for (Node *i = head;i!=NULL;i=i->next){
         Node *minNode = i;
         for (Node * j = i->next ; j!=NULL;j=j->next){
-            if (j->sach->tac_gia < i->sach->tac_gia){
+            if (j->sach->tac_gia < minNode->sach->tac_gia){
                 minNode = j;
             }
         }
@@ -156,7 +156,7 @@ void SapXepTheoNXB(Node *head){ // tăng dan
     for (Node *i = head;i!=NULL;i=i->next){
         Node *minNode = i;
         for (Node * j = i->next ; j!=NULL;j=j->next){
-            if (j->sach->nxb < i->sach->nxb){
+            if (j->sach->nxb < minNode->sach->nxb){
                 minNode = j;
             }
         }
@@ -169,7 +169,7 @@ void SapXepTheoNamSX(Node *head){ // tăng dan
     for (Node *i = head;i!=NULL;i=i->next){
         Node *minNode = i;
         for (Node * j = i->next ; j!=NULL;j=j->next){
-            if (j->sach->namsx < i->sach->namsx){
+            if (j->sach->namsx < minNode->sach->namsx){
                 minNode = j;
             }
         }
@@ -177,9 +177,9 @@ void SapXepTheoNamSX(Node *head){ // tăng dan
     }
 }
 // --------------------------- Xoa ----------------------------------
-void DelByID(Node *head, string ID){
+bool DelByID(Node *head, string ID){
    
-    while(head->next!=NULL && head->next->sach->ID != ID){
+    while(head->next!=NULL && Vietthuong(head->next->sach->ID) != Vietthuong(ID)){
         head = head->next;
     }
     if (head->next!=NULL){
@@ -187,12 +187,14 @@ void DelByID(Node *head, string ID){
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
+        return true;
     }
+    return false;
 
 }
- void DelByTenSach(Node *head, string ten){
+ bool DelByTenSach(Node *head, string ten){
    
-    while(head->next!=NULL && head->next->sach->ten != ten){
+    while(head->next!=NULL && Vietthuong(head->next->sach->ten) != Vietthuong(ten)){
         head = head->next;
     }
     if (head->next!=NULL){
@@ -200,25 +202,28 @@ void DelByID(Node *head, string ID){
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
+        return true;
     }
+    return false;
 
 }
 
-void DelByTacGia(Node *head, string tg){
-   
+bool DelByTacGia(Node *head, string tg){
+    bool check = false;
 while(head->next!=NULL){
-    if (head->next->sach->tac_gia == tg){
+    if (Vietthuong(head->next->sach->tac_gia) == Vietthuong(tg)){
         Node *temp = head->next;
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
+        check = true;
     }
     else{
         head = head->next;
     }
     
     }
-
+    return check;
 }
 
 void XoaDau(Node *head){
@@ -228,9 +233,9 @@ void XoaDau(Node *head){
     delete temp;
 }
 
-void XoaSauMa(Node *head,string ID){
+bool XoaSauMa(Node *head,string ID){
     head = head->next;
-    while(head!=NULL && head->next!=NULL && head->sach->ID != ID){
+    while(head!=NULL && head->next!=NULL && Vietthuong(head->sach->ID) != Vietthuong(ID)){
         head = head->next;
     }
     if (head !=NULL && head->next!=NULL){ // node hiện tại và phía sau đều tồn tại
@@ -238,8 +243,9 @@ void XoaSauMa(Node *head,string ID){
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
+        return true;
     }
-
+    return false;
 }
 
 void XoaCuoi(Node *head){
@@ -348,8 +354,50 @@ void tt1(Node *head){
         cout << "Da them thanh cong\n";
     }
 }
+void tt2(Node *head){
+    cout << "1.Theo Ma So\n"
+         << "2.Theo Ten Sach\n"
+         << "3.Theo Ten Tac Gia\n"
+         << "4.Xoa sach dau danh sach\n"
+         << "5.Xoa sach sau ma so\n"
+         << "6.Xoa cuoi danh sach\n";
+      int tt;cout << "Nhap thao tac: "; cin >> tt;
+    while(tt!=1 && tt!=2 && tt!=3 && tt!=4 && tt!=5 && tt!=6){
+        cout << "Thao tac khong hop le\n";
+        cout << "Nhap lai thao tac :"  ; cin >> tt;
+    }
+    cin.ignore();
+    if (tt==1){
+        string ID ; cout << "Nhap ma so : ";getline(cin,ID);
+        if (DelByID(head,ID)) cout << "Xoa thanh cong\n";
+        else cout << "Khong tim thay\n";
+    }
+    else if (tt==2){
+        string ts ; cout << "Nhap ten sach : ";getline(cin,ts);
+        if (DelByTenSach(head,ts))cout << "Xoa thanh cong\n";
+        else cout << "Khong tim thay\n";
+    }
+    else if (tt==3){
+        string tg; cout << "Nhap ten tac gia : ";getline(cin,tg);
+        if(DelByTacGia(head,tg))cout << "Xoa thanh cong\n";
+        else cout << "Khong tim thay\n";
+    }
+    else if (tt==4){
+        XoaDau(head);
+        cout << "Xoa thanh cong\n";
+    }
+    else if (tt==5){
+       string ID ; cout << "Nhap ma so : ";getline(cin,ID);
+       if( XoaSauMa(head,ID)) cout << "Xoa thanh cong\n";
+        else cout << "Khong tim thay\n";
+    }
+    else if (tt==6){
+        XoaCuoi(head);
+        cout << "Xoa thanh cong\n";
+    }
+}
 
-void tt4(Node *head){
+void tt3(Node *head){
     cout << "1.Theo ten sach\n"
          << "2.Theo ten tac gia\n"
          << "3.Theo ten Nha xuat ban\n";
@@ -381,6 +429,44 @@ void tt4(Node *head){
     }
 }
 
+void tt4(Node *head){ // thieu
+    cout << "1.Xem toan bo danh sach\n"
+         << "2.Xem theo thu tu\n"
+         << "3.Xem sach dang cho muon\n"
+         << "4.Xem sach chua cho muon\n";
+     int tt;cout << "Nhap thao tac: "; cin >> tt;
+    while(tt!=1 && tt!=2 && tt!=4 && tt!=4){
+        cout << "Thao tac khong hop le\n";
+        cout << "Nhap lai thao tac :"  ; cin >> tt;
+    }
+    if (tt==1){
+        print_lib(head);
+    }
+    else if (tt==2){
+        cout << "1.Theo ten sach\n"
+             << "2.Theo ten tac gia\n"
+             << "3.Theo ten NXB \n"
+             << "4.Moi duoc xuat ban\n";
+         int tt2;cout << "Nhap thao tac: "; cin >> tt2;
+    while(tt2!=1 && tt2!=2 && tt2!=3 && tt2!=4){
+        cout << "Thao tac khong hop le\n";
+        cout << "Nhap lai thao tac :"  ; cin >> tt;
+    }
+        if (tt2==1){
+            SapXepTheoTenSach(head);
+        }
+        else if (tt2==2){
+            SapXepTheoTenTacGia(head);}
+        else if (tt2==3){
+            SapXepTheoNXB(head);
+        }
+        else SapXepTheoNamSX(head);
+        cout << "\n ---------------Danh sach--------------------------\n";
+        print_lib(head);
+    }
+}
+
+
 int main() {
     Node* head = Head();
     r_lib(head);
@@ -388,29 +474,28 @@ int main() {
     while(cnt){
         cout << "\n\n --------- Quan ly thu vien ---------------\n";
         cout << "1.Them sach vao danh sach\n"
-             << "2.Xoa mot cuon sach khoi danh sach\n"
-             << "3.Xoa sach\n"
-             << "4.Tim kiem sach\n"
-             << "5.Xem sach\n"
-             << "6.Exit\n";
+             << "2.Xoa sach\n"
+             << "3.Tim kiem sach\n"
+             << "4.Xem sach\n"
+             << "5.Exit\n";
         int tt; cout << "Nhap thao tac : ";cin >> tt;
         cin.ignore();
         if (tt==1){
            tt1(head);
         }
+        if (tt==2){
+            tt2(head);
+        }
         if (tt==3){
-            
+            tt3(head);
         }
         if (tt==4){
             tt4(head);
         }
-        if (tt==5){
-            print_lib(head);
-        }
-        if (tt==6) cnt = false;
+        if (tt==5) cnt = false;
     }
 
-    save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
+  //  save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
     // Giải phóng bộ nhớ
     Node* current = head;
     while (current != nullptr) {
