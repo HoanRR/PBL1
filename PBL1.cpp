@@ -4,6 +4,11 @@
 #include <algorithm>
 using namespace std;
 
+string Vietthuong(string c){
+    transform(c.begin(),c.end(),c.begin(),::tolower);
+    return c;
+}
+
 struct Book {
     string ID;
     string ten;
@@ -29,19 +34,12 @@ Book* tao_sach(const string& ID, const string& ten, const string& tac_gia, const
     sach_moi->sl = sl;
     return sach_moi;
 }
-
-// In ra tất cả sách
-void print_lib(Node* head) {
-    head = head->next;
-    while (head != nullptr) {
-        cout << "ID: " << head->sach->ID
-             << "\nTen: " << head->sach->ten
-             << "\nTac gia: " << head->sach->tac_gia
-             << "\nNXB: " << head->sach->nxb
-             << "\nNam san xuat: " << head->sach->namsx
-             << "\nSo luong: " << head->sach->sl << "\n\n";
-        head = head->next;
-    }
+// -------------Node giả------------
+Node *Head(){
+    Node *head = new Node;
+    head->next = NULL;
+    head->sach = NULL;
+    return head;
 }
 
 // Khởi tạo node mới
@@ -55,7 +53,6 @@ Node* khoitao_node(Book* sach) {
     node_moi->sach = sach;
     return node_moi;
 }
-
 // --------------------Chèn vào danh sách ----------------
 // thiếu chèn sau một cuốn sách
 
@@ -76,50 +73,35 @@ void pushend(Node* head, Book* sach) {
     head->next = new_node;
 }
 
+// ----------------------Đọc từ ----------------------------------
 
-//-----------------------------Liet ke---------------------------------------------
-void showtt(Node *head){
-     cout << "ID: " << head->sach->ID
-             << "\nTen: " << head->sach->ten
-             << "\nTac gia: " << head->sach->tac_gia
-             << "\nNXB: " << head->sach->nxb
-             << "\nNam san xuat: " << head->sach->namsx
-             << "\nSo luong: " << head->sach->sl << "\n\n";
-}
-string Vietthuong(string c){
-    transform(c.begin(),c.end(),c.begin(),::tolower);
-    return c;
-}
-void LietKebyTenSach(Node *head,string tensach){
-    head = head->next;
-    string t = Vietthuong(tensach);
-    while(head!=NULL){
-        if (Vietthuong(head->sach->ten) == t){
-            showtt(head);
-        }
-        head = head->next;
+void r_lib(Node* &head) {
+    ifstream fi("thuvien.txt");
+    if (!fi.is_open()) {
+        cout << "Khong the mo file\n";
+        return;
     }
-}
 
-void LietKebyTacGia(Node *head,string tg){
-    head = head->next;
-    string t = Vietthuong(tg);
-    while(head!=NULL){
-        if (Vietthuong(head->sach->tac_gia) == t){
-            showtt(head);
-        }
-        head = head->next;
+    string line;
+    while (getline(fi, line)) {
+        stringstream ss(line);
+        string ID, ten, tac_gia, nxb, namsx_str, sl_str;
+
+        getline(ss, ID, '|');
+        getline(ss, ten, '|');
+        getline(ss, tac_gia, '|');
+        getline(ss, nxb, '|');
+        getline(ss, namsx_str, '|');
+        getline(ss, sl_str, '|');
+
+        long namsx = stol(namsx_str);
+        long sl = stol(sl_str);
+
+        Book* sach = tao_sach(ID, ten, tac_gia, nxb, namsx, sl);
+        pushend(head, sach);
     }
-}
-void LietKebyNXB(Node *head,string NXB){
-    head = head->next;
-    string t = Vietthuong(NXB);
-    while(head!=NULL){
-        if (Vietthuong(head->sach->nxb) == t){
-            showtt(head);
-        }
-        head = head->next;
-    }
+
+    fi.close();
 }
 
 
@@ -263,38 +245,76 @@ void XoaCuoi(Node *head){
    delete temp;
    
 }
-// ----------------------Đọc từ ----------------------------------
 
-void r_lib(Node* &head) {
-    ifstream fi("thuvien.txt");
-    if (!fi.is_open()) {
-        cout << "Khong the mo file\n";
-        return;
+//-----------------------------Liet ke---------------------------------------------
+// In ra tất cả sách
+void print_lib(Node* head) {
+    head = head->next;
+    while (head != nullptr) {
+        cout << "ID: " << head->sach->ID
+             << "\nTen: " << head->sach->ten
+             << "\nTac gia: " << head->sach->tac_gia
+             << "\nNXB: " << head->sach->nxb
+             << "\nNam san xuat: " << head->sach->namsx
+             << "\nSo luong: " << head->sach->sl << "\n\n";
+        head = head->next;
     }
-
-    string line;
-    while (getline(fi, line)) {
-        stringstream ss(line);
-        string ID, ten, tac_gia, nxb, namsx_str, sl_str;
-
-        getline(ss, ID, '|');
-        getline(ss, ten, '|');
-        getline(ss, tac_gia, '|');
-        getline(ss, nxb, '|');
-        getline(ss, namsx_str, '|');
-        getline(ss, sl_str, '|');
-
-        long namsx = stol(namsx_str);
-        long sl = stol(sl_str);
-
-        Book* sach = tao_sach(ID, ten, tac_gia, nxb, namsx, sl);
-        pushend(head, sach);
-    }
-
-    fi.close();
+}
+// ko show từng cái chuyển hết về show 1 danh 
+void showtt(Node *head){
+     cout << "ID: " << head->sach->ID
+             << "\nTen: " << head->sach->ten
+             << "\nTac gia: " << head->sach->tac_gia
+             << "\nNXB: " << head->sach->nxb
+             << "\nNam san xuat: " << head->sach->namsx
+             << "\nSo luong: " << head->sach->sl << "\n\n";
 }
 
-// ------------------------lưu lại danh sách liên kết vào file
+Node* LietKebyTenSach(Node *head,string tensach){
+    Node *DS = Head();
+    head = head->next;
+    string t = Vietthuong(tensach);
+    while(head!=NULL){
+        if (Vietthuong(head->sach->ten) == t){
+            Book *newbook = tao_sach(head->sach->ID,head->sach->ten,head->sach->tac_gia,head->sach->nxb,head->sach->namsx,head->sach->sl);
+            pushhead(DS,newbook);
+            delete newbook;
+        }
+        head = head->next;
+    }
+    return DS;
+}
+
+Node* LietKebyTacGia(Node *head,string tg){
+    Node *DS = Head();
+    head = head->next;
+    string t = Vietthuong(tg);
+    while(head!=NULL){
+        if (Vietthuong(head->sach->tac_gia) == t){
+            Book *newbook = tao_sach(head->sach->ID,head->sach->ten,head->sach->tac_gia,head->sach->nxb,head->sach->namsx,head->sach->sl);
+            pushhead(DS,newbook);
+            delete newbook;
+        }
+        head = head->next;
+    }
+    return DS;
+}
+Node* LietKebyNXB(Node *head,string NXB){
+    Node *DS = Head();
+    head = head->next;
+    string t = Vietthuong(NXB);
+    while(head!=NULL){
+        if (Vietthuong(head->sach->nxb) == t){
+            Book *newbook = tao_sach(head->sach->ID,head->sach->ten,head->sach->tac_gia,head->sach->nxb,head->sach->namsx,head->sach->sl);
+            pushhead(DS,newbook);
+            delete newbook;
+        }
+        head = head->next;
+    }
+    return DS;
+}
+
+// ------------lưu lại danh sách liên kết vào file---------
 void save_to_file(Node *head, const string& filename){ 
     ofstream fo(filename);
     head = head->next;
@@ -316,18 +336,10 @@ void save_to_file(Node *head, const string& filename){
     fo.close();
 }
 
-// -------------Node giả------------
-Node *Head(){
-    Node *head = new Node;
-    head->next = NULL;
-    head->sach = NULL;
-    return head;
-}
-
-
 // ------------------------------- Các thao tác -----------------------------
 
-void tt1(Node *head){
+
+void them_sach(Node *head){
     
     string ID,tensach, tacgia,NXB;
     long namsx ,sluong;
@@ -354,7 +366,7 @@ void tt1(Node *head){
         cout << "Da them thanh cong\n";
     }
 }
-void tt2(Node *head){
+void xoa_sach(Node *head){
     cout << "1.Theo Ma So\n"
          << "2.Theo Ten Sach\n"
          << "3.Theo Ten Tac Gia\n"
@@ -397,7 +409,7 @@ void tt2(Node *head){
     }
 }
 
-void tt3(Node *head){
+void Tim_sach(Node *head){
     cout << "1.Theo ten sach\n"
          << "2.Theo ten tac gia\n"
          << "3.Theo ten Nha xuat ban\n";
@@ -411,7 +423,9 @@ void tt3(Node *head){
         cout << "Nhap ten sach : ";
         string tensach ; getline(cin,tensach);
         cout << "------------Danh sach liet ke --------------------\n";
-        LietKebyTenSach(head,tensach);
+        Node* ds = LietKebyTenSach(head,tensach);
+        print_lib(ds);
+        delete ds;
     }
     else if (tt==2){
         // cin.ignore();
@@ -419,6 +433,9 @@ void tt3(Node *head){
         string tg ; getline(cin,tg);
         cout << "------------Danh sach liet ke --------------------\n";
         LietKebyTacGia(head,tg);
+        Node* ds = LietKebyTenSach(head,tg);
+        print_lib(ds);
+        delete ds;
     }
     else if (tt==3){
         // cin.ignore();
@@ -426,10 +443,13 @@ void tt3(Node *head){
         string nxb ; getline(cin,nxb);
         cout << "------------Danh sach liet ke --------------------\n";
         LietKebyNXB(head,nxb);
+        Node* ds = LietKebyTenSach(head,nxb);
+        print_lib(ds);
+        delete ds;
     }
 }
 
-void tt4(Node *head){ // thieu
+void xem_sach(Node *head){ // thieu
     cout << "1.Xem toan bo danh sach\n"
          << "2.Xem theo thu tu\n"
          << "3.Xem sach dang cho muon\n"
@@ -466,36 +486,39 @@ void tt4(Node *head){ // thieu
     }
 }
 
-
-int main() {
-    Node* head = Head();
-    r_lib(head);
+void trang_chu(Node *head){
     bool cnt = true;
-    while(cnt){
+     while(cnt){
         cout << "\n\n --------- Quan ly thu vien ---------------\n";
         cout << "1.Them sach vao danh sach\n"
              << "2.Xoa sach\n"
              << "3.Tim kiem sach\n"
              << "4.Xem sach\n"
-             << "5.Exit\n";
+             << "5.Thoat\n";
         int tt; cout << "Nhap thao tac : ";cin >> tt;
         cin.ignore();
         if (tt==1){
-           tt1(head);
+           them_sach(head);
         }
         if (tt==2){
-            tt2(head);
+            xoa_sach(head);
         }
         if (tt==3){
-            tt3(head);
+            Tim_sach(head);
         }
         if (tt==4){
-            tt4(head);
+            xem_sach(head);
         }
         if (tt==5) cnt = false;
     }
+    save_to_file(head,"thuvien.txt");
+}
 
-  //  save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
+int main() {
+    Node* head = Head();
+    r_lib(head);
+    trang_chu(head);
+    //  save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
     // Giải phóng bộ nhớ
     Node* current = head;
     while (current != nullptr) {
