@@ -246,7 +246,7 @@ void XoaCuoi(Node *head){
    
 }
 
-//-----------------------------Liet ke---------------------------------------------
+//-----------------------------In ra màn hình---------------------------------------------
 // In ra tất cả sách
 void print_lib(Node* head) {
     head = head->next;
@@ -260,7 +260,7 @@ void print_lib(Node* head) {
         head = head->next;
     }
 }
-// ko show từng cái chuyển hết về show 1 danh 
+
 void showtt(Node *head){
      cout << "ID: " << head->sach->ID
              << "\nTen: " << head->sach->ten
@@ -269,45 +269,39 @@ void showtt(Node *head){
              << "\nNam san xuat: " << head->sach->namsx
              << "\nSo luong: " << head->sach->sl << "\n\n";
 }
-
-Node* LietKebyTenSach(Node *head,string tensach){
+//-----------------------Tìm Kiếm---------------------
+Node* FindbyTenSach(Node *head,string tensach){
     Node *DS = Head();
     head = head->next;
     string t = Vietthuong(tensach);
     while(head!=NULL){
         if (Vietthuong(head->sach->ten) == t){
-            Book *newbook = tao_sach(head->sach->ID,head->sach->ten,head->sach->tac_gia,head->sach->nxb,head->sach->namsx,head->sach->sl);
-            pushhead(DS,newbook);
-            delete newbook;
+            pushhead(DS,head->sach);
         }
         head = head->next;
     }
     return DS;
 }
 
-Node* LietKebyTacGia(Node *head,string tg){
+Node* FindbyTacGia(Node *head,string tg){
     Node *DS = Head();
     head = head->next;
     string t = Vietthuong(tg);
     while(head!=NULL){
         if (Vietthuong(head->sach->tac_gia) == t){
-            Book *newbook = tao_sach(head->sach->ID,head->sach->ten,head->sach->tac_gia,head->sach->nxb,head->sach->namsx,head->sach->sl);
-            pushhead(DS,newbook);
-            delete newbook;
+            pushhead(DS,head->sach);
         }
         head = head->next;
     }
     return DS;
 }
-Node* LietKebyNXB(Node *head,string NXB){
+Node* FindbyNXB(Node *head,string NXB){
     Node *DS = Head();
     head = head->next;
     string t = Vietthuong(NXB);
     while(head!=NULL){
         if (Vietthuong(head->sach->nxb) == t){
-            Book *newbook = tao_sach(head->sach->ID,head->sach->ten,head->sach->tac_gia,head->sach->nxb,head->sach->namsx,head->sach->sl);
-            pushhead(DS,newbook);
-            delete newbook;
+            pushhead(DS,head->sach);
         }
         head = head->next;
     }
@@ -423,7 +417,7 @@ void Tim_sach(Node *head){
         cout << "Nhap ten sach : ";
         string tensach ; getline(cin,tensach);
         cout << "------------Danh sach liet ke --------------------\n";
-        Node* ds = LietKebyTenSach(head,tensach);
+        Node* ds = FindbyTenSach(head,tensach);
         print_lib(ds);
         delete ds;
     }
@@ -432,8 +426,7 @@ void Tim_sach(Node *head){
         cout << "Nhap ten tac gia : ";
         string tg ; getline(cin,tg);
         cout << "------------Danh sach liet ke --------------------\n";
-        LietKebyTacGia(head,tg);
-        Node* ds = LietKebyTenSach(head,tg);
+        Node* ds = FindbyTacGia(head,tg);
         print_lib(ds);
         delete ds;
     }
@@ -442,8 +435,7 @@ void Tim_sach(Node *head){
         cout << "Nhap ten NXB : ";
         string nxb ; getline(cin,nxb);
         cout << "------------Danh sach liet ke --------------------\n";
-        LietKebyNXB(head,nxb);
-        Node* ds = LietKebyTenSach(head,nxb);
+        Node* ds = FindbyNXB(head,nxb);
         print_lib(ds);
         delete ds;
     }
@@ -513,6 +505,7 @@ void trang_chu(Node *head){
     }
     save_to_file(head,"thuvien.txt");
 }
+
 
 int main() {
     Node* head = Head();
