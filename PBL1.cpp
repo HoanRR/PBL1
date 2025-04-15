@@ -264,14 +264,15 @@ void print_lib(Node* head) {
     }
 }
 
-/*void showtt(Node *head){
+void showtt(Node *head){
      cout << "ID: " << head->sach->ID
              << "\nTen: " << head->sach->ten
              << "\nTac gia: " << head->sach->tac_gia
              << "\nNXB: " << head->sach->nxb
-             << "\nNam san xuat: " << head->sach->namsx
-             << "\nSo luong: " << head->sach->sl << "\n\n";
-}*/
+             << "\nNam san xuat: " << head->sach->namsx;
+        if (head->sach->Trang_thai) cout << "\nTrang thai: chua muon\n\n";
+        else cout <<"\n Trang thai: da muon\n";
+}
 //-----------------------Tìm Kiếm---------------------
 Node* FindbyTenSach(Node *head,string tensach){
     Node *DS = Head();
