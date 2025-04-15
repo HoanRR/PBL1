@@ -15,7 +15,7 @@ struct Book {
     string tac_gia;
     string nxb;
     long namsx;
-    long sl;
+    bool Trang_thai;
 };
 
 struct Node {
@@ -24,14 +24,14 @@ struct Node {
 };
 
 // Khởi tạo 1 sách mới
-Book* tao_sach(const string& ID, const string& ten, const string& tac_gia, const string& nxb, long namsx, long sl) {
+Book* tao_sach(const string& ID, const string& ten, const string& tac_gia, const string& nxb,long namsx, bool trangthai) {
     Book* sach_moi = new Book;
     sach_moi->ID = ID;
     sach_moi->ten = ten;
     sach_moi->tac_gia = tac_gia;
     sach_moi->nxb = nxb;
     sach_moi->namsx = namsx;
-    sach_moi->sl = sl;
+    sach_moi->Trang_thai = trangthai;
     return sach_moi;
 }
 // -------------Node giả------------
@@ -95,9 +95,11 @@ void r_lib(Node* &head) {
         getline(ss, sl_str, '|');
 
         long namsx = stol(namsx_str);
-        long sl = stol(sl_str);
+        bool Trang_thai;
+        if (sl_str == "Da muon") Trang_thai= false;
+        else Trang_thai = true;
 
-        Book* sach = tao_sach(ID, ten, tac_gia, nxb, namsx, sl);
+        Book* sach = tao_sach(ID, ten, tac_gia, nxb, namsx, Trang_thai);
         pushend(head, sach);
     }
 
@@ -255,20 +257,21 @@ void print_lib(Node* head) {
              << "\nTen: " << head->sach->ten
              << "\nTac gia: " << head->sach->tac_gia
              << "\nNXB: " << head->sach->nxb
-             << "\nNam san xuat: " << head->sach->namsx
-             << "\nSo luong: " << head->sach->sl << "\n\n";
+             << "\nNam san xuat: " << head->sach->namsx;
+        if (head->sach->Trang_thai) cout << "\nTrang thai: chua muon\n\n";
+        else cout <<"\n Trang thai: da muon\n";
         head = head->next;
     }
 }
 
-void showtt(Node *head){
+/*void showtt(Node *head){
      cout << "ID: " << head->sach->ID
              << "\nTen: " << head->sach->ten
              << "\nTac gia: " << head->sach->tac_gia
              << "\nNXB: " << head->sach->nxb
              << "\nNam san xuat: " << head->sach->namsx
              << "\nSo luong: " << head->sach->sl << "\n\n";
-}
+}*/
 //-----------------------Tìm Kiếm---------------------
 Node* FindbyTenSach(Node *head,string tensach){
     Node *DS = Head();
@@ -323,8 +326,9 @@ void save_to_file(Node *head, const string& filename){
            << b->ten << "|"
            << b->tac_gia << "|"
            << b->nxb << "|"
-           << b->namsx << "|"
-           << b->sl << "|" << endl;
+           << b->namsx << "|";
+        if (b->Trang_thai) fo << "chua muon|"<<endl;
+        else fo<<"da muon|"<<endl;
         temp = temp->next;
     }
     fo.close();
