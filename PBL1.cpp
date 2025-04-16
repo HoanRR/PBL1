@@ -332,6 +332,7 @@ void save_to_file(Node *head, const string& filename){
         else fo<<"da muon|"<<endl;
         temp = temp->next;
     }
+    cout << "Luu thanh cong\n";
     fo.close();
 }
 
@@ -447,9 +448,72 @@ void Tim_sach(Node *head){
 }
 
 void Sua_sach(Node *head){
+    head = head->next;
     cout << "Nhap ID sach can sua : ";
     string ID; getline(cin,ID);
-    
+    while(head!=NULL && head->sach->ID != ID){
+        head = head->next;
+    }
+    if (head == NULL) {
+        cout << "Khong tim thay\n";
+     return;
+ }
+    bool check = true;
+    while(check){
+    cout << "1.Sua ID\n"
+         << "2.Sua Ten Sach\n"
+         << "3.Sua Tac Gia\n"
+         << "4.Sua NXB\n"
+         << "5.Sua Nam SX\n"
+         << "6.Sua trang thai\n"
+         << "7.Thoat\n";
+    int tt; cout << "Nhap thao tac : "; cin >> tt;
+    cin.ignore();
+    if (tt==7) check = false;
+    else if (tt==1){
+        string id; cout << "Nhap ID sua : "; getline(cin,id);
+        head->sach->ID = id;
+        cout << "Sua doi thanh cong!\n";
+    }
+    else if (tt==2){
+        string ten; cout << "Nhap ten sach : "; getline(cin,ten);
+        head->sach->ten = ten;
+        cout << "Sua doi thanh cong!\n";
+    }
+    else if (tt==3){
+        string tg; cout << "Nhap ten tac gia : "; getline(cin,tg);
+        head->sach->tac_gia = tg;
+        cout << "Sua doi thanh cong!\n";
+    }
+    else if (tt==4){
+        string nxb; cout << "Nhap NXB : "; getline(cin,nxb);
+        head->sach->nxb = nxb;
+        cout << "Sua doi thanh cong!\n";
+    }
+   else if (tt==5){
+        long sx; cout << "Nhap nam san xuat : "; cin >> sx;
+        head->sach->namsx = sx;
+        cout << "Sua doi thanh cong!\n";
+    }
+    else if (tt==6){
+         bool tthai;cout << "Chinh sua trang thai thanh : \n1.Chua muon\n2.Da muon\n Nhap thao tac : ";
+        int tt2 ; cin >> tt2;
+        if (tt2==1) {
+            tthai = true;
+            cout << "Sua doi thanh cong!\n";
+        }
+         else if  (tt2==2) {tthai = false;
+            cout << "Sua doi thanh cong!\n";
+        }
+        else cout << "Du lieu khong hop le\n";
+        head->sach->Trang_thai = tthai;
+    }
+    else {
+        cout << "Du lieu khong hop le ! \n";
+    }
+
+    }
+
 }
 
 void xem_sach(Node *head){ // thieu
@@ -489,6 +553,12 @@ void xem_sach(Node *head){ // thieu
     }
 }
 
+void LuuVaoFile(Node *head){
+    cout << "Nhap ten file de luu : ";
+    string file_name;
+    getline(cin,file_name);
+    save_to_file(head,file_name);
+}
 void trang_chu(Node *head){
     bool cnt = true;
      while(cnt){
@@ -517,6 +587,9 @@ void trang_chu(Node *head){
         }
         if (tt==6){
             Sua_sach(head);
+        }
+        if (tt==7){
+            LuuVaoFile(head);
         }
         if (tt==8) cnt = false;
     }

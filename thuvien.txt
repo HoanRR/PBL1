@@ -1,4 +1,4 @@
-001|Sach giao khoa Toan|Nguyen Van A|NXB GDDT|1994|chua muon|
+001|Tuoi tre dang gia bao nhieu|Nguyen Van A|NXB GDDT|1994|chua muon|
 002|Dac Nhan Tam|Dale Carnegie|NXB Tre|2010|chua muon|
 003|Nha Gia Kim|Paulo Coelho|NXB VH|2015|chua muon|
 004|Viet Nam|Paulo Coelho|NXB VN|2022|chua muon|
