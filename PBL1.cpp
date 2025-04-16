@@ -446,6 +446,12 @@ void Tim_sach(Node *head){
     }
 }
 
+void Sua_sach(Node *head){
+    cout << "Nhap ID sach can sua : ";
+    string ID; getline(cin,ID);
+    
+}
+
 void xem_sach(Node *head){ // thieu
     cout << "1.Xem toan bo danh sach\n"
          << "2.Xem theo thu tu\n"
@@ -491,7 +497,10 @@ void trang_chu(Node *head){
              << "2.Xoa sach\n"
              << "3.Tim kiem sach\n"
              << "4.Xem sach\n"
-             << "5.Thoat\n";
+             << "5.Muon/Tra Sach\n"
+             << "6.Sua noi dung sach\n"
+             << "7.Luu vao file\n"
+             << "8.Thoat\n";
         int tt; cout << "Nhap thao tac : ";cin >> tt;
         cin.ignore();
         if (tt==1){
@@ -506,7 +515,10 @@ void trang_chu(Node *head){
         if (tt==4){
             xem_sach(head);
         }
-        if (tt==5) cnt = false;
+        if (tt==6){
+            Sua_sach(head);
+        }
+        if (tt==8) cnt = false;
     }
     save_to_file(head,"thuvien.txt");
 }
