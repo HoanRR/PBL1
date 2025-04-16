@@ -2,6 +2,9 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
+#include <ctime>
+#include <vector>
+#include <string>
 using namespace std;
 
 string Vietthuong(string c){
@@ -22,6 +25,7 @@ struct Node {
     Node* next;
     Book* sach;
 };
+
 
 // Khởi tạo 1 sách mới
 Book* tao_sach(const string& ID, const string& ten, const string& tac_gia, const string& nxb,long namsx, bool trangthai) {
@@ -72,7 +76,55 @@ void pushend(Node* head, Book* sach) {
     }
     head->next = new_node;
 }
+//-----------------------Đăng Nhập--------------------------------
+string KiemTraDangNhap(const string& TenDangNhap, const string& Matkhau){
+    ifstream fi("user.txt");
+    string line;
+    while (getline(fi,line)){
+        stringstream ss(line);
+        string ten,mk;
+        getline(ss,ten,'|');
+        getline(ss,mk,'|');
+        if (ten==TenDangNhap && mk==Matkhau){
+            return ten;
+        }
+    }
+    cout << "ten dang nhap hoac mat khau khong dung\n";
+    fi.close();
+    return "";
+}   
+//-----------------------Đăng Ký----------------------------------
+void DangKyTaiKhoan(){
+    fstream fi("user.txt",ios::in | ios :: out | ios :: app);
+    bool kt=true;
+    string TenDangNhap, Matkhau;
+    while (kt){
+        kt = false;
+        cout <<"Nhap ten dang nhap :";
+        cin >> TenDangNhap;
+        cout << "Nhap mat khau :";
+        cin >> Matkhau;
 
+        fi.clear();
+        fi.seekg(0, ios::beg);
+
+        string line;
+        while (getline(fi,line)){
+            stringstream ss(line);
+            string ten;
+            getline(ss,ten,'|');
+            if (ten==TenDangNhap && ten.substr(0,5)!="admin"){
+                kt = true;
+                cout << "Ten dang nhap ton tai.Hay nhap lai.";
+            }
+        }
+    }
+    fi.clear();
+    fi.seekp(0, ios::end);
+    fi << TenDangNhap <<"|"<< Matkhau <<" |" <<endl;
+    fi.close();
+    cout << "Dang ky thanh cong!";
+}
 // ----------------------Đọc từ ----------------------------------
 
 void r_lib(Node* &head) {
@@ -274,6 +326,18 @@ void showtt(Node *head){
         else cout <<"\n Trang thai: da muon\n";
 }
 //-----------------------Tìm Kiếm---------------------
+Book* FindbyID(Node *head,string ID){
+    Node *DS = Head();
+    head = head->next;
+    string t = Vietthuong(ID);
+    while(head!=NULL){
+        if (Vietthuong(head->sach->ID) == t){
+            return head->sach;
+        }
+        head = head->next;
+    }
+    cout << "Khong co sach ID:" << ID << endl;
+}
 Node* FindbyTenSach(Node *head,string tensach){
     Node *DS = Head();
     head = head->next;
@@ -305,6 +369,17 @@ Node* FindbyNXB(Node *head,string NXB){
     string t = Vietthuong(NXB);
     while(head!=NULL){
         if (Vietthuong(head->sach->nxb) == t){
+            pushhead(DS,head->sach);
+        }
+        head = head->next;
+    }
+    return DS;
+}
+Node* FindChuaMuon(Node *head){
+    Node *DS = Head();
+    head = head->next;
+    while(head!=NULL){
+        if (head->sach->Trang_thai){
             pushhead(DS,head->sach);
         }
         head = head->next;
@@ -412,9 +487,10 @@ void xoa_sach(Node *head){
 void Tim_sach(Node *head){
     cout << "1.Theo ten sach\n"
          << "2.Theo ten tac gia\n"
-         << "3.Theo ten Nha xuat ban\n";
+         << "3.Theo ten Nha xuat ban\n"
+         << "4.Sach chua muon\n";
     int tt;cout << "Nhap thao tac: "; cin >> tt;
-    while(tt!=1 && tt!=2 && tt!=3){
+    while(tt!=1 && tt!=2 && tt!=3 && tt!= 4){
         cout << "Thao tac khong hop le\n";
         cout << "Nhap lai thao tac :"  ; cin >> tt;
     }
@@ -442,6 +518,12 @@ void Tim_sach(Node *head){
         string nxb ; getline(cin,nxb);
         cout << "------------Danh sach liet ke --------------------\n";
         Node* ds = FindbyNXB(head,nxb);
+        print_lib(ds);
+        delete ds;
+    }
+    else if (tt == 4){
+        Node* ds =FindChuaMuon(head);
+        cout << "------------Danh sach liet ke --------------------\n";
         print_lib(ds);
         delete ds;
     }
@@ -518,11 +600,9 @@ void Sua_sach(Node *head){
 
 void xem_sach(Node *head){ // thieu
     cout << "1.Xem toan bo danh sach\n"
-         << "2.Xem theo thu tu\n"
-         << "3.Xem sach dang cho muon\n"
-         << "4.Xem sach chua cho muon\n";
+         << "2.Xem theo thu tu\n";
      int tt;cout << "Nhap thao tac: "; cin >> tt;
-    while(tt!=1 && tt!=2 && tt!=4 && tt!=4){
+    while(tt!=1 && tt!=2 ){
         cout << "Thao tac khong hop le\n";
         cout << "Nhap lai thao tac :"  ; cin >> tt;
     }
@@ -535,19 +615,19 @@ void xem_sach(Node *head){ // thieu
              << "3.Theo ten NXB \n"
              << "4.Moi duoc xuat ban\n";
          int tt2;cout << "Nhap thao tac: "; cin >> tt2;
-    while(tt2!=1 && tt2!=2 && tt2!=3 && tt2!=4){
-        cout << "Thao tac khong hop le\n";
-        cout << "Nhap lai thao tac :"  ; cin >> tt;
-    }
-        if (tt2==1){
-            SapXepTheoTenSach(head);
+        while(tt2!=1 && tt2!=2 && tt2!=3 && tt2!=4){
+            cout << "Thao tac khong hop le\n";
+            cout << "Nhap lai thao tac :"  ; cin >> tt;
         }
-        else if (tt2==2){
-            SapXepTheoTenTacGia(head);}
-        else if (tt2==3){
-            SapXepTheoNXB(head);
-        }
-        else SapXepTheoNamSX(head);
+            if (tt2==1){
+                SapXepTheoTenSach(head);
+            }
+            else if (tt2==2){
+                SapXepTheoTenTacGia(head);}
+            else if (tt2==3){
+                SapXepTheoNXB(head);
+            }
+            else SapXepTheoNamSX(head);
         cout << "\n ---------------Danh sach--------------------------\n";
         print_lib(head);
     }
@@ -559,7 +639,7 @@ void LuuVaoFile(Node *head){
     getline(cin,file_name);
     save_to_file(head,file_name);
 }
-void trang_chu(Node *head){
+void trang_chu_admin(Node *head){
     bool cnt = true;
      while(cnt){
         cout << "\n\n --------- Quan ly thu vien ---------------\n";
@@ -567,7 +647,6 @@ void trang_chu(Node *head){
              << "2.Xoa sach\n"
              << "3.Tim kiem sach\n"
              << "4.Xem sach\n"
-             << "5.Muon/Tra Sach\n"
              << "6.Sua noi dung sach\n"
              << "7.Luu vao file\n"
              << "8.Thoat\n";
@@ -595,12 +674,144 @@ void trang_chu(Node *head){
     }
     save_to_file(head,"thuvien.txt");
 }
+//----------------Mượn sách -----------------
+void MuonSach(const string& Ten,Node *head){
+    string temp = Ten;
+    string ID;
+    cout << "Nhap ID sach can muon:";
+    cin >> ID;
+    Book* sach = FindbyID(head,ID);
+    if (!sach->Trang_thai){
+        cout <<" Sach da duoc muon";
+        return;
+    }
+    temp += ".txt";
+    ofstream fo(temp,ios::app);
+    time_t now = time(0);
+    string dt = ctime(&now);
+    fo  << sach->ID << "|"
+        << sach->ten << "|"
+        << sach->tac_gia << "|"
+        << dt << "|" <<endl;
+    cout << "Muon sach thanh cong\n";
+}
+void TraSach(const string& ten){
+    string temp = ten;
+    string ID;
+    cout << "Nhap ID sach can muon:";
+    cin >> ID;
+    temp += ".txt";
+    bool kt = false;
+    ifstream fi(temp);
+    vector <string> lines;
+    string line;
+    int SLDong = 1;
+    while(getline(fi,line)){
+        string id;
+        stringstream ss(line);
+        getline(ss,id,'|');
+        if (id!=ID){
+            lines.push_back(line);
+        }
+        else kt = true;
+        SLDong++;
+    }
+    if (!kt){
+        cout << "Loi tra sach!";
+        return;
+    }
+    fi.close();
+    ofstream fo(temp,ios::trunc);
+    for (const auto&dong :lines){
+        fo <<dong<<endl;
+    }
+    fo.close();
+    cout << "Tra sach thanh cong";
+
+}
+//---------------in sach da muon-------------
+void print_user(const string &ten){
+    string temp = ten;
+    temp += ".txt";
+    ifstream fi (temp);   
+    string line;
+    int i =1;
+    while (getline(fi,line)){
+        string ID,ten,tacgia,ThoiGian;
+        stringstream ss(line);
+        getline(ss,ID,'|');
+        getline(ss,ten,'|');
+        getline(ss,tacgia,'|');
+        getline(ss,ThoiGian,'|');
+        cout << "Sach: " << i <<endl
+                <<"ID: " << ID <<endl
+                <<"Ten: "<< ten<<endl
+                <<"Tac Gia: "<<tacgia<<endl
+                <<"Thoi gian muon: "<<ThoiGian<<endl;
+        i++;
+    }
+    fi.close();
+}
+void trang_chu_user(const string& TenDangNhap, Node *head){
+    bool cnt = true;
+     while(cnt){
+        cout << "\n\n --------- Thu vien ---------------\n";
+        cout << "1.Tim kiem sach\n"
+             << "2.Xem sach da muon\n"
+             << "3.Muon sach\n"
+             << "4.Tra sach\n"
+             << "5.Thoat\n";
+        int tt; cout << "Nhap thao tac : ";cin >> tt;
+        cin.ignore();
+        if (tt==1){
+           Tim_sach(head);
+        }
+        if (tt==2){
+            print_user(TenDangNhap);
+        }
+        if (tt==3){
+            MuonSach(TenDangNhap,head);
+        }
+        if (tt==4){
+            TraSach(TenDangNhap);
+        }
+        if (tt==5) cnt = false;
+    }
+
+}
 
 
+//--------------đăng nhập--------------
+string dangnhap(){
+    string TenDangNhap;
+    string MatKhau;
+    for (int i=3; i>0;i--){
+        cout << "Nhap ten dang nhap: "; cin >> TenDangNhap;
+        cout << "Nhap mat khau: "; cin >> MatKhau;
+        string s = KiemTraDangNhap(TenDangNhap,MatKhau);
+        if (s=="") cout << "Ban con " << i-1<<"lan dang nhap";
+        else break;
+    }
+    return TenDangNhap;
+}
 int main() {
     Node* head = Head();
     r_lib(head);
-    trang_chu(head);
+    cout << "1. Dang nhap\n"
+        << "2. Dang Ki\n";
+    int tt; cout <<"nhap thao tac"; cin >> tt;
+    while (tt!=1&&tt!=2){
+        cout <<"Thao tac khong hop le!"<< endl;
+        cout <<"Nhap lai thao tac"; cin >> tt;
+    }
+    if (tt==1){
+        string TK = dangnhap();
+        if (TK.substr(0,5)=="admin"){
+            trang_chu_admin(head);
+        }
+        else trang_chu_user(TK,head);
+    }
+    else DangKyTaiKhoan();
     //  save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
     // Giải phóng bộ nhớ
     Node* current = head;
