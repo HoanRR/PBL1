@@ -326,13 +326,13 @@ void showtt(Node *head){
         else cout <<"\n Trang thai: da muon\n";
 }
 //-----------------------Tìm Kiếm---------------------
-Book* FindbyID(Node *head,string ID){
+Book** FindbyID(Node *head,string ID){
     Node *DS = Head();
     head = head->next;
     string t = Vietthuong(ID);
     while(head!=NULL){
         if (Vietthuong(head->sach->ID) == t){
-            return head->sach;
+            return &(head->sach);
         }
         head = head->next;
     }
@@ -679,11 +679,11 @@ void trang_chu_admin(Node *head){
 void MuonSach(const string& Ten,Node *head){
     string temp = Ten;
     string ID;
-    cout << "Nhap ID sach can muon:";
+    cout << "Nhap ID sach can muon: ";
     cin >> ID;
-    Book* sach = FindbyID(head,ID);
+    Book** sach = FindbyID(head,ID);
     if (sach == NULL) return;
-    if (!sach->Trang_thai){
+    if (!(*sach)->Trang_thai){
         cout <<" Sach da duoc muon";
         return;
     }
@@ -692,10 +692,10 @@ void MuonSach(const string& Ten,Node *head){
     time_t now = time(0);
     string dt = ctime(&now);
     dt.pop_back();// xoa dau \n o cuoi
-    sach->Trang_thai = false; // Đã sửa nhưng không thành 
-    fo  << sach->ID << "|"
-        << sach->ten << "|"
-        << sach->tac_gia << "|"
+    (*sach)->Trang_thai = false; // Đã sửa và đã thành   
+    fo  << (*sach)->ID << "|"
+        << (*sach)->ten << "|"
+        << (*sach)->tac_gia << "|"
         << dt << "|" << endl;
     cout << "Muon sach thanh cong\n";
 }
@@ -803,7 +803,7 @@ int main() {
     r_lib(head);
     cout << "1. Dang nhap\n"
         << "2. Dang Ki\n";
-    int tt; cout <<"nhap thao tac : "; cin >> tt;
+    int tt; cout <<"Nhap thao tac : "; cin >> tt;
     while (tt!=1&&tt!=2){
         cout <<"Thao tac khong hop le!"<< endl;
         cout <<"Nhap lai thao tac"; cin >> tt;
