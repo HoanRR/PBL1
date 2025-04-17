@@ -121,7 +121,7 @@ void DangKyTaiKhoan(){
     }
     fi.clear();
     fi.seekp(0, ios::end);
-    fi << TenDangNhap <<"|"<< Matkhau <<" |" <<endl;
+    fi << TenDangNhap <<"|"<< Matkhau <<"|" <<endl;
     fi.close();
     cout << "Dang ky thanh cong!";
 }
@@ -336,7 +336,8 @@ Book* FindbyID(Node *head,string ID){
         }
         head = head->next;
     }
-    cout << "Khong co sach ID:" << ID << endl;
+    cout << "Khong co sach ID: " << ID << endl;
+    return NULL;
 }
 Node* FindbyTenSach(Node *head,string tensach){
     Node *DS = Head();
@@ -380,7 +381,7 @@ Node* FindChuaMuon(Node *head){
     head = head->next;
     while(head!=NULL){
         if (head->sach->Trang_thai){
-            pushhead(DS,head->sach);
+            pushend(DS,head->sach);
         }
         head = head->next;
     }
@@ -681,6 +682,7 @@ void MuonSach(const string& Ten,Node *head){
     cout << "Nhap ID sach can muon:";
     cin >> ID;
     Book* sach = FindbyID(head,ID);
+    if (sach == NULL) return;
     if (!sach->Trang_thai){
         cout <<" Sach da duoc muon";
         return;
@@ -689,10 +691,12 @@ void MuonSach(const string& Ten,Node *head){
     ofstream fo(temp,ios::app);
     time_t now = time(0);
     string dt = ctime(&now);
+    dt.pop_back();// xoa dau \n o cuoi
+    sach->Trang_thai = false; // Đã sửa nhưng không thành 
     fo  << sach->ID << "|"
         << sach->ten << "|"
         << sach->tac_gia << "|"
-        << dt << "|" <<endl;
+        << dt << "|" << endl;
     cout << "Muon sach thanh cong\n";
 }
 void TraSach(const string& ten){
@@ -799,7 +803,7 @@ int main() {
     r_lib(head);
     cout << "1. Dang nhap\n"
         << "2. Dang Ki\n";
-    int tt; cout <<"nhap thao tac"; cin >> tt;
+    int tt; cout <<"nhap thao tac : "; cin >> tt;
     while (tt!=1&&tt!=2){
         cout <<"Thao tac khong hop le!"<< endl;
         cout <<"Nhap lai thao tac"; cin >> tt;
