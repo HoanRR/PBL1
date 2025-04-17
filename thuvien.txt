@@ -1,4 +1,1000 @@
-001|Tuoi tre dang gia bao nhieu|Nguyen Van A|NXB GDDT|1994|chua muon|
-002|Dac Nhan Tam|Dale Carnegie|NXB Tre|2010|chua muon|
-003|Nha Gia Kim|Paulo Coelho|NXB VH|2015|chua muon|
-004|Viet Nam|Paulo Coelho|NXB VN|2022|chua muon|
+MS0001|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0002|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0003|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0004|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0005|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0006|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0007|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0008|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0009|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0010|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0011|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0012|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0013|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0014|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0015|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0016|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0017|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0018|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0019|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0020|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0021|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0022|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0023|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0024|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0025|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0026|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0027|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0028|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0029|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0030|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0031|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0032|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0033|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0034|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0035|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0036|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0037|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0038|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0039|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0040|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0041|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0042|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0043|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0044|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0045|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0046|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0047|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0048|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0049|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0050|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0051|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0052|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0053|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0054|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0055|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0056|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0057|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0058|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0059|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0060|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0061|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0062|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0063|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0064|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0065|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0066|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0067|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0068|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0069|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0070|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0071|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0072|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0073|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0074|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0075|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0076|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0077|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0078|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0079|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0080|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0081|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0082|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0083|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0084|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0085|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0086|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0087|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0088|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0089|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0090|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0091|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0092|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0093|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0094|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0095|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0096|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0097|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0098|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0099|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0100|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0101|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0102|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0103|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0104|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0105|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0106|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0107|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0108|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0109|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0110|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0111|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0112|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0113|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0114|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0115|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0116|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0117|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0118|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0119|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0120|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0121|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0122|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0123|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0124|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0125|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0126|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0127|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0128|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0129|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0130|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0131|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0132|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0133|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0134|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0135|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0136|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0137|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0138|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0139|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0140|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0141|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0142|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0143|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0144|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0145|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0146|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0147|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0148|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0149|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0150|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0151|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0152|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0153|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0154|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0155|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0156|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0157|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0158|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0159|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0160|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0161|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0162|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0163|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0164|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0165|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0166|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0167|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0168|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0169|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0170|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0171|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0172|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0173|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0174|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0175|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0176|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0177|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0178|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0179|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0180|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0181|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0182|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0183|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0184|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0185|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0186|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0187|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0188|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0189|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0190|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0191|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0192|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0193|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0194|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0195|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0196|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0197|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0198|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0199|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0200|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0201|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0202|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0203|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0204|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0205|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0206|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0207|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0208|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0209|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0210|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0211|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0212|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0213|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0214|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0215|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0216|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0217|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0218|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0219|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0220|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0221|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0222|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0223|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0224|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0225|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0226|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0227|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0228|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0229|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0230|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0231|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0232|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0233|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0234|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0235|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0236|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0237|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0238|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0239|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0240|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0241|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0242|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0243|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0244|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0245|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0246|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0247|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0248|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0249|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0250|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0251|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0252|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0253|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0254|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0255|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0256|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0257|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0258|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0259|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0260|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0261|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0262|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0263|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0264|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0265|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0266|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0267|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0268|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0269|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0270|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0271|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0272|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0273|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0274|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0275|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0276|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0277|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0278|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0279|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0280|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0281|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0282|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0283|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0284|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0285|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0286|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0287|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0288|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0289|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0290|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0291|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0292|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0293|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0294|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0295|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0296|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0297|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0298|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0299|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0300|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0301|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0302|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0303|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0304|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0305|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0306|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0307|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0308|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0309|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0310|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0311|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0312|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0313|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0314|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0315|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0316|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0317|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0318|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0319|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0320|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0321|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0322|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0323|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0324|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0325|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0326|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0327|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0328|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0329|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0330|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0331|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0332|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0333|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0334|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0335|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0336|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0337|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0338|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0339|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0340|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0341|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0342|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0343|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0344|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0345|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0346|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0347|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0348|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0349|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0350|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0351|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0352|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0353|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0354|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0355|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0356|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0357|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0358|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0359|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0360|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0361|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0362|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0363|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0364|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0365|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0366|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0367|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0368|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0369|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0370|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0371|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0372|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0373|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0374|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0375|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0376|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0377|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0378|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0379|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0380|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0381|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0382|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0383|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0384|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0385|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0386|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0387|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0388|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0389|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0390|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0391|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0392|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0393|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0394|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0395|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0396|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0397|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0398|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0399|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0400|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0401|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0402|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0403|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0404|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0405|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0406|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0407|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0408|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0409|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0410|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0411|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0412|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0413|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0414|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0415|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0416|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0417|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0418|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0419|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0420|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0421|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0422|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0423|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0424|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0425|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0426|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0427|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0428|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0429|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0430|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0431|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0432|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0433|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0434|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0435|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0436|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0437|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0438|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0439|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0440|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0441|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0442|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0443|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0444|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0445|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0446|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0447|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0448|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0449|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0450|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0451|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0452|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0453|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0454|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0455|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0456|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0457|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0458|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0459|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0460|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0461|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0462|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0463|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0464|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0465|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0466|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0467|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0468|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0469|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0470|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0471|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0472|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0473|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0474|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0475|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0476|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0477|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0478|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0479|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0480|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0481|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0482|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0483|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0484|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0485|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0486|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0487|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0488|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0489|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0490|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0491|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0492|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0493|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0494|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0495|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0496|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0497|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0498|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0499|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0500|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0501|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0502|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0503|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0504|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0505|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0506|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0507|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0508|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0509|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0510|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0511|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0512|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0513|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0514|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0515|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0516|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0517|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0518|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0519|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0520|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0521|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0522|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0523|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0524|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0525|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0526|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0527|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0528|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0529|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0530|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0531|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0532|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0533|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0534|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0535|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0536|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0537|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0538|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0539|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0540|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0541|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0542|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0543|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0544|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0545|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0546|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0547|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0548|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0549|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0550|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0551|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0552|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0553|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0554|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0555|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0556|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0557|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0558|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0559|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0560|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0561|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0562|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0563|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0564|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0565|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0566|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0567|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0568|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0569|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0570|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0571|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0572|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0573|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0574|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0575|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0576|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0577|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0578|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0579|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0580|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0581|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0582|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0583|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0584|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0585|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0586|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0587|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0588|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0589|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0590|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0591|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0592|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0593|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0594|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0595|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0596|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0597|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0598|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0599|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0600|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0601|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0602|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0603|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0604|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0605|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0606|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0607|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0608|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0609|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0610|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0611|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0612|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0613|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0614|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0615|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0616|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0617|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0618|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0619|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0620|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0621|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0622|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0623|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0624|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0625|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0626|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0627|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0628|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0629|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0630|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0631|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0632|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0633|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0634|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0635|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0636|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0637|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0638|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0639|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0640|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0641|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0642|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0643|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0644|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0645|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0646|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0647|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0648|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0649|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0650|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0651|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0652|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0653|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0654|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0655|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0656|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0657|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0658|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0659|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0660|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0661|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0662|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0663|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0664|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0665|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0666|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0667|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0668|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0669|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0670|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0671|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0672|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0673|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0674|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0675|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0676|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0677|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0678|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0679|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0680|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0681|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0682|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0683|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0684|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0685|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0686|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0687|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0688|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0689|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0690|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0691|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0692|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0693|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0694|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0695|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0696|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0697|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0698|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0699|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0700|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0701|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0702|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0703|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0704|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0705|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0706|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0707|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0708|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0709|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0710|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0711|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0712|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0713|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0714|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0715|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0716|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0717|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0718|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0719|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0720|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0721|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0722|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0723|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0724|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0725|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0726|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0727|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0728|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0729|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0730|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0731|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0732|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0733|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0734|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0735|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0736|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0737|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0738|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0739|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0740|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0741|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0742|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0743|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0744|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0745|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0746|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0747|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0748|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0749|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0750|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0751|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0752|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0753|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0754|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0755|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0756|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0757|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0758|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0759|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0760|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0761|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0762|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0763|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0764|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0765|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0766|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0767|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0768|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0769|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0770|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0771|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0772|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0773|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0774|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0775|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0776|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0777|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0778|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0779|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0780|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0781|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0782|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0783|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0784|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0785|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0786|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0787|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0788|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0789|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0790|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0791|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0792|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0793|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0794|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0795|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0796|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0797|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0798|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0799|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0800|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0801|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0802|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0803|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0804|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0805|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0806|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0807|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0808|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0809|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0810|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0811|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0812|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0813|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0814|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0815|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0816|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0817|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0818|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0819|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0820|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0821|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0822|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0823|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0824|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0825|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0826|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0827|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0828|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0829|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0830|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0831|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0832|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0833|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0834|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0835|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0836|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0837|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0838|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0839|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0840|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0841|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0842|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0843|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0844|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0845|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0846|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0847|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0848|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0849|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0850|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0851|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0852|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0853|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0854|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0855|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0856|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0857|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0858|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0859|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0860|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0861|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0862|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0863|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0864|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0865|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0866|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0867|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0868|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0869|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0870|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0871|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0872|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0873|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0874|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0875|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0876|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0877|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0878|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0879|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0880|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0881|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0882|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0883|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0884|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0885|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0886|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0887|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0888|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0889|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0890|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0891|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0892|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0893|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0894|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0895|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0896|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0897|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0898|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0899|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0900|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0901|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0902|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0903|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0904|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0905|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0906|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0907|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0908|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
+MS0909|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0910|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0911|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0912|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0913|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0914|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0915|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0916|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0917|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0918|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0919|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0920|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0921|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0922|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0923|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0924|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0925|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0926|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0927|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0928|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0929|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0930|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0931|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0932|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0933|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0934|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0935|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0936|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0937|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0938|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0939|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0940|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0941|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0942|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0943|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0944|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0945|Artificial Intelligence: A Modern Approach|Stuart Russell and Peter Norvig|Pearson|1995|True
+MS0946|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0947|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0948|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0949|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0950|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0951|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0952|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0953|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0954|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0955|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0956|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0957|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0958|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0959|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0960|The Pragmatic Programmer|Andrew Hunt and David Thomas|Addison-Wesley|1999|True
+MS0961|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0962|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0963|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0964|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0965|Computer Organization and Design|David A. Patterson|Morgan Kaufmann|1993|True
+MS0966|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0967|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0968|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0969|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0970|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0971|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
+MS0972|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
+MS0973|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0974|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0975|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0976|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0977|Computer Networks|Andrew S. Tanenbaum|Pearson|1981|True
+MS0978|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0979|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0980|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0981|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0982|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0983|Design Patterns|Erich Gamma et al.|Addison-Wesley|1994|True
+MS0984|Deep Learning|Ian Goodfellow|MIT Press|2016|True
+MS0985|Introduction to Algorithms|Thomas H. Cormen|MIT Press|1990|True
+MS0986|Refactoring|Martin Fowler|Addison-Wesley|1999|True
+MS0987|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0988|You Don't Know JS|Kyle Simpson|O'Reilly Media|2014|True
+MS0989|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0990|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Press|1985|True
+MS0991|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
+MS0992|Hands-On Machine Learning|Aurelien Geron|O'Reilly Media|2017|True
+MS0993|Python Crash Course|Eric Matthes|No Starch Press|2015|True
+MS0994|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS0995|Clean Code|Robert C. Martin|Prentice Hall|2008|True
+MS0996|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0997|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
+MS0998|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0999|Code Complete|Steve McConnell|Microsoft Press|1993|True
+MS1000|Operating System Concepts|Abraham Silberschatz|Wiley|1982|True
