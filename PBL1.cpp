@@ -89,7 +89,7 @@ string KiemTraDangNhap(const string& TenDangNhap, const string& Matkhau){
             return ten;
         }
     }
-    cout << "ten dang nhap hoac mat khau khong dung\n";
+    cout << "Ten dang nhap hoac mat khau khong dung.\n";
     fi.close();
     return "";
 }   
@@ -113,9 +113,15 @@ void DangKyTaiKhoan(){
             stringstream ss(line);
             string ten;
             getline(ss,ten,'|');
-            if (ten==TenDangNhap && ten.substr(0,5)!="admin"){
+            if (TenDangNhap.length() >= 5 && TenDangNhap.substr(0, 5) == "admin") {
                 kt = true;
-                cout << "Ten dang nhap ton tai.Hay nhap lai.";
+                cout << "khong duoc su dung ten dang nhap bat dau bang 'admin'. Vui long nhap lai.\n";
+                break;
+            }
+            else if (ten == TenDangNhap) {
+                kt = true;
+                cout << "Ten dang nhap da ton tai. Vui long nhap lai.\n";
+                break;
             }
         }
     }
@@ -327,7 +333,6 @@ void showtt(Node *head){
 }
 //-----------------------Tìm Kiếm---------------------
 Book** FindbyID(Node *head,string ID){
-    Node *DS = Head();
     head = head->next;
     string t = Vietthuong(ID);
     while(head!=NULL){
@@ -781,7 +786,7 @@ void trang_chu_user(const string& TenDangNhap, Node *head){
         }
         if (tt==5) cnt = false;
     }
-
+    save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file  
 }
 
 
@@ -789,14 +794,17 @@ void trang_chu_user(const string& TenDangNhap, Node *head){
 string dangnhap(){
     string TenDangNhap;
     string MatKhau;
+    string s;
     for (int i=3; i>0;i--){
         cout << "Nhap ten dang nhap: "; cin >> TenDangNhap;
         cout << "Nhap mat khau: "; cin >> MatKhau;
-        string s = KiemTraDangNhap(TenDangNhap,MatKhau);
-        if (s=="") cout << "Ban con " << i-1<<"lan dang nhap";
+        s = KiemTraDangNhap(TenDangNhap,MatKhau);
+        if (s==""&&i-1!=0) cout << "Ban con " << i-1<<" lan dang nhap"<<endl;
+        else if (s==""&& i-1 == 0) cout <<"Da qua lan dang nhap";
         else break;
     }
-    return TenDangNhap;
+    if (s=="") exit(0);
+    else return s;
 }
 int main() {
     Node* head = Head();
@@ -816,7 +824,6 @@ int main() {
         else trang_chu_user(TK,head);
     }
     else DangKyTaiKhoan();
-    //  save_to_file(head,"thuvien.txt"); // lưu lại DLSK đã sửa vào file
     // Giải phóng bộ nhớ
     Node* current = head;
     while (current != nullptr) {
