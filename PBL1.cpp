@@ -6,7 +6,8 @@
 #include <vector>
 #include <string>
 using namespace std;
-
+// sửa giao diện chính có nút thoát
+// Đang kí amin bị trùng nhưng vẫn được
 string Vietthuong(string c){
     transform(c.begin(),c.end(),c.begin(),::tolower);
     return c;
