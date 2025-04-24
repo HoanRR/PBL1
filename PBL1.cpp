@@ -851,6 +851,7 @@ void MuonSach(const string& Ten,Node *head){
         << (*sach)->ten << "|"
         << (*sach)->tac_gia << "|"
         << dt << "|" << endl;
+    save_to_file(head,"thuvien.txt");
     cout << "Muon sach thanh cong\n";
 }
 void TraSach(const string& ten, Node *head){
@@ -887,6 +888,7 @@ void TraSach(const string& ten, Node *head){
     cout << "Tra sach thanh cong";
     Book **sach = FindbyID(head,ID);
     (*sach)->soluong++;
+    save_to_file(head,"thuvien.txt");
 }
 //---------------in sach da muon-------------
 void print_user(const string &ten){
