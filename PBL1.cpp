@@ -316,7 +316,7 @@ void KhoiPhuc(Node* head,Node* rac){
 }
 // --------------------------- Xoa ----------------------------------
 bool DelByID(Node *head, string ID){
-   
+
     while(head->next!=NULL && Vietthuong(head->next->sach->ID) != Vietthuong(ID)){
         head = head->next;
     }
@@ -328,11 +328,11 @@ bool DelByID(Node *head, string ID){
         delete temp;
         return true;
     }
-    return false;
 
+    return false;
 }
 bool DelByTenSach(Node *head, string ten){
-   
+
     while(head->next!=NULL && Vietthuong(head->next->sach->ten) != Vietthuong(ten)){
         head = head->next;
     }
@@ -344,6 +344,7 @@ bool DelByTenSach(Node *head, string ten){
         delete temp;
         return true;
     }
+
     return false;
 
 }
@@ -535,6 +536,7 @@ void them_sach(Node *head){
         pushend(head,C);
         cout << "Da them thanh cong\n";
     }
+    save_to_file(head,"thuvien.txt");
 }
 void xoa_sach(Node *head){
     cout <<"---------------Xoa sach---------------------\n";
@@ -574,12 +576,13 @@ void xoa_sach(Node *head){
     else if (tt==5){
        string ID ; cout << "Nhap ma so : ";getline(cin,ID);
        if( XoaSauMa(head,ID)) cout << "Xoa thanh cong\n";
-        else cout << "Khong tim thay\n";
+       else cout << "Khong tim thay\n";
     }
     else if (tt==6){
         XoaCuoi(head);
         cout << "Xoa thanh cong\n";
     }
+    save_to_file(head,"thuvien.txt");
 }
 
 void Thung_rac(Node *head, Node *rac){
@@ -728,6 +731,7 @@ void Sua_sach(Node *head){
             cout <<"Thao tac khong hop le!\n";
         }
     } 
+    save_to_file(head,"thuvien.txt");
 }
 
 void Xem_sach(Node *head){ // thieu
