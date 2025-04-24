@@ -7,6 +7,8 @@
 #include <string>
 using namespace std;
 
+
+
 string Vietthuong(string c){
     transform(c.begin(),c.end(),c.begin(),::tolower);
     return c;
@@ -27,6 +29,7 @@ struct Node {
     Book* sach;
 };
 
+bool DelByID(Node *head, string ID);
 
 // Khởi tạo 1 sách mới
 Book* tao_sach(const string& ID, const string& ten, const string& tac_gia, const string& nxb,long namsx,long soluong) {
@@ -165,6 +168,22 @@ void r_lib(Node* &head) {
 }
 
 
+//-----------------------------In ra màn hình---------------------------------------------
+// In ra tất cả sách
+void print_lib(Node* head) {
+    head = head->next;
+    while (head != nullptr) {
+        cout << "ID: " << head->sach->ID
+             << "\nTen: " << head->sach->ten
+             << "\nTac gia: " << head->sach->tac_gia
+             << "\nNXB: " << head->sach->nxb
+             << "\nNam san xuat: " << head->sach->namsx
+             << "\nSo luong: " << head->sach->soluong;
+        if (head->sach->Trang_thai) cout << "\nTrang thai: Con\n\n";
+        else cout <<"\n Trang thai: Het\n";
+        head = head->next;
+    }
+}
 // ---------------------------- Sap xep-----------------------------
 
 void SapXepTheoTenSach(Node *head){ // tăng dần 
@@ -234,6 +253,40 @@ void Add_RecycleBin(Book *b){
         if (b->Trang_thai) fo << "Con|"<<endl;
         else fo <<"Het|"<<endl;
     }
+
+
+void Xem_RecycleBin(Node *head){
+    ifstream fi("thung_rac.txt");
+    if (!fi.is_open()) {
+        cout << "Khong the mo file\n";
+        return;
+    }
+
+    string line;
+    while (getline(fi, line)) {
+        stringstream ss(line);
+        string ID, ten, tac_gia, nxb, namsx_str, sl,trangthai;
+
+        getline(ss, ID, '|');
+        getline(ss, ten, '|');
+        getline(ss, tac_gia, '|');
+        getline(ss, nxb, '|');
+        getline(ss, namsx_str, '|');
+        getline(ss, sl, '|');
+
+        long namsx = stol(namsx_str);
+        long soluong =stol(sl);
+    
+        Book* sach = tao_sach(ID, ten, tac_gia, nxb, namsx, soluong);
+        pushend(head, sach);
+    }
+    print_lib(head);
+
+}
+
+void KhoiPhuc(Node *head,Node *rac){
+    
+}
 
 // --------------------------- Xoa ----------------------------------
 bool DelByID(Node *head, string ID){
@@ -329,22 +382,6 @@ void XoaCuoi(Node *head){
    
 }
 
-//-----------------------------In ra màn hình---------------------------------------------
-// In ra tất cả sách
-void print_lib(Node* head) {
-    head = head->next;
-    while (head != nullptr) {
-        cout << "ID: " << head->sach->ID
-             << "\nTen: " << head->sach->ten
-             << "\nTac gia: " << head->sach->tac_gia
-             << "\nNXB: " << head->sach->nxb
-             << "\nNam san xuat: " << head->sach->namsx
-             << "\nSo luong: " << head->sach->soluong;
-        if (head->sach->Trang_thai) cout << "\nTrang thai: Con\n\n";
-        else cout <<"\n Trang thai: Het\n";
-        head = head->next;
-    }
-}
 
 void showtt(Node *head){
      cout << "ID: " << head->sach->ID
@@ -675,6 +712,7 @@ void LuuVaoFile(Node *head){
     save_to_file(head,file_name);
 }
 void trang_chu_admin(Node *head){
+    Node *rac = Head();
     bool cnt = true;
      while(cnt){
         cout << "\n\n --------- Quan ly thu vien ---------------\n";
@@ -682,6 +720,7 @@ void trang_chu_admin(Node *head){
              << "2.Xoa sach\n"
              << "3.Tim kiem sach\n"
              << "4.Xem sach\n"
+             << "5.Thung rac\n"
              << "6.Sua noi dung sach\n"
              << "7.Luu vao file\n"
              << "8.Thoat\n";
@@ -692,22 +731,41 @@ void trang_chu_admin(Node *head){
         if (tt==1){
            them_sach(head);
         }
-        if (tt==2){
+        else if (tt==2){
             xoa_sach(head);
         }
-        if (tt==3){
+        else if (tt==3){
             Tim_sach(head);
         }
-        if (tt==4){
+        else if (tt==4){
             xem_sach(head);
         }
-        if (tt==6){
+        else if (tt==5){
+            cout << "1.Xem thung rac\n"
+                 << "2.Khoi phuc tu thung rac\n";
+                 int tt2 ; cout << "Nhap thao tac : "; cin >> tt2;
+                 cin.ignore();
+                 if (tt2==1){
+                    Xem_RecycleBin(rac);
+                 }
+                 else if (tt2==2){
+                    KhoiPhuc(head,rac);
+                 }
+                 else {
+                    cout << "Thao tac khong hop le!\n";
+                 }
+
+        }
+        else if (tt==6){
             Sua_sach(head);
         }
-        if (tt==7){
+        else if (tt==7){
             LuuVaoFile(head);
         }
-        if (tt==8) cnt = false;
+        else if (tt==8) cnt = false;
+        else{
+            cout << "Thao tac khong hop le\n";
+        }
     }
     save_to_file(head,"thuvien.txt");
 }

@@ -1,7 +1,4 @@
-admin|admin|
 tai123|123|
-huutai01679|Tai123|
-admin1311|admin|
 admin|admin|
-admin|admin|
-admin|admin|
+huutai|123|
+vn|vn|
