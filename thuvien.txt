@@ -9,7 +9,7 @@ MS0008|Structure and Interpretation of Computer Programs|Harold Abelson|MIT Pres
 MS0009|Clean Code|Robert C. Martin|Prentice Hall|2008|True
 MS0010|The C++ Programming Language|Bjarne Stroustrup|Addison-Wesley|1985|True
 MS0011|The Mythical Man-Month|Fred Brooks|Addison-Wesley|1975|True
-MS0012|The Art of Computer Programming|Donald Knuth|Addison-Wesley|1968|True
+MS0012|The Art of Computer Programming|Donald 	Knuth|Addison-Wesley|1968|True
 MS0013|C Programming Language|Brian W. Kernighan and Dennis M. Ritchie|Prentice Hall|1978|True
 MS0014|Database System Concepts|Abraham Silberschatz|McGraw-Hill|1986|True
 MS0015|Python Crash Course|Eric Matthes|No Starch Press|2015|True
