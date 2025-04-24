@@ -6,17 +6,12 @@
 #include <vector>
 #include <string>
 using namespace std;
-// sửa giao diện chính có nút thoát
-// Đang kí amin bị trùng nhưng vẫn được
+
 string Vietthuong(string c){
     transform(c.begin(),c.end(),c.begin(),::tolower);
     return c;
 }
-// cần thêm số lượng
-// 1. chỉnh struct note Trạng thái ở đây sẽ là hết sách hay còn sách
-// 2. chỉnh tạo sách
-// 3. chỉnh mượn sách
-// 4. chỉnh đọc/ra file 
+
 struct Book {
     string ID;
     string ten;
@@ -223,6 +218,23 @@ void SapXepTheoNamSX(Node *head){ // tăng dan
         swap(i->sach,minNode->sach);
     }
 }
+// ---------------------------Thung rac-----------------
+void Add_RecycleBin(Book *b){
+    ofstream fo("thung_rac.txt",ios::app);
+    if (!fo.is_open()){
+        cout << "Khong the mo file de ghi\n";
+        return;
+    }
+        fo << b->ID << "|"
+           << b->ten << "|"
+           << b->tac_gia << "|"
+           << b->nxb << "|"
+           << b->namsx << "|"
+           << b->soluong << "|";
+        if (b->Trang_thai) fo << "Con|"<<endl;
+        else fo <<"Het|"<<endl;
+    }
+
 // --------------------------- Xoa ----------------------------------
 bool DelByID(Node *head, string ID){
    
@@ -230,6 +242,7 @@ bool DelByID(Node *head, string ID){
         head = head->next;
     }
     if (head->next!=NULL){
+        Add_RecycleBin(head->next->sach);
         Node *temp = head->next;
         head->next = head->next->next;
         delete temp->sach;
@@ -245,6 +258,7 @@ bool DelByTenSach(Node *head, string ten){
         head = head->next;
     }
     if (head->next!=NULL){
+        Add_RecycleBin(head->next->sach);
         Node *temp = head->next;
         head->next = head->next->next;
         delete temp->sach;
@@ -260,6 +274,7 @@ bool DelByTacGia(Node *head, string tg){
 while(head->next!=NULL){
     if (Vietthuong(head->next->sach->tac_gia) == Vietthuong(tg)){
         Node *temp = head->next;
+        Add_RecycleBin(head->next->sach);
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
@@ -274,6 +289,7 @@ while(head->next!=NULL){
 }
 
 void XoaDau(Node *head){
+    Add_RecycleBin(head->next->sach);
     Node *temp = head->next;
     head->next = head->next->next;
     delete temp->sach;
@@ -287,6 +303,7 @@ bool XoaSauMa(Node *head,string ID){
     }
     if (head !=NULL && head->next!=NULL){ // node hiện tại và phía sau đều tồn tại
         Node *temp = head->next;
+        Add_RecycleBin(head->next->sach);
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
@@ -305,6 +322,7 @@ void XoaCuoi(Node *head){
         prev = temp;
         temp = temp->next;
    }
+   Add_RecycleBin(temp->sach);
    prev->next = NULL;
    delete temp->sach;
    delete temp;
@@ -828,10 +846,14 @@ string dangnhap(){
 int main() {
     Node* head = Head();
     r_lib(head);
-    cout << "1. Dang nhap\n"
-        << "2. Dang Ki\n";
+    bool check = true;
+    while(check){
+    cout << "-----------------------Trang chu----------------\n" 
+        << "1. Dang nhap\n"
+        << "2. Dang Ki\n"
+        << "3. Thoat\n";
     int tt; cout <<"Nhap thao tac : "; cin >> tt;
-    while (tt!=1&&tt!=2){
+    while (tt!=1&&tt!=2 && tt!=3){
         cout <<"Thao tac khong hop le!"<< endl;
         cin.clear();
         cin.ignore(1000,'\n');
@@ -845,6 +867,8 @@ int main() {
         else trang_chu_user(TK,head);
     }
     else if (tt==2) DangKyTaiKhoan();
+    else if (tt==3) check = false;
+}
     // Giải phóng bộ nhớ
     Node* current = head;
     while (current != nullptr) {
