@@ -29,13 +29,43 @@ struct Node {
     Book* sach;
 };
 
-bool DelByID(Node *head, string ID);
-void Xem_sach(Node* head);
-void Tim_sach(Node* head);
 void save_to_file(Node *head, const string& filename);
-Book** FindbyID(Node *head,const string& ID);
+void print_lib(Node* head) ;
+void SapXepTheoTenSach(Node *head);
+void SapXepTheoTenTacGia(Node *head);
+void SapXepTheoNXB(Node *head);
+void SapXepTheoNamSX(Node *head);
+void Add_RecycleBin(Book *b);
+void KhoiPhuc_TatCa(Node *head,Node *rac);
+void KhoiPhuc_1Cuon(Node *head, Node *rac);
 void KhoiPhuc(Node* head,Node* rac);
+bool DelByTenSach(Node *head, string ten);
+bool DelByID(Node *head, string ID);
 
+void XoaDau(Node *head);
+void XoaCuoi(Node *head);
+bool XoaSauMa(Node *head,string ID);
+
+void showtt(Node *head);
+Book** FindbyID(Node *head,const string& ID);
+Node* FindbyTenSach(Node *head,string tensach);
+Node* FindbyTacGia(Node *head,string tg);
+Node* FindbyNXB(Node *head,string NXB);
+Node* FindChuaMuon(Node *head);
+
+void them_sach(Node *head);
+void xoa_sach(Node *head);
+void Xem_sach(Node* head);
+void Thung_rac(Node *head, Node *rac);
+void Tim_sach(Node *head);
+void Sua_sach(Node *head);
+
+void LuuVaoFile(Node *head);
+
+void MuonSach(const string& Ten,Node *head);
+void TraSach(const string& ten, Node *head);
+void print_user(const string &ten);
+void trang_chu_user(const string& TenDangNhap, Node *head);
 
 // Khởi tạo 1 sách mới
 Book* tao_sach(const string& ID, const string& ten, const string& tac_gia, const string& nxb,long namsx,long soluong) {
