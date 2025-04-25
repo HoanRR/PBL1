@@ -35,16 +35,16 @@ void SapXepTheoTenSach(Node *head);
 void SapXepTheoTenTacGia(Node *head);
 void SapXepTheoNXB(Node *head);
 void SapXepTheoNamSX(Node *head);
-void Add_RecycleBin(Book *b);
+void Add_RecycleBin(Node *rac,Book *b);
 void KhoiPhuc_TatCa(Node *head,Node *rac);
 void KhoiPhuc_1Cuon(Node *head, Node *rac);
 void KhoiPhuc(Node* head,Node* rac);
-bool DelByTenSach(Node *head, string ten);
-bool DelByID(Node *head, string ID);
+bool DelByTenSach(Node *head,Node *rac, string ten);
+bool DelByID(Node *head,Node *rac, string ID);
 
-void XoaDau(Node *head);
-void XoaCuoi(Node *head);
-bool XoaSauMa(Node *head,string ID);
+void XoaDau(Node *head,Node *rac);
+void XoaCuoi(Node *head,Node *rac);
+bool XoaSauMa(Node *head,Node *rac,string ID);
 
 void showtt(Node *head);
 Book** FindbyID(Node *head,const string& ID);
@@ -54,7 +54,7 @@ Node* FindbyNXB(Node *head,string NXB);
 Node* FindChuaMuon(Node *head);
 
 void them_sach(Node *head);
-void xoa_sach(Node *head);
+void xoa_sach(Node *head,Node *rac);
 void Xem_sach(Node* head);
 void Thung_rac(Node *head, Node *rac);
 void Tim_sach(Node *head);
@@ -286,7 +286,8 @@ void SapXepTheoNamSX(Node *head){ // tăng dan
     }
 }
 // ---------------------------Thung rac-----------------
-void Add_RecycleBin(Book *b){
+void Add_RecycleBin(Node *rac,Book *b){
+	pushend(rac,b);
     ofstream fo("thung_rac.txt",ios::app);
     if (!fo.is_open()){
         cout << "Khong the mo file de ghi\n";
@@ -314,22 +315,24 @@ void KhoiPhuc_TatCa(Node *head,Node *rac){
 
 void KhoiPhuc_1Cuon(Node *head, Node *rac){
     string ID;
-    cout <<"Nhap ID sach muon khoi phuc"; cin >> ID;
+    cout <<"Nhap ID sach muon khoi phuc : "; cin >> ID;
     Book** Sach = FindbyID(rac,ID);
-    if ((*Sach)!=NULL){
-        DelByID(rac,ID);
+    if ((*Sach)!=NULL && Sach != NULL){
+        DelByID(rac,rac,ID);
         pushend(head,*Sach);
     }
+    save_to_file(head,"thuvien.txt");
+    save_to_file(rac,"Thung_rac.txt");
 }
 void KhoiPhuc(Node* head,Node* rac){
     bool check=true;
-    while (check){
-        cout <<"--------------------------------";
+	while (check){
+        cout <<"-----------------------------------------------\n";
          cout << "1.Khoi phuc tat ca\n"
         << "2.Khoi phuc 1 cuon sach\n"
-        <<"3. Thoat\n";
+        <<"3.Thoat\n";
         int tt;
-        cout<<"Nhap thao tac :"; cin >> tt;
+        cout<<"Nhap thao tac : "; cin >> tt;
         if (tt == 1 ){
             KhoiPhuc_TatCa(head,rac);
         }
@@ -340,18 +343,18 @@ void KhoiPhuc(Node* head,Node* rac){
             check = false;
         }
         else {
-            cout <<"Thao tac khong hop le. Vui long nhap lai.";
+            cout <<"Thao tac khong hop le. Vui long nhap lai\n";
         }
     }
 }
 // --------------------------- Xoa ----------------------------------
-bool DelByID(Node *head, string ID){
+bool DelByID(Node *head,Node *rac, string ID){
 
     while(head->next!=NULL && Vietthuong(head->next->sach->ID) != Vietthuong(ID)){
         head = head->next;
     }
     if (head->next!=NULL){
-        Add_RecycleBin(head->next->sach);
+        Add_RecycleBin(rac,head->next->sach);
         Node *temp = head->next;
         head->next = head->next->next;
         delete temp->sach;
@@ -361,13 +364,13 @@ bool DelByID(Node *head, string ID){
 
     return false;
 }
-bool DelByTenSach(Node *head, string ten){
+bool DelByTenSach(Node *head,Node *rac, string ten){
 
     while(head->next!=NULL && Vietthuong(head->next->sach->ten) != Vietthuong(ten)){
         head = head->next;
     }
     if (head->next!=NULL){
-        Add_RecycleBin(head->next->sach);
+        Add_RecycleBin(rac,head->next->sach);
         Node *temp = head->next;
         head->next = head->next->next;
         delete temp->sach;
@@ -379,12 +382,12 @@ bool DelByTenSach(Node *head, string ten){
 
 }
 
-bool DelByTacGia(Node *head, string tg){
+bool DelByTacGia(Node *head,Node *rac, string tg){
     bool check = false;
 while(head->next!=NULL){
     if (Vietthuong(head->next->sach->tac_gia) == Vietthuong(tg)){
         Node *temp = head->next;
-        Add_RecycleBin(head->next->sach);
+        Add_RecycleBin(rac,head->next->sach);
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
@@ -398,22 +401,22 @@ while(head->next!=NULL){
     return check;
 }
 
-void XoaDau(Node *head){
-    Add_RecycleBin(head->next->sach);
+void XoaDau(Node *head,Node *rac){
+    Add_RecycleBin(rac,head->next->sach);
     Node *temp = head->next;
     head->next = head->next->next;
     delete temp->sach;
     delete temp;
 }
 
-bool XoaSauMa(Node *head,string ID){
+bool XoaSauMa(Node *head,Node *rac,string ID){
     head = head->next;
     while(head!=NULL && head->next!=NULL && Vietthuong(head->sach->ID) != Vietthuong(ID)){
         head = head->next;
     }
     if (head !=NULL && head->next!=NULL){ // node hiện tại và phía sau đều tồn tại
         Node *temp = head->next;
-        Add_RecycleBin(head->next->sach);
+        Add_RecycleBin(rac,head->next->sach);
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
@@ -422,7 +425,7 @@ bool XoaSauMa(Node *head,string ID){
     return false;
 }
 
-void XoaCuoi(Node *head){
+void XoaCuoi(Node *head,Node *rac){
    if (head->next==NULL) return;
 
    Node *prev = head;
@@ -432,7 +435,7 @@ void XoaCuoi(Node *head){
         prev = temp;
         temp = temp->next;
    }
-   Add_RecycleBin(temp->sach);
+   Add_RecycleBin(rac,temp->sach);
    prev->next = NULL;
    delete temp->sach;
    delete temp;
@@ -539,7 +542,7 @@ void save_to_file(Node *head, const string& filename){
 
 
 void them_sach(Node *head){
-   	cout <<"-------------Them sach -----------------------\n";
+   	cout <<"-----------------Them sach -----------------------\n";
     string ID,tensach, tacgia,NXB;
     long namsx ,sluong;
     cout << "Nhap ID : " ; getline(cin,ID);
@@ -568,7 +571,7 @@ void them_sach(Node *head){
     }
     save_to_file(head,"thuvien.txt");
 }
-void xoa_sach(Node *head){
+void xoa_sach(Node *head,Node *rac){
     cout <<"---------------Xoa sach---------------------\n";
     cout << "1.Theo Ma So\n"
          << "2.Theo Ten Sach\n"
@@ -586,30 +589,30 @@ void xoa_sach(Node *head){
     cin.ignore();
     if (tt==1){
         string ID ; cout << "Nhap ma so : ";getline(cin,ID);
-        if (DelByID(head,ID)) cout << "Xoa thanh cong\n";
+        if (DelByID(head,rac,ID)) cout << "Xoa thanh cong\n";
         else cout << "Khong tim thay\n";
     }
     else if (tt==2){
         string ts ; cout << "Nhap ten sach : ";getline(cin,ts);
-        if (DelByTenSach(head,ts))cout << "Xoa thanh cong\n";
+        if (DelByTenSach(head,rac,ts))cout << "Xoa thanh cong\n";
         else cout << "Khong tim thay\n";
     }
     else if (tt==3){
         string tg; cout << "Nhap ten tac gia : ";getline(cin,tg);
-        if(DelByTacGia(head,tg))cout << "Xoa thanh cong\n";
+        if(DelByTacGia(head,rac,tg))cout << "Xoa thanh cong\n";
         else cout << "Khong tim thay\n";
     }
     else if (tt==4){
-        XoaDau(head);
+        XoaDau(head,rac);
         cout << "Xoa thanh cong\n";
     }
     else if (tt==5){
        string ID ; cout << "Nhap ma so : ";getline(cin,ID);
-       if( XoaSauMa(head,ID)) cout << "Xoa thanh cong\n";
+       if( XoaSauMa(head,rac,ID)) cout << "Xoa thanh cong\n";
        else cout << "Khong tim thay\n";
     }
     else if (tt==6){
-        XoaCuoi(head);
+        XoaCuoi(head,rac);
         cout << "Xoa thanh cong\n";
     }
     save_to_file(head,"thuvien.txt");
@@ -648,7 +651,7 @@ void Thung_rac(Node *head, Node *rac){
 void Tim_sach(Node *head){
     bool check = true;
     while(check){
-    	cout <<"---------------Tim sach--------------------\n";
+    	cout <<"\n---------------Tim sach--------------------\n";
         cout << "1.Theo ten sach\n"
              << "2.Theo ten tac gia\n"
              << "3.Theo ten Nha xuat ban\n"
@@ -665,7 +668,7 @@ void Tim_sach(Node *head){
                 cout << "------------Danh sach liet ke --------------------\n";
                 print_lib(ds);
                 delete ds;
-            } else cout <<"Thu vien khong co sach nay";
+            } else cout <<"Thu vien khong co sach nay!\n";
         }
         else if (tt==2){
             // cin.ignore();
@@ -676,7 +679,7 @@ void Tim_sach(Node *head){
                 cout << "------------Danh sach liet ke --------------------\n";
                 print_lib(ds);
                 delete ds;
-            } else cout <<"Thu vien khong co sach nay";
+            } else cout <<"Thu vien khong co sach nay!\n";
         }
         else if (tt==3){
             // cin.ignore();
@@ -699,7 +702,7 @@ void Tim_sach(Node *head){
         	check = false;
         }
         else {
-        	cout <<"Thao tac khong hop le. Vui long nhap lai";
+        	cout <<"Thao tac khong hop le. Vui long nhap lai!\n";
         }
     }
     
@@ -834,7 +837,7 @@ void trang_chu_admin(Node *head){
            them_sach(head);
         }
         else if (tt==2){
-            xoa_sach(head);
+            xoa_sach(head,rac);
         }
         else if (tt==3){
             Tim_sach(head);
@@ -925,7 +928,7 @@ void print_user(const string &ten){
     ifstream fi (temp);   
     string line;
     int i =1;
-    cout <<"Danh sach sach da muon:";
+    cout <<"Danh sach sach da muon:\n";
     while (getline(fi,line)){
         string ID,ten,tacgia,ThoiGian;
         stringstream ss(line);
@@ -952,7 +955,7 @@ void trang_chu_user(const string& TenDangNhap, Node *head){
              << "2.Xem sach da muon\n"
              << "3.Muon sach\n"
              << "4.Tra sach\n"
-             << "5.Thoat\n";
+             << "5.Dang xuat\n";
 
         int tt; cout << "Nhap thao tac : ";cin >> tt;
         if (tt==1){

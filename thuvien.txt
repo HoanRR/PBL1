@@ -1,4 +1,4 @@
-002|Cau truc du lieu|Le Van C|NXB Khoa hoc|2021|7|Con|
+002|Cau truc du lieu|Le Van C|NXB Khoa hoc|2021|5|Con|
 003|Giai thuat can ban|Tran Thi B|NXB DH Quoc gia|2018|6|Con|
 004|Tri tue nhan tao|Le Van C|NXB Khoa hoc|2023|9|Con|
 005|Hoc may nang cao|Le Van C|NXB Cong nghe|2020|6|Con|
@@ -16,3 +16,5 @@
 017|Thiet ke thuat toan|Le Van C|NXB Thong ke|2022|13|Con|
 018|Xu ly ngon ngu tu nhien|Le Van C|NXB Khoa hoc|2021|10|Con|
 019|Thuc tap AI|Ngo Van E|NXB Cong nghe|2020|7|Con|
+001|Lap trinh Python co ban|Le Van C|NXB Giao duc|2023|8|Con|
+020|Du an cuoi khoa|Ngo Van E|NXB Thong ke|2019|72|Con|
