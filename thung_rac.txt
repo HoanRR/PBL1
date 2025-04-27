@@ -1,1 +1,2 @@
-001|Lap trinh Python co ban|Le Van C|NXB Giao duc|2023|8|Con|
+001|hoandep|Le Van C|NXB Giao duc|2023|24|Con
+002|Cau truc du lieu|Le Van C|NXB Khoa hoc|2021|5|Con

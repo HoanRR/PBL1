@@ -1,20 +1,14 @@
-002|Cau truc du lieu|Le Van C|NXB Khoa hoc|2021|5|Con|
-003|Giai thuat can ban|Tran Thi B|NXB DH Quoc gia|2018|6|Con|
-004|Tri tue nhan tao|Le Van C|NXB Khoa hoc|2023|9|Con|
 005|Hoc may nang cao|Le Van C|NXB Cong nghe|2020|6|Con|
 006|Khoa hoc du lieu|Nguyen Van A|NXB Giao duc|2019|5|Con|
 007|Lap trinh huong doi tuong|Le Van C|NXB Cong nghe|2019|15|Con|
 008|Mang may tinh|Tran Thi B|NXB DH Quoc gia|2019|13|Con|
 009|Co so du lieu|Pham Thi D|NXB Khoa hoc|2019|9|Con|
-010|An toan thong tin|Nguyen Van A|NXB Giao duc|2024|8|Con|
-011|Phan tich du lieu|Ngo Van E|NXB DH Quoc gia|2019|4|Con|
-012|Lap trinh web|Nguyen Van A|NXB Cong nghe|2018|14|Con|
-013|Toan roi rac|Le Van C|NXB Giao duc|2021|7|Con|
 014|He dieu hanh|Ngo Van E|NXB Thong ke|2018|4|Con|
 015|Lap trinh Java|Ngo Van E|NXB Cong nghe|2023|10|Con|
-016|Hoc sau may tinh|Pham Thi D|NXB Cong nghe|2018|14|Con|
 017|Thiet ke thuat toan|Le Van C|NXB Thong ke|2022|13|Con|
 018|Xu ly ngon ngu tu nhien|Le Van C|NXB Khoa hoc|2021|10|Con|
 019|Thuc tap AI|Ngo Van E|NXB Cong nghe|2020|7|Con|
-001|Lap trinh Python co ban|Le Van C|NXB Giao duc|2023|8|Con|
 020|Du an cuoi khoa|Ngo Van E|NXB Thong ke|2019|72|Con|
+013|Toan roi rac|Le Van C|NXB Giao duc|2021|7|Con|
+010|An toan thong tin|Nguyen Van A|NXB Giao duc|2024|8|Con|
+003|Giai thuat can ban|Tran Thi B|NXB DH Quoc gia|2018|6|Con|
