@@ -39,8 +39,10 @@ bool DelByID(Node *head,Node *rac, string ID);
 void XoaDau(Node *head,Node *rac);
 void XoaCuoi(Node *head,Node *rac);
 bool XoaSauMa(Node *head,Node *rac,string ID);
+bool DelByTacGia(Node *head,Node *rac, string tg);
 
-void showtt(Node *head);
+
+void showtt(Node *head,int x , int y);
 Book** FindbyID(Node *head,const string& ID);
 Node* FindbyTenSach(Node *head,string tensach);
 Node* FindbyTacGia(Node *head,string tg);
@@ -55,6 +57,7 @@ void Tim_sach(Node *head);
 void Sua_sach(Node *head);
 
 void LuuVaoFile(Node *head);
+
 
 void MuonSach(const string& Ten,Node *head);
 void TraSach(const string& ten, Node *head);
@@ -435,6 +438,8 @@ bool DelByID(Node *head,Node *rac, string ID){
     }
     if (head->next!=NULL){
         Add_RecycleBin(rac,head->next->sach);
+            showtt(head->next,22,6);
+
         Node *temp = head->next;
         head->next = head->next->next;
         delete temp->sach;
@@ -451,6 +456,8 @@ bool DelByTenSach(Node *head,Node *rac, string ten){
     }
     if (head->next!=NULL){
         Add_RecycleBin(rac,head->next->sach);
+            showtt(head->next,22,6);
+
         Node *temp = head->next;
         head->next = head->next->next;
         delete temp->sach;
@@ -464,25 +471,29 @@ bool DelByTenSach(Node *head,Node *rac, string ten){
 
 bool DelByTacGia(Node *head,Node *rac, string tg){
     bool check = false;
+    int x = 22 , y = 6;
 while(head->next!=NULL){
     if (Vietthuong(head->next->sach->tac_gia) == Vietthuong(tg)){
         Node *temp = head->next;
         Add_RecycleBin(rac,head->next->sach);
+        showtt(head->next,x,y);
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
         check = true;
+        y+=3;
+
     }
     else{
         head = head->next;
     }
-    
     }
     return check;
 }
 
 void XoaDau(Node *head,Node *rac){
     Add_RecycleBin(rac,head->next->sach);
+    showtt(head->next,22,6);
     Node *temp = head->next;
     head->next = head->next->next;
     delete temp->sach;
@@ -497,6 +508,8 @@ bool XoaSauMa(Node *head,Node *rac,string ID){
     if (head !=NULL && head->next!=NULL){ // node hiện tại và phía sau đều tồn tại
         Node *temp = head->next;
         Add_RecycleBin(rac,head->next->sach);
+        showtt(head->next,22,6);
+
         head->next = head->next->next;
         delete temp->sach;
         delete temp;
@@ -516,6 +529,8 @@ void XoaCuoi(Node *head,Node *rac){
         temp = temp->next;
    }
    Add_RecycleBin(rac,temp->sach);
+    showtt(temp,22,6);
+
    prev->next = NULL;
    delete temp->sach;
    delete temp;
@@ -523,15 +538,10 @@ void XoaCuoi(Node *head,Node *rac){
 }
 
 
-void showtt(Node *head){
-     cout << "ID: " << head->sach->ID
-             << "\nTen: " << head->sach->ten
-             << "\nTac gia: " << head->sach->tac_gia
-             << "\nNXB: " << head->sach->nxb
-             << "\nNam san xuat: " << head->sach->namsx
-             << "\nSo luong: " << head->sach->soluong;
-        if (head->sach->Trang_thai) cout << "\nTrang thai: Con\n\n";
-        else cout <<"\n Trang thai: Het\n";
+void showtt(Node *head, int x , int y){
+     gotoXY(x,y);
+     cout << "ID: " << head->sach->ID;
+     gotoXY(x,y+1) ; cout << "Ten: " << head->sach->ten;
 }
 //-----------------------Tìm Kiếm---------------------
 Book** FindbyID(Node *head,const string& ID){
@@ -623,7 +633,7 @@ void save_to_file(Node *head, const string& filename){
 
 void them_sach(Node *head) {
     system("cls");
-    int x = 20, y = 2, width = 80, height = 20;
+    int x = 20, y = 2, width = 80, height = 25;
     drawBox(x, y, width, height);
 
     gotoXY(x + (width - 20) / 2, y + 1);
@@ -663,16 +673,18 @@ void them_sach(Node *head) {
     cout << "1. Them vao dau";
     gotoXY(x + 2, y + 16);
     cout << "2. Them vao cuoi";
-
+    bool check = true;
     int tt;
     gotoXY(x + 2, y + 17);
     cout << "Nhap thao tac: ";
     cin >> tt;
-
+    cin.clear();
+    int i = 1;
     while (tt != 1 && tt != 2) {
-        gotoXY(x + 2, y + 18);
-        cout << "Thao tac khong hop le. Nhap lai: ";
+        gotoXY(x + 2, y + 18 +i);
+        cout << "Thao tac khong hop le!. Nhap lai : ";
         cin >> tt;
+        i++;
     }
 
     if (tt == 1) {
@@ -683,11 +695,13 @@ void them_sach(Node *head) {
 
     save_to_file(head, "thuvien.txt");
 
-    gotoXY(x + 2, y + height);
+    gotoXY(x + 2, y + height-3);
     cout << "Da them sach thanh cong!";
     Sleep(1500);
 }
 void xoa_sach(Node *head, Node *rac) {
+    bool check = true;
+    while(check){
     system("cls");
     int x = 20, y = 2, width = 80, height = 22;
     drawBox(x, y, width, height);
@@ -707,20 +721,24 @@ void xoa_sach(Node *head, Node *rac) {
     cout << "5. Xoa sau ma so";
     gotoXY(x + 2, y + 13);
     cout << "6. Xoa cuoi danh sach";
+    gotoXY(x+2,y+15);
+    cout << "7. Thoat";
 
     int tt;
-    gotoXY(x + 2, y + 15);
+    gotoXY(x + 2, y + 17);
     cout << "Nhap thao tac: ";
     cin >> tt;
     cin.clear();
     cin.ignore(1000, '\n');
 
-    while (tt < 1 || tt > 6) {
-        gotoXY(x + 2, y + 17);
-        cout << "Thao tac khong hop le. Nhap lai: ";
+    int i = 1;
+    while (tt != 1 && tt != 2 && tt!=3 && tt!=4 && tt!=5 && tt!=6 && tt!=7) {
+        gotoXY(x + 2, y + 17 +i);
+        cout << "Thao tac khong hop le!. Nhap lai : ";
         cin >> tt;
         cin.clear();
-        cin.ignore(1000, '\n');
+        cin.ignore(1000,'\n');
+        i++;
     }
 
     system("cls");
@@ -759,19 +777,22 @@ void xoa_sach(Node *head, Node *rac) {
             XoaCuoi(head, rac);
             ok = true;
             break;
+        case 7:
+            check = false;
+            break;
     }
+    if (tt!=7){
     if (ok) {
-        gotoXY(x + 2, y + 7);
+        gotoXY(x + 2, y + 18);
         cout << "Xoa thanh cong!";
     } else {
         gotoXY(x + 2, y + 7);
         cout << "Khong tim thay!";
-    }
-
+    }}
     save_to_file(head, "thuvien.txt");
-    Sleep(1500);
+    if (tt!=7) system("pause");
 }
-
+}
 
 void Thung_rac(Node *head, Node *rac) {
     bool check = true;
@@ -851,20 +872,21 @@ void Tim_sach(Node *head) {
         gotoXY(x + 2, y + 11);
         cout << "5. Thoat";
 
+
         int tt;
         gotoXY(x + 2, y + 13);
         cout << "Nhap thao tac: ";
         cin >> tt;
         cin.clear();
         cin.ignore(1000, '\n');
-
-        while (tt < 1 || tt > 5) {
+        bool check1 = true;
+        if (tt < 1 || tt > 5) {
             gotoXY(x + 2, y + 15);
-            cout << "Thao tac khong hop le! Nhap lai: ";
-            cin >> tt;
-            cin.clear();
-            cin.ignore(1000, '\n');
+            cout << "Thao tac khong hop le!";
+            Sleep(1000);
+            check1 = false;
         }
+        if (!check1) continue;
 
         system("cls");
         string input;
@@ -872,19 +894,34 @@ void Tim_sach(Node *head) {
 
         switch (tt) {
             case 1:
+                drawBox(x, y, width, height);
+                gotoXY(x + (width - 12) / 2, y + 1);
+                cout << "TIM SACH";
+                gotoXY(x+2,y+3);
                 cout << "Nhap ten sach: ";
                 getline(cin, input);
                 ds = FindbyTenSach(head, input);
+                system("cls");
                 break;
             case 2:
+                drawBox(x, y, width, height);
+                gotoXY(x + (width - 12) / 2, y + 1);
+                cout << "TIM SACH";
+                gotoXY(x+2,y+3);
                 cout << "Nhap ten tac gia: ";
                 getline(cin, input);
                 ds = FindbyTacGia(head, input);
+                system("cls");
                 break;
             case 3:
+                drawBox(x, y, width, height);
+                gotoXY(x + (width - 12) / 2, y + 1);
+                cout << "TIM SACH";
+                gotoXY(x+2,y+3);
                 cout << "Nhap ten NXB: ";
                 getline(cin, input);
                 ds = FindbyNXB(head, input);
+                system("cls");
                 break;
             case 4:
                 ds = FindChuaMuon(head);
@@ -892,18 +929,24 @@ void Tim_sach(Node *head) {
             case 5:
                 check = false;
                 break;
-        }
+        }   
 
         if (ds != NULL && ds->next != NULL) {
             cout << "------------Danh sach liet ke --------------------\n";
             print_lib(ds);
             delete ds;
         } else {
+            drawBox(x, y, width, height);
+                gotoXY(x + (width - 12) / 2, y + 1);
+                cout << "TIM SACH";
+                gotoXY(x+2,y+3);
             cout << "Thu vien khong co sach nay!\n";
         }
 
         if (tt != 5) {
-            cout << "\nNhan phim bat ky de tiep tuc...";
+            gotoXY(x+2,y+5);
+
+            cout << "Nhan phim bat ky de tiep tuc...";
             _getch();
         }
     }
@@ -913,7 +956,7 @@ void Tim_sach(Node *head) {
 void Sua_sach(Node *head) {
     system("cls");
     int x = 20, y = 2, width = 80, height = 20;
-    drawBox(x, y, width, height);
+    drawBox(x, y, width, height+3);
     gotoXY(x + (width - 12) / 2, y + 1);
     cout << "SUA SACH";
 
@@ -932,7 +975,7 @@ void Sua_sach(Node *head) {
     bool check = true;
     while (check) {
         system("cls");
-        drawBox(x, y, width, height);
+        drawBox(x, y, width, height+5);
         gotoXY(x + (width - 12) / 2, y + 1);
         cout << "SUA SACH";
 
@@ -957,7 +1000,7 @@ void Sua_sach(Node *head) {
         cin >> tt;
         cin.clear();
         cin.ignore(1000, '\n');
-
+        bool  ok = true;
         switch (tt) {
             case 1: {
                 gotoXY(x + 2, y + 18);
@@ -1006,6 +1049,7 @@ void Sua_sach(Node *head) {
                 check = false;
                 continue;
             default:
+                ok = false;
                 gotoXY(x + 2, y + 18);
                 cout << "Thao tac khong hop le!";
                 break;
@@ -1013,7 +1057,7 @@ void Sua_sach(Node *head) {
 
         save_to_file(head, "thuvien.txt");
         gotoXY(x + 2, y + 19);
-        cout << "Sua doi thanh cong!";
+        if (ok) cout << "Sua doi thanh cong!";
         Sleep(1500);
     }
 }
@@ -1026,7 +1070,7 @@ void Xem_sach(Node *head) {
     while (check) {
         system("cls");
         int x = 20, y = 2, width = 80, height = 12;
-        drawBox(x, y, width, height);
+        drawBox(x, y, width, height+8);
         gotoXY(x + (width - 8) / 2, y + 1);    cout << "XEM SACH";
         gotoXY(x + 2, y + 3);                  cout << "1. Xem toan bo danh sach";
         gotoXY(x + 2, y + 5);                  cout << "2. Xem theo thu tu";
@@ -1039,7 +1083,7 @@ void Xem_sach(Node *head) {
         cin.clear();
         cin.ignore(1000, '\n');
         while (tt < 1 || tt > 3) {
-            gotoXY(x + 2, y + 9);
+            gotoXY(x + 2, y + 18);
             cout << "Thao tac khong hop le! Nhap lai: ";
             cin >> tt;
             cin.clear();
@@ -1049,14 +1093,15 @@ void Xem_sach(Node *head) {
         if (tt == 1) {
             system("cls");
             print_lib(head);
-            cout << "\nNhan phim bat ky de tiep tuc...";
+            gotoXY(x+2,y+18);
+            cout << "Nhan phim bat ky de tiep tuc...";
             _getch();
         }
         else if (tt == 2) {
             bool sub = true;
             while (sub) {
                 system("cls");
-                drawBox(x, y, width, height);
+                drawBox(x, y, width, height+5);
                 gotoXY(x + (width - 16) / 2, y + 1);  cout << "SAP XEP SACH";
                 gotoXY(x + 2, y + 3);                  cout << "1. Theo ten sach";
                 gotoXY(x + 2, y + 5);                  cout << "2. Theo tac gia";
@@ -1087,7 +1132,8 @@ void Xem_sach(Node *head) {
 
                 system("cls");
                 print_lib(head);
-                cout << "\nNhan phim bat ky de tiep tuc...";
+                gotoXY(x+2,y+18);
+                cout << "Nhan phim bat ky de tiep tuc...";
                 _getch();
                 sub = false;
             }
@@ -1101,10 +1147,19 @@ void Xem_sach(Node *head) {
 
 // hàm ni dùng ở đâu ri
 void LuuVaoFile(Node *head){
-    cout << "Nhap ten file de luu : ";
+    system("cls");
+    int x = 20, y = 2, width = 80, height = 20;
+    drawBox(x, y, width, height+3);
+    gotoXY(x + (width - 12) / 2, y + 1);
+    cout << "Luu vao FIle";
+
+    gotoXY(x + 2, y + 3);
     string file_name;
+    cout << "Nhap ten file de luu : ";
     getline(cin,file_name);
     save_to_file(head,file_name);
+    gotoXY(x+2,y+5) ; cout << "Luu thanh cong !";
+    gotoXY(x+2,y+7); system("pause");
 }
 
 void trang_chu_admin(Node *head) {
@@ -1170,7 +1225,7 @@ void trang_chu_admin(Node *head) {
                 cnt = false;
                 break;
             default:
-                gotoXY(x + 2, y + height);
+                gotoXY(x + 2, y + height-2);
                 cout << "Thao tac khong hop le!";
                 Sleep(1000);
                 break;
@@ -1221,7 +1276,10 @@ void MuonSach(const string& TenDangNhap, Node *head) {
     fo.close();
 
     gotoXY(x + 2, y + 5);                  cout << "Muon sach thanh cong!";
-    Sleep(1500);
+    gotoXY(x+2,y+6) ; cout << "Ten sach : " << (*sach)->ten << endl;
+    gotoXY(x+2,y+7) ; cout << "Thoi gian muon : " << ctime(&now);
+    gotoXY(x+2,y+8);
+    system("pause");
 }
 
 
@@ -1280,15 +1338,18 @@ void TraSach(const string& TenDangNhap, Node *head) {
         (*sach)->Trang_thai = true; // Neu so luong > 0 thi co san
         save_to_file(head, "thuvien.txt");
     }
-
+    time_t now = time(0);
     gotoXY(x + 2, y + 5);                  cout << "Tra sach thanh cong!";
-    Sleep(1500);
+    gotoXY(x+2,y+6) ; cout << "Ten sach : " << (*sach)->ten << endl;
+    gotoXY(x+2,y+7) ; cout << "Thoi gian tra : " << ctime(&now);
+    gotoXY(x+2,y+8);
+    system("pause");
 }
 
 //---------------in sach da muon-------------
 void print_user(const string &ten) {
     system("cls");
-    int x = 20, y = 2, width = 80, height = 15;
+    int x = 20, y = 2, width = 80, height = 25;
     drawBox(x, y, width, height);
     gotoXY(x + (width - 20) / 2, y + 1); cout << "DANH SACH SACH DA MUON";
 
@@ -1310,13 +1371,16 @@ void print_user(const string &ten) {
         getline(ss, tacgia, '|');
         getline(ss, ThoiGian, '|');
         
-        gotoXY(x + 2, y + 2 + i * 6); cout << "Sach: " << i;
-        gotoXY(x + 2, y + 3 + i * 6); cout << "ID: " << ID;
-        gotoXY(x + 2, y + 4 + i * 6); cout << "Ten: " << ten;
-        gotoXY(x + 2, y + 5 + i * 6); cout << "Tac Gia: " << tacgia;
-        gotoXY(x + 2, y + 6 + i * 6); cout << "Thoi gian muon: " << ThoiGian;
+        gotoXY(x + 2, y -3 + i * 6); cout << "Sach: " << i;
+        gotoXY(x + 2, y  -2 + i * 6); cout << "ID: " << ID;
+        gotoXY(x + 2, y - 1 + i * 6); cout << "Ten: " << ten;
+        gotoXY(x + 2, y  + i * 6); cout << "Tac Gia: " << tacgia;
+        gotoXY(x + 2, y +1 + i * 6); cout << "Thoi gian muon: " << ThoiGian;
         i++;
     }
+    cout << endl;
+    gotoXY(x+2,y+2+(i-1)*6);
+    system("pause");
     fi.close();
 }
 
@@ -1367,7 +1431,7 @@ void trang_chu_user(const string& TenDangNhap, Node *head) {
                 cnt = false;
                 break;
             default:
-                gotoXY(x + 2, y + height);
+                gotoXY(x + 2, y + height-2);
                 cout << "Thao tac khong hop le!";
                 Sleep(1000);
                 break;
@@ -1433,6 +1497,7 @@ string dangnhap() {
     if (s == "") exit(0);
     else return s;
 }
+
 void drawBox(int x, int y, int width, int height) {
     gotoXY(x, y);
     cout << char(201); // ╔
@@ -1453,16 +1518,17 @@ void drawBox(int x, int y, int width, int height) {
 }
 void showIntro() {
     system("cls");
+    //SetColor(11);
     drawBox(20, 5, 60, 10);
     gotoXY(30, 8);
     cout << "CHAO MUNG BAN DEN VOI CHUONG TRINH";
-    Sleep(2000);
+    Sleep(2000); // dừng lại 2 gi
 }
 
 void showHomePage() {
     system("cls");
-    drawBox(20, 5, 60, 15);
-    gotoXY(40, 7);
+    drawBox(20, 5, 60, 16);
+    gotoXY(45, 7);
     cout << "TRANG CHU";
     gotoXY(30, 10);
     cout << "1. Dang nhap";
@@ -1516,7 +1582,7 @@ void menuLoop(Node* head) {
         break;
     }
     default:
-        gotoXY(5, 20);
+        gotoXY(22,19);
         cout << "Lua chon khong hop le!";
         Sleep(1000); // Cho người dùng đọc được lỗi, sau đó tự quay lại
         break;

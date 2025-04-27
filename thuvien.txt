@@ -1,7 +1,6 @@
-005|Hoc may nang cao|Le Van C|NXB Cong nghe|2020|6|Con|
+005|kkk|Le Van C|NXB Cong nghe|2020|99|Con|
 006|Khoa hoc du lieu|Nguyen Van A|NXB Giao duc|2019|5|Con|
 007|Lap trinh huong doi tuong|Le Van C|NXB Cong nghe|2019|15|Con|
-008|Mang may tinh|Tran Thi B|NXB DH Quoc gia|2019|13|Con|
 009|Co so du lieu|Pham Thi D|NXB Khoa hoc|2019|9|Con|
 014|He dieu hanh|Ngo Van E|NXB Thong ke|2018|4|Con|
 015|Lap trinh Java|Ngo Van E|NXB Cong nghe|2023|10|Con|
@@ -11,4 +10,4 @@
 020|Du an cuoi khoa|Ngo Van E|NXB Thong ke|2019|72|Con|
 013|Toan roi rac|Le Van C|NXB Giao duc|2021|7|Con|
 010|An toan thong tin|Nguyen Van A|NXB Giao duc|2024|8|Con|
-003|Giai thuat can ban|Tran Thi B|NXB DH Quoc gia|2018|6|Con|
+001|Tuoi tre dang gia bao nhieu|Rosie Nguyen|cong nghe|1995|8|Con|
