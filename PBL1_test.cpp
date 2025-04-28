@@ -347,6 +347,7 @@ void SapXepTheoNamSX(Node *head){ // tăng dan
         swap(i->sach,minNode->sach);
     }
 }
+
 // ---------------------------Thung rac-----------------
 void Add_RecycleBin(Node *rac, Book *b) {
     if (b == nullptr) return; 
@@ -632,20 +633,31 @@ void save_to_file(Node *head, const string& filename){
 
 
 void them_sach(Node *head) {
-    system("cls");
     int x = 20, y = 2, width = 80, height = 25;
+    bool cnt = true;
+    string ID, tensach, tacgia, NXB;
+    long namsx, sluong;
+    while(cnt){
+    system("cls");
     drawBox(x, y, width, height);
 
     gotoXY(x + (width - 20) / 2, y + 1);
     cout << "THEM SACH VAO THU VIEN";
 
-    string ID, tensach, tacgia, NXB;
-    long namsx, sluong;
 
     gotoXY(x + 2, y + 3);
     cout << "Nhap ID: ";
     getline(cin, ID);
+    if (FindbyID(head,ID)){
+        gotoXY(x+2,y+5);
+        cout << "Da ton tai ID ! Vui long nhap lai! ";
+        Sleep(2000);
+    }
+    else{
+        cnt = false;
+    }
 
+}
     gotoXY(x + 2, y + 5);
     cout << "Nhap ten sach: ";
     getline(cin, tensach);
@@ -820,30 +832,33 @@ void Thung_rac(Node *head, Node *rac) {
         cin.clear();
         cin.ignore(1000, '\n');
 
-        while (tt < 1 || tt > 4) {
-            gotoXY(x + 2, y + 13);
-            cout << "Thao tac khong hop le! Nhap lai: ";
-            cin >> tt;
-            cin.clear();
-            cin.ignore(1000, '\n');
-        }
 
-        system("cls");
         switch (tt) {
             case 1:
+                system("cls");
                 Xem_sach(rac);
                 break;
             case 2:
+                system("cls");
+
                 Tim_sach(rac);
                 break;
             case 3:
+                system("cls");
+
                 KhoiPhuc(head, rac);
                 break;
             case 4:
+
                 check = false;
                 break;
+            default :
+                gotoXY(x+2,y+13);
+                cout << "Thao tac khong hop le ! Nhap lai .";
+                Sleep(2000);
+                break;
         }
-        if (tt != 4) {
+        if (tt == 1 || tt == 2 || tt==3) {
             cout << "\nNhan phim bat ky de tiep tuc...";
             _getch();
         }
@@ -1082,13 +1097,7 @@ void Xem_sach(Node *head) {
         cin >> tt;
         cin.clear();
         cin.ignore(1000, '\n');
-        while (tt < 1 || tt > 3) {
-            gotoXY(x + 2, y + 18);
-            cout << "Thao tac khong hop le! Nhap lai: ";
-            cin >> tt;
-            cin.clear();
-            cin.ignore(1000, '\n');
-        }
+        
 
         if (tt == 1) {
             system("cls");
@@ -1114,32 +1123,36 @@ void Xem_sach(Node *head) {
                 cin >> tt2;
                 cin.clear();
                 cin.ignore(1000, '\n');
-                while (tt2 < 1 || tt2 > 5) {
-                    gotoXY(x + 2, y + 15);
-                    cout << "Thao tac khong hop le! Nhap lai: ";
-                    cin >> tt2;
-                    cin.clear();
-                    cin.ignore(1000, '\n');
-                }
+                
 
                 switch (tt2) {
                     case 1: SapXepTheoTenSach(head); break;
                     case 2: SapXepTheoTenTacGia(head); break;
                     case 3: SapXepTheoNXB(head); break;
                     case 4: SapXepTheoNamSX(head); break;
-                    case 5: sub = false; continue;
+                    case 5: sub = false; break;
+                    default :
+                        gotoXY(x + 2, y + 15);
+                        cout << "Thao tac khong hop le! Nhap lai!";
+                        Sleep(1500);
+                        break;
                 }
-
+                 if (tt2==1 || tt2==2 || tt2==3 || tt2==4 || tt2==5){
                 system("cls");
                 print_lib(head);
                 gotoXY(x+2,y+18);
                 cout << "Nhan phim bat ky de tiep tuc...";
                 _getch();
-                sub = false;
             }
         }
-        else {
+        }
+        else if (tt==3) {
             check = false;
+        }
+        else{
+            gotoXY(x + 2, y + 18);
+            cout << "Thao tac khong hop le! Nhap lai: ";
+            Sleep(1500);
         }
     }
 }
