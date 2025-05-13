@@ -1,6 +1,6 @@
 #include "headed.h"
 #include "giao_dien.h"
-
+#include <set>
 
 string Vietthuong(string c){
     transform(c.begin(),c.end(),c.begin(),::tolower);
@@ -227,12 +227,27 @@ void read_file(Node* &head,const string& TenFile) {
 
 
 //-----------------------------In ra màn hình---------------------------------------------
-// In ra tất cả sách
-void print_lib(Node* head) {
-    int widths[] = {10, 30, 20, 20, 10, 10, 10};
-    const char *headers[] = {"ID", "Ten", "TacGia", "NXB", "Nam", "SoLuong", "TT"};
-    int cols = 7;
-    int total = 1; 
+//-----------------------------In ra màn hình---------------------------------------------
+int count_Book(Node *head){
+    head = head->next;
+    int cnt = 0;
+    while(head!=NULL){
+        cnt++;
+        head = head->next;
+    }
+    return cnt;
+}
+void print_BottomBorder(int widths[],int cols){
+    // Bottom border
+    cout << char(200);
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < widths[i]; j++) cout << char(205);
+        cout << (i < cols-1 ? char(202) : char(188));
+    }
+    cout << "\n";
+}
+void print_TopBorder(int widths[],const char *headers[],int cols){
+    int total = 1;
     for (int i = 0; i < cols; i++) total += widths[i] + 1;
     // Top border
     cout << char(201);
@@ -257,41 +272,61 @@ void print_lib(Node* head) {
         cout << (i < cols-1 ? char(206) : char(185));
     }
     cout << "\n";
-    // Data rows
-    head = head->next;
-    while (head) {
+}
+// in 1 trang sach
+// In từ start đến ngay trước end (end không in)
+void print_page(Node *start, Node *end, int widths[]) {
+    Node *cur = start;
+    while (cur != end) {
         cout << char(186);
-        cout << head->sach->ID;
-        for (int j = head->sach->ID.length(); j < widths[0]; j++) cout << ' ';
+        cout << cur->sach->ID;
+        for (int j = cur->sach->ID.length(); j < widths[0]; j++) cout << ' ';
         cout << char(186);
-        cout << head->sach->ten;
-        for (int j = head->sach->ten.length(); j < widths[1]; j++) cout << ' ';
+        cout << cur->sach->ten;
+        for (int j = cur->sach->ten.length(); j < widths[1]; j++) cout << ' ';
         cout << char(186);
-        cout << head->sach->tac_gia;
-        for (int j = head->sach->tac_gia.length(); j < widths[2]; j++) cout << ' ';
+        cout << cur->sach->tac_gia;
+        for (int j = cur->sach->tac_gia.length(); j < widths[2]; j++) cout << ' ';
         cout << char(186);
-        cout << head->sach->nxb;
-        for (int j = head->sach->nxb.length(); j < widths[3]; j++) cout << ' ';
+        cout << cur->sach->nxb;
+        for (int j = cur->sach->nxb.length(); j < widths[3]; j++) cout << ' ';
         cout << char(186);
-        cout << head->sach->namsx;
-        for (int j = to_string(head->sach->namsx).length(); j < widths[4]; j++) cout << ' ';
+        cout << cur->sach->namsx;
+        for (int j = to_string(cur->sach->namsx).length(); j < widths[4]; j++) cout << ' ';
         cout << char(186);
-        cout << head->sach->soluong;
-        for (int j = to_string(head->sach->soluong).length(); j < widths[5]; j++) cout << ' ';
+        cout << cur->sach->soluong;
+        for (int j = to_string(cur->sach->soluong).length(); j < widths[5]; j++) cout << ' ';
         cout << char(186);
-        string tt = head->sach->Trang_thai ? "Con" : "Het";
+        string tt = cur->sach->Trang_thai ? "Con" : "Het";
         cout << tt;
         for (int j = tt.length(); j < widths[6]; j++) cout << ' ';
         cout << char(186) << "\n";
-        head = head->next;
+        cur = cur->next;
     }
-    // Bottom border
-    cout << char(200);
-    for (int i = 0; i < cols; i++) {
-        for (int j = 0; j < widths[i]; j++) cout << char(205);
-        cout << (i < cols-1 ? char(202) : char(188));
+}
+
+// In toàn bộ thư viện, chia trang
+void print_lib(Node* head) {
+    int widths[] = {10, 30, 20, 20, 10, 10, 10};
+    const char *headers[] = {"ID", "Ten", "TacGia", "NXB", "Nam", "SoLuong", "TT"};
+    int cols = 7;
+
+    Node *cur = head->next;
+    while (cur != NULL) {
+        Node *start = cur;
+        int count = 0;
+        while (cur != NULL && count < 18) {
+            cur = cur->next;
+            count++;
+        }
+
+        print_TopBorder(widths, headers, cols);
+        print_page(start, cur, widths);
+        print_BottomBorder(widths, cols);
+
+        system("pause");
+        system("cls");
     }
-    cout << "\n";
 }
 
 // ---------------------------- Sap xep-----------------------------
@@ -661,7 +696,9 @@ void them_sach(Node *head) {
     gotoXY(x + 2, y + 5);
     cout << "Nhap ten sach: ";
     getline(cin, tensach);
+    string temp = tensach;
 
+    
     gotoXY(x + 2, y + 7);
     cout << "Nhap ten tac gia: ";
     getline(cin, tacgia);
@@ -1102,7 +1139,7 @@ void Xem_sach(Node *head) {
         if (tt == 1) {
             system("cls");
             print_lib(head);
-            gotoXY(x+2,y+18);
+            gotoXY(x+2,y+25);
             cout << "Nhan phim bat ky de tiep tuc...";
             _getch();
         }
@@ -1137,7 +1174,7 @@ void Xem_sach(Node *head) {
                         Sleep(1500);
                         break;
                 }
-                 if (tt2==1 || tt2==2 || tt2==3 || tt2==4 || tt2==5){
+                 if (tt2==1 || tt2==2 || tt2==3 || tt2==4 ){
                 system("cls");
                 print_lib(head);
                 gotoXY(x+2,y+18);
