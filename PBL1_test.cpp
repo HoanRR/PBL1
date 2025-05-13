@@ -1,5 +1,6 @@
 #include "headed.h"
 #include "giao_dien.h"
+#include <set>
 
 
 string Vietthuong(string c){
@@ -58,6 +59,8 @@ void Sua_sach(Node *head);
 
 void LuuVaoFile(Node *head);
 
+Node* GoiY_TenSach(Node *head,string tensach)
+void clearLine(int x, int y, int length)
 
 void MuonSach(const string& Ten,Node *head);
 void TraSach(const string& ten, Node *head);
@@ -174,12 +177,14 @@ void DangKyTaiKhoan() {
             if (TenDangNhap.length() >= 5 && TenDangNhap.substr(0, 5) == "admin") {
                 kt = true;
                 gotoXY(x + 2, y + 6); cout << "Khong duoc su dung ten dang nhap bat dau bang 'admin'. Vui long nhap lai.";
-                break;
+                Sleep(2000);
+                DangKyTaiKhoan();
             } 
             else if (ten == TenDangNhap) {
                 kt = true;
                 gotoXY(x + 2, y + 6); cout << "Ten dang nhap da ton tai. Vui long nhap lai.";
-                break;
+                Sleep(2000);
+                DangKyTaiKhoan();
             }
         }
     }
@@ -561,7 +566,8 @@ Node* FindbyTenSach(Node *head,string tensach){
     head = head->next;
     string t = Vietthuong(tensach);
     while(head!=NULL){
-        if (Vietthuong(head->sach->ten) == t){
+        string ten_sach = Vietthuong(head->sach->ten);
+        if (ten_sach.find(t) != string::npos){
             pushhead(DS,head->sach);
         }
         head = head->next;
@@ -631,9 +637,24 @@ void save_to_file(Node *head, const string& filename){
 
 // ------------------------------- Các thao tác -----------------------------
 
+Node* GoiY_TenSach(Node *head,string tensach){
+    size_t vitri = tensach.find("tap");
+    string Tenss;
+    if (vitri != string::npos && vitri > 0){
+        Tenss = tensach.substr(0,vitri-1);
+    }
+    else Tenss = tensach;
+    Node* DS = FindbyTenSach(head,Tenss);
+    return DS;
+}
+void clearLine(int x, int y, int length) {
+    gotoXY(x, y);
+    for (int i = 0; i < length; i++) cout << ' ';
+}
+
 
 void them_sach(Node *head) {
-    int x = 20, y = 2, width = 80, height = 25;
+    int x = 20, y = 2, width = 80, height = 40;
     bool cnt = true;
     string ID, tensach, tacgia, NXB;
     long namsx, sluong;
@@ -656,17 +677,58 @@ void them_sach(Node *head) {
     else{
         cnt = false;
     }
-
-}
+    }
     gotoXY(x + 2, y + 5);
     cout << "Nhap ten sach: ";
     getline(cin, tensach);
+    Node* check = GoiY_TenSach(head,tensach);
+    check = check ->next;
+    set <string> DS_tg;
+    vector<string> DS_Tacgia;
+    if (check != NULL){
+        for (Node* p = check; p != NULL; p= p->next){
+            DS_tg.insert(p->sach->tac_gia);
+        }
+        for (string k : DS_tg ){
+            DS_Tacgia.push_back(k);
+        }
+        gotoXY(x + 2, y + 6);
+        cout <<"Goi y: ";
+        for (int i= 0; i < DS_Tacgia.size();i++){
+            gotoXY(x + 4, y + 7 + i);
+            cout << i+1<< "."<< DS_Tacgia[i]<<endl;
+        }
 
-    gotoXY(x + 2, y + 7);
-    cout << "Nhap ten tac gia: ";
-    getline(cin, tacgia);
-
-    gotoXY(x + 2, y + 9);
+        int tt;
+        gotoXY(x + 2, y + 7 + DS_Tacgia.size());
+        cout << "Chon so (hoac 0 de tu nhap): ";
+        cin >> tt;
+        cin.ignore();
+        while (tt > DS_Tacgia.size()){
+            clearLine(x + 2, y + 7 + DS_Tacgia.size(),width -4);
+            gotoXY(x + 2, y + 7 + DS_Tacgia.size());
+            cout << "Nhap lai lua chon :";
+            cin >> tt;
+            cin.ignore();
+        }
+        if (tt>0) tacgia = DS_Tacgia[tt-1];
+        else if (tt ==0) {
+            gotoXY(x + 2, y + 10 + DS_Tacgia.size());
+            cout << "Nhap ten tac gia: ";
+            getline(cin, tacgia); 
+        }
+    } 
+    else {
+            gotoXY(x + 2, y + 6);
+            cout << "Nhap ten tac gia: ";
+            getline(cin, tacgia);
+    }
+    for (int i = 0; i < DS_Tacgia.size() + 5; i++) {
+        clearLine(x + 2, y + 6 + i, width - 4);
+    }
+    gotoXY(x + 2, y + 6);
+    cout << " ten tac gia: "<< tacgia;
+    gotoXY(x + 2, y + 8 );
     cout << "Nhap Nha xuat ban: ";
     getline(cin, NXB);
 
@@ -681,29 +743,7 @@ void them_sach(Node *head) {
 
     Book *C = tao_sach(ID, tensach, tacgia, NXB, namsx, sluong);
 
-    gotoXY(x + 2, y + 15);
-    cout << "1. Them vao dau";
-    gotoXY(x + 2, y + 16);
-    cout << "2. Them vao cuoi";
-    bool check = true;
-    int tt;
-    gotoXY(x + 2, y + 17);
-    cout << "Nhap thao tac: ";
-    cin >> tt;
-    cin.clear();
-    int i = 1;
-    while (tt != 1 && tt != 2) {
-        gotoXY(x + 2, y + 18 +i);
-        cout << "Thao tac khong hop le!. Nhap lai : ";
-        cin >> tt;
-        i++;
-    }
-
-    if (tt == 1) {
-        pushhead(head, C);
-    } else {
-        pushend(head, C);
-    }
+    pushhead(head, C);
 
     save_to_file(head, "thuvien.txt");
 
@@ -1540,7 +1580,7 @@ void showIntro() {
 
 void showHomePage() {
     system("cls");
-    drawBox(20, 5, 60, 16);
+    drawBox(20, 5, 60, 16); 
     gotoXY(45, 7);
     cout << "TRANG CHU";
     gotoXY(30, 10);
