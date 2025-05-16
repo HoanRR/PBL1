@@ -1,6 +1,8 @@
 #include "headed.h"
 #include "giao_dien.h"
 #include <set>
+#include <stdlib.h>
+#include <cctype>
 
 
 string Vietthuong(string c){
@@ -348,7 +350,18 @@ void SapXepTheoTenSach(Node *head){ // tăng dần
         swap(i->sach,minNode->sach);
     }
 }
-
+void SapXepTheoID(Node *head){
+     head = head -> next;
+    for (Node *i = head;i!=NULL;i=i->next){
+        Node *minNode = i;
+        for (Node * j = i->next ; j!=NULL;j=j->next){
+            if (j->sach->ID < minNode->sach->ID){
+                minNode = j;
+            }
+        }
+        swap(i->sach,minNode->sach);
+    }
+}
 void SapXepTheoTenTacGia(Node *head){ // tăng dần
     head = head -> next;
     for (Node *i = head;i!=NULL;i=i->next){
@@ -649,11 +662,12 @@ Node* FindChuaMuon(Node *head){
 // ------------lưu lại danh sách liên kết vào file---------
 void save_to_file(Node *head, const string& filename){ 
     ofstream fo(filename);
-    head = head->next;
     if (!fo.is_open()){
         cout << "Khong the mo file de ghi\n";
         return;
     }
+    SapXepTheoID(head);
+    head = head->next;
     Node *temp = head;
     while (temp !=NULL){
         Book *b = temp->sach;
@@ -735,23 +749,16 @@ void them_sach(Node *head) {
             cout << i+1<< "."<< DS_Tacgia[i]<<endl;
         }
 
-        int tt;
         gotoXY(x + 2, y + 7 + DS_Tacgia.size());
-        cout << "Chon so (hoac 0 de tu nhap): ";
-        cin >> tt;
-        cin.ignore();
-        while (tt > DS_Tacgia.size()){
-            clearLine(x + 2, y + 7 + DS_Tacgia.size(),width -4);
-            gotoXY(x + 2, y + 7 + DS_Tacgia.size());
-            cout << "Nhap lai lua chon :";
-            cin >> tt;
-            cin.ignore();
+        cout << "Nhap tac gia hoac lua chon : ";
+        string tg;
+        getline(cin,tg);
+        if (isdigit(tg[0])){
+            int num = stoi(tg);
+            tacgia = DS_Tacgia[num-1];
         }
-        if (tt>0) tacgia = DS_Tacgia[tt-1];
-        else if (tt ==0) {
-            gotoXY(x + 2, y + 10 + DS_Tacgia.size());
-            cout << "Nhap ten tac gia: ";
-            getline(cin, tacgia); 
+        else{
+            tacgia = tg;
         }
     } 
     else {
@@ -763,7 +770,7 @@ void them_sach(Node *head) {
         clearLine(x + 2, y + 6 + i, width - 4);
     }
     gotoXY(x + 2, y + 6);
-    cout << " ten tac gia: "<< tacgia;
+    cout << "Ten tac gia: " << tacgia;
     gotoXY(x + 2, y + 8 );
     cout << "Nhap Nha xuat ban: ";
     getline(cin, NXB);
@@ -1529,7 +1536,6 @@ void trang_chu_user(const string& TenDangNhap, Node *head) {
     save_to_file(head, "thuvien.txt");
 }
 
-
 //--------------đăng nhập--------------
 string NhapMatKhau() {
     string matkhau = "";
@@ -1667,6 +1673,7 @@ void menuLoop(Node* head) {
         gotoXY(10, 10);
         cout << "Dang thoat chuong trinh...";
         Sleep(1000);
+        save_to_file(head,"thuvien.txt");
         exit(0);
         break;
     }
