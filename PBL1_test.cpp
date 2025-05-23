@@ -25,7 +25,7 @@ struct Node {
     Book* sach;
 };
 void drawBox(int x, int y, int width, int height);
-
+void deleteList(Node* head);
 void save_to_file(Node *head, const string& filename);
 void print_lib(Node* head) ;
 void SapXepTheoTenSach(Node *head);
@@ -105,30 +105,30 @@ Node* khoitao_node(Book* sach) {
 
 // Thêm vào đầu danh sách
 void pushhead(Node* head, Book* sach) {
-	Book** kt = FindbyID(head, sach->ID);
-	if (kt != NULL && *kt != NULL) {
-    	(*kt)->soluong += sach->soluong;
-	}
-	else{
- 	    Node* new_node = khoitao_node(sach);
-    	new_node->next = head->next;
+    Book** kt = FindbyID(head, sach->ID);
+    if (kt != NULL && *kt != NULL) {
+        (*kt)->soluong += sach->soluong;
+    }
+    else{
+        Node* new_node = khoitao_node(sach);
+        new_node->next = head->next;
         head->next = new_node;
     }
 }
 
 // Thêm vào cuối danh sách
 void pushend(Node* head, Book* sach) {
-	Book** kt = FindbyID(head, sach->ID);
-	if (kt != NULL && *kt != NULL) {
-    	(*kt)->soluong += sach->soluong;
-	}
-	else{
-	    Node* new_node = khoitao_node(sach);
-	    while(head->next!=NULL){
-	        head = head->next;
-	    }
-	    head->next = new_node;
-	}
+    Book** kt = FindbyID(head, sach->ID);
+    if (kt != NULL && *kt != NULL) {
+        (*kt)->soluong += sach->soluong;
+    }
+    else{
+        Node* new_node = khoitao_node(sach);
+        while(head->next!=NULL){
+            head = head->next;
+        }
+        head->next = new_node;
+    }
 }
 
 //-----------------------Đăng Nhập--------------------------------
@@ -314,7 +314,7 @@ void print_page(Node *start, Node *end, int widths[]) {
 
 // In toàn bộ thư viện, chia trang
 void print_lib(Node* head) {
-    int widths[] = {10, 30, 20, 20, 10, 10, 10};
+    int widths[] = {10, 50, 20, 20, 10, 10, 10};
     const char *headers[] = {"ID", "Ten", "TacGia", "NXB", "Nam", "SoLuong", "TT"};
     int cols = 7;
 
@@ -423,7 +423,7 @@ void Add_RecycleBin(Node *rac, Book *b) {
 
 void KhoiPhuc_TatCa(Node *head,Node *rac){
     Node* temp = rac->next;
-
+    if (temp == NULL) return;
     while (temp->next!= NULL){
         pushend(head,temp->sach);
         temp = temp->next;
@@ -465,14 +465,20 @@ void KhoiPhuc(Node* head, Node* rac) {
             gotoXY(x + 2, y + 3);
             cout <<"Nhap ID sach muon khoi phuc : "; cin >> ID;
             Book** Sach = FindbyID(rac,ID);
-            if ((*Sach)!=NULL && Sach != NULL){
-            DelByID(rac,rac,ID);
-            pushend(head,*Sach);
+            if ((Sach)!=NULL && (*Sach) != NULL){
+                DelByID(rac,rac,ID);
+                pushend(head,*Sach);
+                save_to_file(head,"thuvien.txt");
+                save_to_file(rac,"Thung_rac.txt");
+                gotoXY(x + 2, y + 11); cout << "Da khoi phuc 1 cuon sach!";
+                Sleep(1500);
+            } 
+            else {
+                gotoXY(x + 2, y + 11); cout << "Khong tim ra sach co ID: " << ID;
+                Sleep(1500);
             }
-            save_to_file(head,"thuvien.txt");
-            save_to_file(rac,"Thung_rac.txt");
-            gotoXY(x + 2, y + 11); cout << "Da khoi phuc 1 cuon sach!";
-            Sleep(1500);
+            
+            
         }
         else if (tt == 3) {
             check = false;
@@ -504,13 +510,15 @@ bool DelByID(Node *head,Node *rac, string ID){
     return false;
 }
 bool DelByTenSach(Node *head,Node *rac, string ten){
-
+    if (head == NULL) {
+        return false;
+    }
     while(head->next!=NULL && Vietthuong(head->next->sach->ten) != Vietthuong(ten)){
         head = head->next;
     }
     if (head->next!=NULL){
         Add_RecycleBin(rac,head->next->sach);
-            showtt(head->next,22,6);
+        showtt(head->next,22,6);
 
         Node *temp = head->next;
         head->next = head->next->next;
@@ -526,21 +534,24 @@ bool DelByTenSach(Node *head,Node *rac, string ten){
 bool DelByTacGia(Node *head,Node *rac, string tg){
     bool check = false;
     int x = 22 , y = 6;
-while(head->next!=NULL){
-    if (Vietthuong(head->next->sach->tac_gia) == Vietthuong(tg)){
-        Node *temp = head->next;
-        Add_RecycleBin(rac,head->next->sach);
-        showtt(head->next,x,y);
-        head->next = head->next->next;
-        delete temp->sach;
-        delete temp;
-        check = true;
-        y+=3;
+  while (head->next != NULL) {
+        if (Vietthuong(head->next->sach->tac_gia) == Vietthuong(tg)) {
+            Node *temp = head->next;
 
-    }
-    else{
-        head = head->next;
-    }
+            Add_RecycleBin(rac, head->next->sach);
+
+            showtt(head->next, x, y);
+            head->next = head->next->next;
+
+            delete temp->sach;
+            delete temp;
+
+            check = true;
+            y += 4;
+
+        } else {
+            head = head->next;
+        }
     }
     return check;
 }
@@ -548,10 +559,9 @@ while(head->next!=NULL){
 void XoaDau(Node *head,Node *rac){
     Add_RecycleBin(rac,head->next->sach);
     showtt(head->next,22,6);
-    Node *temp = head->next;
+
     head->next = head->next->next;
-    delete temp->sach;
-    delete temp;
+
 }
 
 bool XoaSauMa(Node *head,Node *rac,string ID){
@@ -596,6 +606,12 @@ void showtt(Node *head, int x , int y){
      gotoXY(x,y);
      cout << "ID: " << head->sach->ID;
      gotoXY(x,y+1) ; cout << "Ten: " << head->sach->ten;
+     gotoXY(x,y+2) ; cout << "Tac gia: " << head->sach->tac_gia;
+     gotoXY(x,y+3) ; cout << "Nha xuat ban: " << head->sach->nxb;
+     gotoXY(x,y+4) ; cout << "Nam san xuat: " << head->sach->namsx;
+     gotoXY(x,y+5) ; cout << "So luong: " << head->sach->soluong;
+
+
 }
 //-----------------------Tìm Kiếm---------------------
 Book** FindbyID(Node *head,const string& ID){
@@ -727,10 +743,16 @@ void them_sach(Node *head) {
         cnt = false;
     }
     }
+    clearLine(x + 2, y + 3 , width - 4);
+    gotoXY(x + 2, y + 3);
+    cout << "ID: " << ID;
+
     gotoXY(x + 2, y + 5);
     cout << "Nhap ten sach: ";
     getline(cin, tensach);
-
+    clearLine(x + 2, y + 5, width - 4);
+    gotoXY(x + 2, y + 5);
+    cout << "Ten sach: " << tensach;
     Node* check = GoiY_TenSach(head,tensach);
     check = check ->next;
     set <string> DS_tg;
@@ -742,10 +764,10 @@ void them_sach(Node *head) {
         for (string k : DS_tg ){
             DS_Tacgia.push_back(k);
         }
-        gotoXY(x + 2, y + 6);
+        gotoXY(x + 2, y + 7);
         cout <<"Goi y: ";
-        for (int i= 0; i < DS_Tacgia.size();i++){
-            gotoXY(x + 4, y + 7 + i);
+        for (size_t i= 0; i < DS_Tacgia.size();i++){
+            gotoXY(x + 4, y + 8 + i);
             cout << i+1<< "."<< DS_Tacgia[i]<<endl;
         }
 
@@ -762,26 +784,34 @@ void them_sach(Node *head) {
         }
     } 
     else {
-            gotoXY(x + 2, y + 6);
+            gotoXY(x + 2, y + 7);
             cout << "Nhap ten tac gia: ";
             getline(cin, tacgia);
     }
-    for (int i = 0; i < DS_Tacgia.size() + 5; i++) {
-        clearLine(x + 2, y + 6 + i, width - 4);
+    for (size_t i = 0; i < DS_Tacgia.size() + 5; i++) {
+        clearLine(x + 2, y + 7 + i, width - 4);
     }
-    gotoXY(x + 2, y + 6);
+    gotoXY(x + 2, y + 7);
     cout << "Ten tac gia: " << tacgia;
-    gotoXY(x + 2, y + 8 );
+    
+    gotoXY(x + 2, y + 9 );
     cout << "Nhap Nha xuat ban: ";
     getline(cin, NXB);
+    clearLine(x + 2, y + 9 , width - 4);
+    gotoXY(x + 2, y + 9);
+    cout << "Ten NXB: " << NXB;
 
     gotoXY(x + 2, y + 11);
-    cout << "Nhap Nam San Xuat: ";
-    cin >> namsx;
-
+    cout << "Nhap Nam San Xuat: "; cin >> namsx;
+    clearLine(x + 2, y + 11, width - 4);
+    gotoXY(x + 2, y + 11);
+    cout << "Nam san xuat: " << namsx;
+    
     gotoXY(x + 2, y + 13);
-    cout << "Nhap So Luong: ";
-    cin >> sluong;
+    cout << "Nhap So Luong: "; cin >> sluong;
+    clearLine(x + 2, y + 13 , width - 4);
+    gotoXY(x + 2, y + 13);
+    cout << "So Luong: " << sluong;
     cin.ignore();
 
     Book *C = tao_sach(ID, tensach, tacgia, NXB, namsx, sluong);
@@ -1030,7 +1060,7 @@ void Tim_sach(Node *head) {
         }   
 
         if (ds != NULL && ds->next != NULL) {
-            cout << "------------Danh sach liet ke --------------------\n";
+            cout << "---------------------------------------------------------Danh sach liet ke ------------------------------------------------------\n";
             print_lib(ds);
             delete ds;
         } else {
@@ -1043,10 +1073,10 @@ void Tim_sach(Node *head) {
 
         if (tt != 5) {
             gotoXY(x+2,y+5);
-
             cout << "Nhan phim bat ky de tiep tuc...";
             _getch();
         }
+
     }
 }
 
@@ -1684,13 +1714,27 @@ void menuLoop(Node* head) {
         break;
     }}while (true);
 }
+void deleteList(Node* head) {
+    if (head == NULL) return; // Xử lý trường hợp danh sách rỗng
+    Node* current = head->next; // Bắt đầu từ nút dữ liệu thực tế đầu tiên (bỏ qua head giả)
+    while (current != NULL) {
+        Node* next = current->next;
+        delete current->sach; // Xóa đối tượng Book mà nút trỏ tới
+        current->sach = nullptr; // Gán con trỏ về null để tránh truy cập lầm
+        delete current;       // Xóa đối tượng Node
+        current = nullptr; // Gán con trỏ về null
+        current = next;
+    }
+    delete head; // Xóa chính nút đầu giả
+    head = nullptr; // Gán con trỏ head về null sau khi xóa
+}
 int main() {
     Node* head = Head();
     read_file(head,"thuvien.txt"); // đọc vào thư 
     showIntro();
     system("cls");
     menuLoop(head);
+    deleteList (head);
     return 0;
 }
-
 
