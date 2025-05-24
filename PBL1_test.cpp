@@ -1,5 +1,5 @@
 #include "headed.h"
-#include "giao_dien.h"
+#include "dohoa.h"
 #include <set>
 #include <stdlib.h>
 #include <cctype>
