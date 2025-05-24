@@ -1246,7 +1246,14 @@ void Xem_sach(Node *head) {
                         cout << "Thao tac khong hop le! Nhap lai!";
                         Sleep(1500);
                         break;
-                }     
+                }
+                 if (tt2==1 || tt2==2 || tt2==3 || tt2==4 ){
+                system("cls");
+                print_lib(head);
+                gotoXY(x+2,y+18);
+                cout << "Nhan phim bat ky de tiep tuc...";
+                _getch();     
+                }
             }
         }
         else if (tt==3) {
