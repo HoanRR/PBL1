@@ -1,0 +1,300 @@
+ART-002|Chuyen dong van toc|Darwin|NXB Giao duc|2000|3|Con|
+ART-003|Sinh hoc tien hoa Tap 1|Einstein|NXB Van hoc|2007|5|Con|
+ART-004|Dien dong hoc Tap 1|Newton|NXB Khoa hoc|1996|1|Con|
+ART-007|Ly thuyet tuong doi Tap 2|Tesla|NXB Giao duc|2003|2|Con|
+ART-009|Nguon goc loai nguoi Tap 1|Tesla|NXB Van hoc|2015|4|Con|
+ART-011|Dien dong hoc Tap 1|Newton|NXB Van hoc|2019|3|Con|
+ART-017|Dien dong hoc Tap 2|Einstein|NXB Giao duc|1993|4|Con|
+ART-020|Chuyen dong van toc Tap 2|Darwin|NXB Cong nghe|1997|5|Con|
+ART-021|Dien dong hoc|Bohr|NXB Van hoc|2019|4|Con|
+ART-022|Chuyen dong van toc|Curie|NXB Van hoc|2024|4|Con|
+ART-023|Sinh hoc tien hoa Tap 1|Curie|NXB Cong nghe|2019|5|Con|
+ART-026|Ky thuat co dien|Bohr|NXB Khoa hoc|2011|5|Con|
+ART-028|Sinh hoc tien hoa Tap 2|Bohr|NXB Cong nghe|2009|1|Con|
+ART-039|Ky thuat co dien Tap 1|Einstein|NXB Giao duc|2002|5|Con|
+ART-045|Dien dong hoc|Bohr|NXB Giao duc|1992|2|Con|
+ART-046|Ly thuyet tuong doi|Curie|NXB Giao duc|1991|5|Con|
+ART-049|Ly thuyet tuong doi Tap 2|Darwin|NXB Khoa hoc|1999|5|Con|
+ART-052|Sinh hoc tien hoa|Bohr|NXB Cong nghe|2006|1|Con|
+ART-054|Ly thuyet tuong doi Tap 2|Darwin|NXB Cong nghe|2003|1|Con|
+ART-065|Chuyen dong van toc Tap 2|Curie|NXB Cong nghe|2010|1|Con|
+ART-066|Ly thuyet tuong doi|Newton|NXB Cong nghe|2000|2|Con|
+ART-068|Sinh hoc tien hoa|Curie|NXB Cong nghe|1991|1|Con|
+ART-077|Sinh hoc tien hoa|Einstein|NXB Van hoc|2020|2|Con|
+ART-078|Ky thuat co dien Tap 2|Curie|NXB Cong nghe|2016|3|Con|
+ART-090|Dien dong hoc|Bohr|NXB Cong nghe|2018|5|Con|
+ART-091|Dien dong hoc Tap 2|Tesla|NXB Cong nghe|2016|5|Con|
+ART-093|Ly thuyet tuong doi|Newton|NXB Khoa hoc|2024|2|Con|
+ART-110|Ky thuat co dien|Darwin|NXB Cong nghe|2017|5|Con|
+ART-125|Ky thuat co dien Tap 2|Einstein|NXB Khoa hoc|1994|2|Con|
+ART-135|Dien dong hoc Tap 1|Tesla|NXB Van hoc|2015|2|Con|
+ART-138|Ky thuat co dien Tap 2|Tesla|NXB Giao duc|1991|2|Con|
+ART-146|Nguon goc loai nguoi Tap 2|Bohr|NXB Van hoc|2019|4|Con|
+ART-149|Chuyen dong van toc Tap 1|Darwin|NXB Khoa hoc|2019|1|Con|
+ART-155|Sinh hoc tien hoa Tap 2|Tesla|NXB Giao duc|2024|3|Con|
+ART-156|Ky thuat co dien|Newton|NXB Khoa hoc|2016|3|Con|
+ART-160|Sinh hoc tien hoa Tap 1|Curie|NXB Khoa hoc|2009|2|Con|
+ART-161|Chuyen dong van toc Tap 1|Curie|NXB Van hoc|2015|3|Con|
+ART-164|Dien dong hoc|Einstein|NXB Cong nghe|2014|3|Con|
+ART-172|Sinh hoc tien hoa Tap 2|Newton|NXB Khoa hoc|2002|2|Con|
+ART-175|Ly thuyet tuong doi|Curie|NXB Giao duc|1997|4|Con|
+ART-176|Chuyen dong van toc Tap 2|Bohr|NXB Cong nghe|2012|2|Con|
+ART-191|Chuyen dong van toc Tap 2|Darwin|NXB Giao duc|2018|4|Con|
+ART-192|Sinh hoc tien hoa|Einstein|NXB Cong nghe|2013|1|Con|
+ART-195|Nguon goc loai nguoi|Einstein|NXB Van hoc|2010|5|Con|
+ART-199|Sinh hoc tien hoa Tap 2|Einstein|NXB Van hoc|1992|4|Con|
+ART-211|Ly thuyet tuong doi Tap 1|Einstein|NXB Cong nghe|2022|1|Con|
+ART-215|Ly thuyet tuong doi|Bohr|NXB Giao duc|2020|1|Con|
+ART-235|Nguon goc loai nguoi|Curie|NXB Van hoc|1990|3|Con|
+ART-237|Nguon goc loai nguoi|Newton|NXB Cong nghe|2018|1|Con|
+ART-244|Ky thuat co dien|Einstein|NXB Khoa hoc|1994|3|Con|
+ART-257|Nguon goc loai nguoi|Curie|NXB Cong nghe|2023|2|Con|
+ART-265|Nguon goc loai nguoi Tap 1|Tesla|NXB Cong nghe|2019|1|Con|
+ART-272|Ly thuyet tuong doi|Darwin|NXB Van hoc|2018|4|Con|
+ART-277|Ky thuat co dien|Tesla|NXB Giao duc|2020|4|Con|
+ART-279|Dien dong hoc Tap 1|Darwin|NXB Van hoc|2023|3|Con|
+ART-280|Nguon goc loai nguoi|Newton|NXB Giao duc|1991|2|Con|
+ART-286|Sinh hoc tien hoa|Newton|NXB Van hoc|2008|5|Con|
+ART-288|Chuyen dong van toc|Einstein|NXB Khoa hoc|2004|4|Con|
+ART-289|Ky thuat co dien|Tesla|NXB Cong nghe|2011|2|Con|
+ART-291|Dien dong hoc Tap 1|Newton|NXB Khoa hoc|2001|2|Con|
+ART-292|Dien dong hoc Tap 1|Darwin|NXB Cong nghe|2015|2|Con|
+ART-293|Chuyen dong van toc|Curie|NXB Cong nghe|2007|4|Con|
+ART-297|Chuyen dong van toc|Curie|NXB Khoa hoc|2017|4|Con|
+HIST-006|Nguon goc loai nguoi Tap 1|Darwin|NXB Khoa hoc|2007|4|Con|
+HIST-014|Nguon goc loai nguoi Tap 2|Tesla|NXB Cong nghe|1991|2|Con|
+HIST-015|Sinh hoc tien hoa Tap 2|Darwin|NXB Giao duc|2013|5|Con|
+HIST-016|Sinh hoc tien hoa Tap 1|Curie|NXB Giao duc|2023|4|Con|
+HIST-024|Chuyen dong van toc|Tesla|NXB Giao duc|2022|2|Con|
+HIST-032|Chuyen dong van toc Tap 1|Tesla|NXB Khoa hoc|2003|2|Con|
+HIST-033|Dien dong hoc Tap 1|Bohr|NXB Giao duc|2002|3|Con|
+HIST-040|Sinh hoc tien hoa|Einstein|NXB Cong nghe|2010|4|Con|
+HIST-042|Chuyen dong van toc Tap 2|Einstein|NXB Giao duc|2014|3|Con|
+HIST-056|Nguon goc loai nguoi|Bohr|NXB Giao duc|1998|1|Con|
+HIST-057|Chuyen dong van toc|Newton|NXB Cong nghe|2011|4|Con|
+HIST-058|Chuyen dong van toc Tap 1|Curie|NXB Khoa hoc|2001|1|Con|
+HIST-060|Chuyen dong van toc Tap 1|Darwin|NXB Cong nghe|2015|4|Con|
+HIST-070|Sinh hoc tien hoa|Curie|NXB Van hoc|2004|2|Con|
+HIST-071|Ky thuat co dien Tap 1|Tesla|NXB Khoa hoc|2007|5|Con|
+HIST-073|Dien dong hoc|Einstein|NXB Giao duc|2006|4|Con|
+HIST-074|Ly thuyet tuong doi Tap 2|Einstein|NXB Giao duc|2021|2|Con|
+HIST-075|Chuyen dong van toc|Tesla|NXB Khoa hoc|2016|3|Con|
+HIST-079|Dien dong hoc|Einstein|NXB Khoa hoc|1995|2|Con|
+HIST-082|Sinh hoc tien hoa Tap 2|Curie|NXB Van hoc|1992|3|Con|
+HIST-084|Chuyen dong van toc Tap 2|Newton|NXB Khoa hoc|2017|4|Con|
+HIST-086|Ly thuyet tuong doi|Darwin|NXB Cong nghe|2002|5|Con|
+HIST-094|Chuyen dong van toc Tap 2|Bohr|NXB Khoa hoc|2017|5|Con|
+HIST-097|Ky thuat co dien Tap 1|Bohr|NXB Khoa hoc|1999|3|Con|
+HIST-101|Sinh hoc tien hoa Tap 2|Darwin|NXB Khoa hoc|2015|5|Con|
+HIST-104|Ly thuyet tuong doi Tap 1|Newton|NXB Khoa hoc|2010|4|Con|
+HIST-105|Chuyen dong van toc Tap 2|Darwin|NXB Giao duc|1996|2|Con|
+HIST-108|Dien dong hoc Tap 2|Newton|NXB Khoa hoc|2017|2|Con|
+HIST-116|Ky thuat co dien|Newton|NXB Giao duc|2019|5|Con|
+HIST-124|Ky thuat co dien|Newton|NXB Khoa hoc|2014|5|Con|
+HIST-127|Dien dong hoc|Bohr|NXB Van hoc|2020|5|Con|
+HIST-128|Ky thuat co dien Tap 2|Curie|NXB Khoa hoc|2002|2|Con|
+HIST-144|Chuyen dong van toc|Bohr|NXB Van hoc|1996|1|Con|
+HIST-148|Chuyen dong van toc Tap 2|Curie|NXB Giao duc|2000|1|Con|
+HIST-151|Nguon goc loai nguoi Tap 2|Newton|NXB Giao duc|2013|4|Con|
+HIST-154|Chuyen dong van toc|Bohr|NXB Van hoc|2019|3|Con|
+HIST-158|Chuyen dong van toc|Bohr|NXB Cong nghe|1998|3|Con|
+HIST-159|Ky thuat co dien Tap 1|Bohr|NXB Giao duc|2021|4|Con|
+HIST-167|Chuyen dong van toc Tap 2|Curie|NXB Cong nghe|2015|4|Con|
+HIST-168|Chuyen dong van toc Tap 1|Darwin|NXB Van hoc|2019|4|Con|
+HIST-173|Chuyen dong van toc|Darwin|NXB Van hoc|1991|1|Con|
+HIST-177|Chuyen dong van toc Tap 2|Curie|NXB Giao duc|2005|5|Con|
+HIST-180|Dien dong hoc Tap 2|Curie|NXB Khoa hoc|1990|4|Con|
+HIST-188|Ky thuat co dien|Bohr|NXB Giao duc|2002|1|Con|
+HIST-193|Dien dong hoc Tap 1|Newton|NXB Giao duc|2015|4|Con|
+HIST-196|Ky thuat co dien|Newton|NXB Giao duc|1993|2|Con|
+HIST-201|Dien dong hoc Tap 2|Tesla|NXB Cong nghe|1995|2|Con|
+HIST-208|Dien dong hoc|Tesla|NXB Khoa hoc|1994|5|Con|
+HIST-216|Dien dong hoc Tap 1|Darwin|NXB Khoa hoc|2016|1|Con|
+HIST-225|Ly thuyet tuong doi|Tesla|NXB Khoa hoc|2006|3|Con|
+HIST-228|Sinh hoc tien hoa Tap 2|Darwin|NXB Cong nghe|2005|1|Con|
+HIST-243|Sinh hoc tien hoa Tap 2|Einstein|NXB Cong nghe|2003|1|Con|
+HIST-250|Ky thuat co dien|Einstein|NXB Cong nghe|2006|5|Con|
+HIST-256|Dien dong hoc|Curie|NXB Giao duc|2002|2|Con|
+HIST-259|Sinh hoc tien hoa|Curie|NXB Van hoc|2006|1|Con|
+HIST-261|Chuyen dong van toc|Curie|NXB Van hoc|2019|4|Con|
+HIST-267|Ky thuat co dien|Tesla|NXB Khoa hoc|1993|2|Con|
+HIST-273|Chuyen dong van toc|Curie|NXB Van hoc|2019|4|Con|
+HIST-282|Dien dong hoc Tap 1|Einstein|NXB Khoa hoc|1992|4|Con|
+HIST-283|Sinh hoc tien hoa|Darwin|NXB Giao duc|2018|2|Con|
+HIST-290|Dien dong hoc Tap 1|Darwin|NXB Cong nghe|2000|2|Con|
+HIST-299|Chuyen dong van toc|Darwin|NXB Cong nghe|2013|4|Con|
+LIT-031|Sinh hoc tien hoa Tap 1|Bohr|NXB Giao duc|1995|3|Con|
+LIT-034|Ly thuyet tuong doi Tap 1|Curie|NXB Cong nghe|2024|2|Con|
+LIT-035|Ly thuyet tuong doi|Curie|NXB Cong nghe|2005|4|Con|
+LIT-043|Chuyen dong van toc Tap 1|Darwin|NXB Giao duc|2005|4|Con|
+LIT-047|Dien dong hoc Tap 1|Darwin|NXB Van hoc|2013|4|Con|
+LIT-059|Sinh hoc tien hoa Tap 1|Newton|NXB Khoa hoc|2006|1|Con|
+LIT-062|Sinh hoc tien hoa|Darwin|NXB Giao duc|1992|1|Con|
+LIT-063|Ly thuyet tuong doi Tap 2|Bohr|NXB Van hoc|2003|4|Con|
+LIT-081|Ky thuat co dien Tap 1|Bohr|NXB Giao duc|1996|1|Con|
+LIT-085|Ky thuat co dien Tap 2|Bohr|NXB Khoa hoc|2004|4|Con|
+LIT-088|Chuyen dong van toc|Darwin|NXB Khoa hoc|2011|4|Con|
+LIT-092|Chuyen dong van toc|Curie|NXB Giao duc|1994|3|Con|
+LIT-096|Ly thuyet tuong doi|Darwin|NXB Giao duc|1993|5|Con|
+LIT-098|Ly thuyet tuong doi Tap 1|Bohr|NXB Giao duc|2013|5|Con|
+LIT-099|Ky thuat co dien Tap 1|Einstein|NXB Van hoc|1996|3|Con|
+LIT-103|Nguon goc loai nguoi|Curie|NXB Giao duc|2022|3|Con|
+LIT-111|Sinh hoc tien hoa|Darwin|NXB Van hoc|2005|1|Con|
+LIT-114|Nguon goc loai nguoi|Curie|NXB Cong nghe|1994|3|Con|
+LIT-115|Ky thuat co dien Tap 1|Tesla|NXB Giao duc|1991|4|Con|
+LIT-117|Chuyen dong van toc Tap 1|Newton|NXB Van hoc|1994|3|Con|
+LIT-118|Ly thuyet tuong doi Tap 2|Einstein|NXB Van hoc|2010|1|Con|
+LIT-120|Chuyen dong van toc|Curie|NXB Giao duc|2000|1|Con|
+LIT-123|Dien dong hoc|Einstein|NXB Cong nghe|2001|3|Con|
+LIT-137|Chuyen dong van toc Tap 2|Bohr|NXB Giao duc|2016|1|Con|
+LIT-140|Ky thuat co dien|Bohr|NXB Cong nghe|2022|4|Con|
+LIT-141|Dien dong hoc Tap 2|Einstein|NXB Khoa hoc|2013|2|Con|
+LIT-142|Nguon goc loai nguoi|Curie|NXB Khoa hoc|2014|4|Con|
+LIT-152|Ly thuyet tuong doi|Curie|NXB Van hoc|2024|4|Con|
+LIT-169|Ky thuat co dien|Einstein|NXB Van hoc|1994|4|Con|
+LIT-170|Dien dong hoc|Einstein|NXB Van hoc|2004|4|Con|
+LIT-182|Ky thuat co dien Tap 1|Tesla|NXB Van hoc|1995|5|Con|
+LIT-184|Sinh hoc tien hoa|Bohr|NXB Khoa hoc|1995|4|Con|
+LIT-194|Ky thuat co dien Tap 1|Bohr|NXB Khoa hoc|2016|4|Con|
+LIT-197|Sinh hoc tien hoa Tap 1|Darwin|NXB Van hoc|2013|5|Con|
+LIT-206|Ly thuyet tuong doi Tap 2|Bohr|NXB Cong nghe|1991|4|Con|
+LIT-214|Chuyen dong van toc Tap 2|Bohr|NXB Cong nghe|1998|4|Con|
+LIT-217|Chuyen dong van toc Tap 2|Tesla|NXB Van hoc|2005|2|Con|
+LIT-226|Nguon goc loai nguoi|Tesla|NXB Van hoc|2024|1|Con|
+LIT-229|Dien dong hoc Tap 2|Bohr|NXB Van hoc|2021|5|Con|
+LIT-230|Chuyen dong van toc|Einstein|NXB Giao duc|2021|3|Con|
+LIT-231|Chuyen dong van toc Tap 2|Einstein|NXB Cong nghe|2014|4|Con|
+LIT-233|Chuyen dong van toc Tap 2|Darwin|NXB Cong nghe|2017|5|Con|
+LIT-236|Chuyen dong van toc Tap 1|Curie|NXB Van hoc|1991|2|Con|
+LIT-238|Sinh hoc tien hoa Tap 2|Einstein|NXB Van hoc|1994|2|Con|
+LIT-239|Nguon goc loai nguoi Tap 1|Tesla|NXB Cong nghe|2017|2|Con|
+LIT-246|Ky thuat co dien Tap 2|Einstein|NXB Khoa hoc|1990|1|Con|
+LIT-248|Ly thuyet tuong doi|Curie|NXB Khoa hoc|1992|5|Con|
+LIT-249|Ly thuyet tuong doi Tap 1|Tesla|NXB Van hoc|2008|4|Con|
+LIT-251|Sinh hoc tien hoa Tap 2|Tesla|NXB Van hoc|2004|2|Con|
+LIT-253|Ly thuyet tuong doi Tap 1|Curie|NXB Giao duc|1997|4|Con|
+LIT-260|Sinh hoc tien hoa Tap 2|Darwin|NXB Khoa hoc|2008|1|Con|
+LIT-264|Nguon goc loai nguoi Tap 1|Newton|NXB Van hoc|2001|1|Con|
+LIT-268|Ly thuyet tuong doi Tap 2|Bohr|NXB Cong nghe|2011|1|Con|
+LIT-271|Nguon goc loai nguoi Tap 2|Newton|NXB Giao duc|2006|1|Con|
+LIT-278|Chuyen dong van toc Tap 2|Tesla|NXB Giao duc|2014|1|Con|
+LIT-285|Dien dong hoc Tap 1|Newton|NXB Van hoc|2013|3|Con|
+LIT-298|Ky thuat co dien Tap 2|Curie|NXB Van hoc|2019|2|Con|
+SCI-005|Ky thuat co dien Tap 1|Curie|NXB Giao duc|2021|5|Con|
+SCI-008|Dien dong hoc|Darwin|NXB Van hoc|2003|3|Con|
+SCI-018|Dien dong hoc|Einstein|NXB Van hoc|1990|3|Con|
+SCI-019|Dien dong hoc|Darwin|NXB Giao duc|1991|1|Con|
+SCI-025|Ky thuat co dien|Bohr|NXB Khoa hoc|1990|2|Con|
+SCI-029|Nguon goc loai nguoi Tap 1|Newton|NXB Giao duc|2007|2|Con|
+SCI-036|Nguon goc loai nguoi Tap 2|Darwin|NXB Khoa hoc|1991|2|Con|
+SCI-037|Chuyen dong van toc Tap 2|Tesla|NXB Khoa hoc|1990|5|Con|
+SCI-053|Ky thuat co dien Tap 2|Bohr|NXB Van hoc|2012|4|Con|
+SCI-064|Nguon goc loai nguoi|Curie|NXB Cong nghe|2024|2|Con|
+SCI-069|Ly thuyet tuong doi|Einstein|NXB Van hoc|2021|1|Con|
+SCI-072|Chuyen dong van toc|Newton|NXB Khoa hoc|2019|5|Con|
+SCI-100|Dien dong hoc Tap 2|Einstein|NXB Van hoc|1995|2|Con|
+SCI-102|Ly thuyet tuong doi Tap 2|Curie|NXB Giao duc|1996|1|Con|
+SCI-106|Sinh hoc tien hoa|Bohr|NXB Khoa hoc|2017|3|Con|
+SCI-107|Chuyen dong van toc Tap 2|Darwin|NXB Giao duc|1993|4|Con|
+SCI-121|Chuyen dong van toc Tap 1|Newton|NXB Giao duc|2004|4|Con|
+SCI-129|Ly thuyet tuong doi Tap 1|Curie|NXB Cong nghe|1998|1|Con|
+SCI-130|Dien dong hoc|Einstein|NXB Giao duc|2017|5|Con|
+SCI-131|Ly thuyet tuong doi Tap 2|Newton|NXB Giao duc|2004|1|Con|
+SCI-136|Ly thuyet tuong doi Tap 1|Darwin|NXB Van hoc|2010|1|Con|
+SCI-143|Nguon goc loai nguoi|Tesla|NXB Giao duc|2001|2|Con|
+SCI-145|Chuyen dong van toc Tap 1|Curie|NXB Khoa hoc|1991|5|Con|
+SCI-153|Ly thuyet tuong doi|Einstein|NXB Giao duc|2001|3|Con|
+SCI-157|Chuyen dong van toc|Bohr|NXB Van hoc|2004|5|Con|
+SCI-163|Nguon goc loai nguoi Tap 2|Tesla|NXB Cong nghe|1997|5|Con|
+SCI-165|Ky thuat co dien Tap 2|Bohr|NXB Khoa hoc|2008|4|Con|
+SCI-178|Sinh hoc tien hoa|Bohr|NXB Giao duc|1994|5|Con|
+SCI-179|Sinh hoc tien hoa Tap 1|Curie|NXB Van hoc|2005|1|Con|
+SCI-185|Chuyen dong van toc Tap 1|Curie|NXB Van hoc|1994|1|Con|
+SCI-187|Chuyen dong van toc|Darwin|NXB Khoa hoc|2013|5|Con|
+SCI-189|Dien dong hoc|Einstein|NXB Khoa hoc|1995|4|Con|
+SCI-190|Sinh hoc tien hoa|Einstein|NXB Cong nghe|2002|4|Con|
+SCI-202|Ly thuyet tuong doi|Bohr|NXB Khoa hoc|2018|2|Con|
+SCI-203|Chuyen dong van toc Tap 1|Bohr|NXB Cong nghe|1998|3|Con|
+SCI-205|Nguon goc loai nguoi Tap 1|Bohr|NXB Khoa hoc|2002|1|Con|
+SCI-212|Nguon goc loai nguoi Tap 2|Darwin|NXB Van hoc|1991|2|Con|
+SCI-218|Nguon goc loai nguoi Tap 2|Bohr|NXB Giao duc|2009|5|Con|
+SCI-219|Dien dong hoc|Einstein|NXB Van hoc|1993|5|Con|
+SCI-220|Chuyen dong van toc Tap 1|Bohr|NXB Van hoc|2000|1|Con|
+SCI-223|Nguon goc loai nguoi Tap 1|Darwin|NXB Van hoc|1990|5|Con|
+SCI-224|Sinh hoc tien hoa|Newton|NXB Cong nghe|2022|5|Con|
+SCI-232|Chuyen dong van toc|Newton|NXB Khoa hoc|2012|3|Con|
+SCI-234|Dien dong hoc Tap 1|Darwin|NXB Van hoc|1999|3|Con|
+SCI-241|Chuyen dong van toc|Bohr|NXB Van hoc|2004|3|Con|
+SCI-245|Sinh hoc tien hoa|Curie|NXB Cong nghe|2007|5|Con|
+SCI-247|Ky thuat co dien|Newton|NXB Giao duc|2007|4|Con|
+SCI-252|Sinh hoc tien hoa Tap 1|Curie|NXB Van hoc|2002|4|Con|
+SCI-254|Sinh hoc tien hoa Tap 1|Tesla|NXB Cong nghe|2014|2|Con|
+SCI-263|Dien dong hoc|Tesla|NXB Khoa hoc|2012|1|Con|
+SCI-274|Ly thuyet tuong doi Tap 2|Darwin|NXB Khoa hoc|1991|4|Con|
+SCI-276|Nguon goc loai nguoi|Bohr|NXB Cong nghe|2008|3|Con|
+TECH-001|Sinh hoc tien hoa Tap 1|Curie|NXB Van hoc|1990|5|Con|
+TECH-010|Ly thuyet tuong doi Tap 2|Bohr|NXB Giao duc|2009|1|Con|
+TECH-012|Nguon goc loai nguoi|Curie|NXB Giao duc|2000|5|Con|
+TECH-013|Nguon goc loai nguoi Tap 2|Tesla|NXB Giao duc|2020|1|Con|
+TECH-027|Ky thuat co dien Tap 2|Darwin|NXB Khoa hoc|2009|3|Con|
+TECH-030|Ly thuyet tuong doi|Einstein|NXB Cong nghe|2003|1|Con|
+TECH-038|Ly thuyet tuong doi Tap 2|Darwin|NXB Cong nghe|1995|3|Con|
+TECH-041|Ky thuat co dien Tap 2|Einstein|NXB Giao duc|2007|5|Con|
+TECH-044|Chuyen dong van toc Tap 1|Darwin|NXB Khoa hoc|2014|4|Con|
+TECH-048|Ly thuyet tuong doi Tap 2|Newton|NXB Khoa hoc|2015|5|Con|
+TECH-050|Chuyen dong van toc|Curie|NXB Van hoc|2019|2|Con|
+TECH-051|Nguon goc loai nguoi|Einstein|NXB Cong nghe|1991|4|Con|
+TECH-055|Nguon goc loai nguoi|Darwin|NXB Giao duc|2012|1|Con|
+TECH-061|Chuyen dong van toc|Einstein|NXB Giao duc|1995|3|Con|
+TECH-067|Ly thuyet tuong doi Tap 2|Einstein|NXB Van hoc|1990|1|Con|
+TECH-076|Sinh hoc tien hoa|Newton|NXB Giao duc|2024|2|Con|
+TECH-080|Nguon goc loai nguoi|Newton|NXB Khoa hoc|2022|4|Con|
+TECH-083|Chuyen dong van toc Tap 2|Darwin|NXB Van hoc|1994|4|Con|
+TECH-087|Ly thuyet tuong doi Tap 1|Tesla|NXB Khoa hoc|2003|1|Con|
+TECH-089|Dien dong hoc|Bohr|NXB Khoa hoc|2010|3|Con|
+TECH-095|Chuyen dong van toc Tap 2|Curie|NXB Cong nghe|2008|1|Con|
+TECH-109|Ly thuyet tuong doi|Curie|NXB Giao duc|1992|4|Con|
+TECH-112|Dien dong hoc Tap 2|Newton|NXB Khoa hoc|2000|4|Con|
+TECH-113|Dien dong hoc|Curie|NXB Cong nghe|2005|1|Con|
+TECH-119|Chuyen dong van toc|Newton|NXB Van hoc|2009|1|Con|
+TECH-122|Sinh hoc tien hoa|Einstein|NXB Cong nghe|2022|3|Con|
+TECH-126|Chuyen dong van toc|Newton|NXB Khoa hoc|2007|5|Con|
+TECH-132|Sinh hoc tien hoa|Curie|NXB Van hoc|2013|1|Con|
+TECH-133|Ly thuyet tuong doi Tap 2|Darwin|NXB Giao duc|2018|4|Con|
+TECH-134|Ky thuat co dien|Bohr|NXB Giao duc|2001|3|Con|
+TECH-139|Ly thuyet tuong doi|Newton|NXB Giao duc|2007|4|Con|
+TECH-147|Dien dong hoc Tap 1|Einstein|NXB Khoa hoc|2024|1|Con|
+TECH-150|Ky thuat co dien|Tesla|NXB Khoa hoc|2020|5|Con|
+TECH-162|Sinh hoc tien hoa Tap 1|Bohr|NXB Khoa hoc|2009|3|Con|
+TECH-166|Ly thuyet tuong doi Tap 2|Curie|NXB Khoa hoc|1998|5|Con|
+TECH-171|Ly thuyet tuong doi Tap 2|Curie|NXB Van hoc|1992|5|Con|
+TECH-174|Chuyen dong van toc|Bohr|NXB Van hoc|2010|1|Con|
+TECH-181|Chuyen dong van toc Tap 2|Bohr|NXB Khoa hoc|1990|5|Con|
+TECH-183|Dien dong hoc Tap 1|Darwin|NXB Van hoc|2021|4|Con|
+TECH-186|Ky thuat co dien|Bohr|NXB Giao duc|1999|2|Con|
+TECH-198|Dien dong hoc Tap 1|Curie|NXB Cong nghe|2004|1|Con|
+TECH-200|Ky thuat co dien|Darwin|NXB Van hoc|1990|1|Con|
+TECH-204|Nguon goc loai nguoi|Tesla|NXB Van hoc|2003|4|Con|
+TECH-207|Chuyen dong van toc Tap 2|Einstein|NXB Van hoc|2002|3|Con|
+TECH-209|Ky thuat co dien|Einstein|NXB Khoa hoc|2001|2|Con|
+TECH-210|Ly thuyet tuong doi Tap 2|Darwin|NXB Khoa hoc|1998|4|Con|
+TECH-213|Dien dong hoc Tap 2|Newton|NXB Giao duc|1994|4|Con|
+TECH-221|Sinh hoc tien hoa Tap 1|Bohr|NXB Van hoc|1994|4|Con|
+TECH-222|Chuyen dong van toc|Darwin|NXB Cong nghe|2024|5|Con|
+TECH-227|Ly thuyet tuong doi Tap 2|Tesla|NXB Cong nghe|2015|1|Con|
+TECH-240|Dien dong hoc|Bohr|NXB Giao duc|2016|2|Con|
+TECH-242|Nguon goc loai nguoi Tap 2|Tesla|NXB Cong nghe|2018|2|Con|
+TECH-255|Chuyen dong van toc|Einstein|NXB Cong nghe|1991|4|Con|
+TECH-258|Ky thuat co dien|Darwin|NXB Khoa hoc|2002|5|Con|
+TECH-262|Chuyen dong van toc Tap 2|Darwin|NXB Giao duc|2008|5|Con|
+TECH-266|Chuyen dong van toc Tap 1|Einstein|NXB Giao duc|1993|1|Con|
+TECH-269|Chuyen dong van toc Tap 1|Curie|NXB Cong nghe|2000|1|Con|
+TECH-270|Ly thuyet tuong doi|Curie|NXB Giao duc|1996|4|Con|
+TECH-275|Ky thuat co dien|Tesla|NXB Van hoc|2016|4|Con|
+TECH-281|Ky thuat co dien|Tesla|NXB Van hoc|2024|2|Con|
+TECH-284|Nguon goc loai nguoi Tap 1|Einstein|NXB Khoa hoc|2000|1|Con|
+TECH-287|Chuyen dong van toc Tap 2|Newton|NXB Van hoc|1997|1|Con|
+TECH-294|Nguon goc loai nguoi Tap 2|Tesla|NXB Khoa hoc|1994|4|Con|
+TECH-295|Sinh hoc tien hoa|Tesla|NXB Giao duc|2010|5|Con|
+TECH-296|Nguon goc loai nguoi Tap 1|Einstein|NXB Khoa hoc|2000|4|Con|
+TECH-300|Ly thuyet tuong doi|Bohr|NXB Van hoc|2005|4|Con|
