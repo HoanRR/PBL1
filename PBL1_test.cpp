@@ -150,43 +150,51 @@ string KiemTraDangNhap(const string& TenDangNhap, const string& Matkhau){
     return "";
 }   
 //-----------------------Đăng Ký----------------------------------
-void DangKyTaiKhoan() {
-    system("cls");
-    int x = 70, y = 2, width = 80, height = 12;
-    drawBox(x, y, width, height);
-    gotoXY(x + (width - 10) / 2, y + 1);   cout << "DANG KY TAI KHOAN";
 
+vector<string> Dulieu_Dangnhap(){
+    fstream fi("user.txt", ios::in | ios::out | ios::app);
+    string line;
+    vector<string> dulieu;
+    while (getline(fi,line)){
+        stringstream ss(line);
+        string ten;
+        getline(ss,ten,'|');
+        dulieu.push_back(ten);
+    }
+    return dulieu;
+}
+
+void DangKyTaiKhoan() {
+    int x = 70, y = 2, width = 80, height = 12;
     fstream fi("user.txt", ios::in | ios::out | ios::app);
     bool kt = true;
     string TenDangNhap, Matkhau;
     
     while (kt) {
+         system("cls");
+        drawBox(x, y, width, height);
+        gotoXY(x + (width - 10) / 2, y + 1);   cout << "DANG KY TAI KHOAN";
         kt = false;
         gotoXY(x + 2, y + 3); cout << "Nhap ten dang nhap: ";
         cin >> TenDangNhap;
         gotoXY(x + 2, y + 4); cout << "Nhap mat khau: ";
         cin >> Matkhau;
 
-        fi.clear();
-        fi.seekg(0, ios::beg);
-        string line;
-        
-        while (getline(fi, line)) {
-            stringstream ss(line);
-            string ten;
-            getline(ss, ten, '|');
-
-            if (TenDangNhap.length() >= 5 && TenDangNhap.substr(0, 5) == "admin") {
+        if (TenDangNhap.length() >= 5 && TenDangNhap.substr(0, 5) == "admin") {
                 kt = true;
                 gotoXY(x + 2, y + 6); cout << "Khong duoc su dung ten dang nhap bat dau bang 'admin'. Vui long nhap lai.";
                 Sleep(2000);
-                DangKyTaiKhoan();
-            } 
-            else if (ten == TenDangNhap) {
-                kt = true;
-                gotoXY(x + 2, y + 6); cout << "Ten dang nhap da ton tai. Vui long nhap lai.";
-                Sleep(2000);
-                DangKyTaiKhoan();
+        }
+        else {
+            vector<string> dulieu = Dulieu_Dangnhap();
+            for(auto s : dulieu){ 
+                if (s == TenDangNhap) {
+                    kt = true;
+                    gotoXY(x + 2, y + 6); 
+                    cout << "Ten dang nhap da ton tai. Vui long nhap lai.";
+                    Sleep(2000);
+                    break;
+                }
             }
         }
     }
@@ -1246,7 +1254,14 @@ void Xem_sach(Node *head) {
                         cout << "Thao tac khong hop le! Nhap lai!";
                         Sleep(1500);
                         break;
-                }     
+                } 
+                if (tt2==1 || tt2==2 || tt2==3 || tt2==4 ){
+                    system("cls");
+                    print_lib(head);
+                    gotoXY(x+2,y+18);
+                    cout << "Nhan phim bat ky de tiep tuc...";
+                    _getch();     
+                }    
             }
         }
         else if (tt==3) {
@@ -1719,6 +1734,7 @@ void deleteList(Node* head) {
     head = nullptr; // Gán con trỏ head về null sau khi xóa
 }
 int main() {
+    system("color f0");
     Node* head = Head();
     read_file(head,"thuvien.txt"); // đọc vào thư 
     showIntro();
