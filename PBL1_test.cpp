@@ -1262,6 +1262,7 @@ void Xem_sach(Node *head) {
                     cout << "Nhan phim bat ky de tiep tuc...";
                     _getch();     
                 }    
+               
             }
         }
         else if (tt==3) {
