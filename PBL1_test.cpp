@@ -1735,7 +1735,7 @@ void deleteList(Node* head) {
     head = nullptr; // Gán con trỏ head về null sau khi xóa
 }
 int main() {
-    system("color f0");
+
     Node* head = Head();
     read_file(head,"thuvien.txt"); // đọc vào thư 
     showIntro();
