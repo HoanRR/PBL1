@@ -1674,13 +1674,13 @@ void showIntro() {
     system("cls");
     //SetColor(11);
     drawBox(70, 5, 60, 20);
-    gotoXY(88, 6);
+    gotoXY(90, 6);
     cout << "DAI HOC DA NANG";
-    gotoXY(84, 7);
+    gotoXY(86, 7);
     cout << "TRUONG DAI HOC BACH KHOA";
-    gotoXY(84, 8);
+    gotoXY(86, 8);
     cout << "KHOA CONG NGHE THONG TIN";
-    gotoXY(88, 9);
+    gotoXY(90, 9);
     cout << "---------------";
     gotoXY(84, 11);
     cout << "PB1. DO AN LAP TRINH TINH TOAN";
