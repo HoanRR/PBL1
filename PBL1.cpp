@@ -1672,10 +1672,29 @@ void drawBox(int x, int y, int width, int height) {
 void showIntro() {
     system("cls");
     //SetColor(11);
-    drawBox(70, 5, 60, 10);
-    gotoXY(80, 8);
-    cout << "CHAO MUNG BAN DEN VOI CHUONG TRINH";
-    Sleep(2000); // dừng lại 2 gi
+    drawBox(70, 5, 60, 20);
+    gotoXY(88, 6);
+    cout << "DAI HOC DA NANG";
+    gotoXY(84, 7);
+    cout << "TRUONG DAI HOC BACH KHOA";
+    gotoXY(84, 8);
+    cout << "KHOA CONG NGHE THONG TIN";
+    gotoXY(88, 9);
+    cout << "---------------";
+    gotoXY(84, 11);
+    cout << "PB1. DO AN LAP TRINH TINH TOAN";
+    gotoXY(88, 12);
+    cout << "QUAN LY THU VIEN";
+    gotoXY(80, 13);
+    cout << "Giang vien huong dan : TS.Truong Ngoc Chau";
+    gotoXY(88,16);
+    cout << "Sinh vien thuc hien:";
+    gotoXY(84, 17);
+    cout << "Nguyen Huu Tai  - 24T_KHDL";
+    gotoXY(84, 18);
+    cout << "Ngo Khai Hoan   - 24T_KHDL";
+
+    Sleep(3000); // dừng lại 3 giay
 }
 
 void showHomePage() {
