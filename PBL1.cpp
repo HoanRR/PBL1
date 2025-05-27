@@ -335,7 +335,7 @@ void print_page(Node *start, Node *end, int widths[],int &cnt) {
 
 // In toàn bộ thư viện, chia trang
 void print_lib(Node* head) {
-    int widths[] = {7,10, 50, 20, 20, 10, 10, 10};
+    int widths[] = {7,10, 50, 20, 35, 10, 10, 10};
     int cnt = 1;
     const char *headers[] = {"STT","ID", "Ten", "TacGia", "NXB", "Nam", "SoLuong", "TT"};
     int cols = 8;
@@ -1069,7 +1069,7 @@ void Tim_sach(Node *head) {
             cout << "---------------------------------------------------------Danh sach liet ke ------------------------------------------------------\n";
             print_lib(ds);
             delete ds;
-        } else {
+        } else if (check == true) {
             drawBox(x, y, width, height);
                 gotoXY(x + (width - 12) / 2, y + 1);
                 cout << "TIM SACH";
@@ -1428,7 +1428,7 @@ void TraSach(const string& TenDangNhap, Node *head) {
     string filename = "data\\user\\" + TenDangNhap + ".txt";
     ifstream fi(filename);
     if (!fi.is_open()) {
-        gotoXY(x + 2, y + 5);              cout << "Khong mo duoc file nguoi dung!";
+        gotoXY(x + 2, y + 5);     cout << "Khong mo duoc file nguoi dung!";
         Sleep(1500);
         return;
     }
@@ -1438,12 +1438,13 @@ void TraSach(const string& TenDangNhap, Node *head) {
     bool found = false;
     while (getline(fi, line)) {
         stringstream ss(line);
+
         string id;
         getline(ss, id, '|');
-        if (id != ID) {
-            lines.push_back(line);
-        } else {
+        if ( Vietthuong(id) == Vietthuong(ID)) { 
             found = true;
+        } else {
+            lines.push_back(line);
         }
     }
     fi.close();
