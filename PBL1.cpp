@@ -309,13 +309,13 @@ void print_page(Node *start, Node *end, int widths[],int &cnt) {
         cout << cur->sach->ID;
         for (int j = cur->sach->ID.length(); j < widths[1]; j++) cout << ' ';
         cout << char(186);
-        cout << cur->sach->ten;
+        cout << cur->sach->ten.substr(0,widths[2]);
         for (int j = cur->sach->ten.length(); j < widths[2]; j++) cout << ' ';
         cout << char(186);
-        cout << cur->sach->tac_gia;
+        cout << cur->sach->tac_gia.substr(0,widths[3]);
         for (int j = cur->sach->tac_gia.length(); j < widths[3]; j++) cout << ' ';
         cout << char(186);
-        cout << cur->sach->nxb;
+        cout << cur->sach->nxb.substr(0,widths[4]);
         for (int j = cur->sach->nxb.length(); j < widths[4]; j++) cout << ' ';
         cout << char(186);
         cout << cur->sach->namsx;
@@ -335,7 +335,7 @@ void print_page(Node *start, Node *end, int widths[],int &cnt) {
 
 // In toàn bộ thư viện, chia trang
 void print_lib(Node* head) {
-    int widths[] = {7,10, 50, 20, 35, 10, 10, 10};
+    int widths[] = {7,10, 40, 20, 27, 10, 10, 10};
     int cnt = 1;
     const char *headers[] = {"STT","ID", "Ten", "TacGia", "NXB", "Nam", "SoLuong", "TT"};
     int cols = 8;
@@ -352,9 +352,14 @@ void print_lib(Node* head) {
         print_BottomBorder(widths, cols);
 
         cout <<" Nhan pham bat ki de xem tiep hoac ESC de thoat.";
-        char ch = _getch();
+        int ch = _getch();
         if (ch == 27) break;
-        else system("cls");
+        else if (ch == 0 || ch == 224) {
+            _getch();
+            system("cls"); 
+        } else {
+            system("cls");
+        }
     }
 }
 // ---------------------------- Sap xep-----------------------------

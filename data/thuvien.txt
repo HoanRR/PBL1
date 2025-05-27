@@ -291,7 +291,6 @@ LIT-005|Tieu thuyet the ky 20|Nguyen Nhat Anh|NXB Tre|2021|5|Con|
 MAT-001|Giai tich 1|Nguyen Huu Dien|NXB Dai hoc Quoc gia Ha Noi|2018|5|Con|
 MAT-002|Giai tich 2|Nguyen Huu Dien|NXB Dai hoc Quoc gia Ha Noi|2019|3|Con|
 MAT-003|Dai so tuyen tinh|Nguyen Dinh Tri|NXB Giao Duc Viet Nam|2020|4|Con|
-MAT-004|Xac suat thong ke|Le Van Hoa|NXB Khoa hoc Tu nhien va Cong nghe|2017|2|Con|
 MAT-005|Toan roi rac|Pham Thi Huong|NXB Giao Duc Viet Nam|2021|6|Con|
 PHY-001|Vat ly dai cuong Tap 1|Tran Van Minh|NXB Giao Duc|2016|5|Con|
 PHY-002|Vat ly dai cuong Tap 2|Tran Van Minh|NXB Giao Duc|2017|4|Con|
