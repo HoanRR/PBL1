@@ -8,11 +8,11 @@ AI-007|Xay dung mo hinh AI|Pham Thi Thu Ha|NXB Bach Khoa|2020|3|Con|
 AI-008|Thuat toan AI|Le Minh Duc|NXB Cong nghe|2019|3|Con|
 AI-009|He thong thong minh|Nguyen Van Long|NXB Giao Duc|2021|2|Con|
 AI-010|Tri tue nhan tao va ung dung|Tran Thi Huyen|NXB Khoa hoc Tu nhien|2022|3|Con|
-AI-011|Học máy nâng cao Tap 1|Pham Van Khoa|NXB Tre|2020|4|Con|
-AI-012|Học máy nâng cao Tap 2|Pham Van Khoa|NXB Tre|2021|4|Con|
+AI-011|Hoc may nang cao Tap 1|Pham Van Khoa|NXB Tre|2020|4|Con|
+AI-012|Hoc may  cao Tap 2|Pham Van Khoa|NXB Tre|2021|4|Con|
 AI-013|Xu ly ngon ngu tu nhien|Le Thi Thu Ha|NXB Giao Duc|2019|3|Con|
 AI-014|Mo hinh deep learning|Nguyen Minh Anh|NXB Bach Khoa|2021|3|Con|
-AI-015|Mạng neuron sâu|Tran Van Khang|NXB Cong nghe|2022|2|Con|
+AI-015|Mang neuron sau|Tran Van Khang|NXB Cong nghe|2022|2|Con|
 AI-016|AI trong xe tu lai|Pham Thi Lan|NXB Khoa hoc Ky thuat|2020|3|Con|
 AI-017|Robot thong minh|Nguyen Van Son|NXB Tre|2021|2|Con|
 AI-018|AI va big data|Le Thanh Tuan|NXB Giao Duc|2022|3|Con|
@@ -105,8 +105,8 @@ COM-034|Pokemon Tap 1|Hidenori Kusaka|NXB Kim Dong|2016|5|Con|
 COM-035|Pokemon Tap 2|Hidenori Kusaka|NXB Kim Dong|2016|5|Con|
 COM-036|Detective Kindaichi Tap 1|Seimaru Amagi|NXB Kim Dong|2015|3|Con|
 COM-037|Detective Kindaichi Tap 2|Seimaru Amagi|NXB Kim Dong|2015|3|Con|
-COM-038|Shin cậu bé bút chì Tap 1|Yoshito Usui|NXB Tre|2015|5|Con|
-COM-039|Shin cậu bé bút chì Tap 2|Yoshito Usui|NXB Tre|2015|5|Con|
+COM-038|Shin cau be but chi Tap 1|Yoshito Usui|NXB Tre|2015|5|Con|
+COM-039|Shin cau be but chi Tap 2|Yoshito Usui|NXB Tre|2015|5|Con|
 COM-040|Inuyasha Tap 1|Rumiko Takahashi|NXB Kim Dong|2016|4|Con|
 COM-041|Inuyasha Tap 2|Rumiko Takahashi|NXB Kim Dong|2016|4|Con|
 COM-042|Ranma 1 2 Tap 1|Rumiko Takahashi|NXB Kim Dong|2017|4|Con|

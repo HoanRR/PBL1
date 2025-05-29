@@ -779,10 +779,10 @@ void them_sach(Node *head) {
         for (string k : DS_tg ){
             DS_Tacgia.push_back(k);
         }
-        gotoXY(x + 2, y + 7);
+        gotoXY(x + 2, y + 6);
         cout <<"Goi y: ";
         for (size_t i= 0; i < DS_Tacgia.size();i++){
-            gotoXY(x + 4, y + 8 + i);
+            gotoXY(x + 4, y + 7 + i);
             cout << i+1<< "."<< DS_Tacgia[i]<<endl;
         }
 
@@ -804,7 +804,7 @@ void them_sach(Node *head) {
             getline(cin, tacgia);
     }
     for (size_t i = 0; i < DS_Tacgia.size() + 5; i++) {
-        clearLine(x + 2, y + 7 + i, width - 4);
+        clearLine(x + 2, y + 6 + i, width - 4);
     }
     gotoXY(x + 2, y + 7);
     cout << "Ten tac gia: " << tacgia;
@@ -1285,7 +1285,7 @@ void LuuVaoFile(Node *head){
     int x = 70, y = 2, width = 80, height = 20;
     drawBox(x, y, width, height+3);
     gotoXY(x + (width - 12) / 2, y + 1);
-    cout << "Luu vao FIle";
+    cout << "Luu vao File";
 
     gotoXY(x + 2, y + 3);
     string file_name;
