@@ -1,5 +1,205 @@
-001|Hoc may|Hoang Thi Thu|NXB Tre|2018|8|Con|
-002|Tri tue nhan tao|Hoang Thi Thu|NXB Tre|2016|9|Con|
-003|Hoc may|Nguyen Van Long|NXB Tre|2020|4|Con|
-004|He thong thong minh|Tran Thi Mai|NXB Khoa Hoc|2021|1|Con|
-005|Tri tue nhan tao|Pham Van Dat|NXB Van Hoa|2017|10|Con|
+1|Hoc may|Hoang Thi Thu|NXB Tre|2018|8|Con|
+2|Tri tue nhan tao|Hoang Thi Thu|NXB Tre|2016|9|Con|
+3|Hoc may|Nguyen Van Long|NXB Tre|2020|4|Con|
+4|He thong thong minh|Tran Thi Mai|NXB Khoa Hoc|2021|1|Con|
+5|Tri tue nhan tao|Pham Van Dat|NXB Van Hoa|2017|10|Con|
+6|Giao Duc Som Cho Tre|Le Thi Thu Ha|NXB Van Hoc|1984|6|Con|
+7|Kinh Te Hoc Vi Mo|Bjarne Stroustrup|NXB Khoa Hoc|2002|43|Con|
+8|Triet Hoc Mac-Lenin|Paulo Coelho|NXB Y Hoc|2007|32|Con|
+9|Tu Duy Nhanh Va Cham|Marie Curie|NXB Giao Duc|2012|43|Con|
+10|Python Cho Moi Nguoi|Marie Curie|NXB Lao Dong|1982|21|Con|
+11|Harry Potter Va Hon Da Phu Thuy|Andrew Ng|NXB Kim Dong|2001|18|Con|
+12|Lap Trinh Web Fullstack|Bjarne Stroustrup|NXB The Gioi|1993|49|Con|
+13|Hoc Tot Tieng Anh|Dao Duy Anh|NXB Lao Dong|1982|8|Con|
+14|Tu Duy Nhanh Va Cham|Stephen Hawking|NXB Khoa Hoc|1993|2|Con|
+15|Python Cho Moi Nguoi|Daniel Kahneman|NXB Lao Dong|1996|25|Con|
+16|Lap Trinh C++ Nang Cao|Pham Nhat Vuong|NXB Van Hoc|2018|22|Con|
+17|Kinh Te Hoc Vi Mo|Paulo Coelho|NXB Lao Dong|1988|18|Con|
+18|Python Cho Moi Nguoi|Nguyen Van Tan|NXB Khoa Hoc|2009|1|Con|
+19|Kinh Te Hoc Vi Mo|Ngo Bao Chau|NXB Kim Dong|2006|43|Con|
+20|Nghin Le Mot Dem|Nguyen Hoang Nam|NXB Cong Nghe|2020|16|Con|
+21|100 Mon An Ngon|Marie Curie|NXB The Gioi|1992|31|Con|
+22|Lap Trinh Web Fullstack|Vo Thi Sau|NXB Khoa Hoc|2005|48|Con|
+23|Nguoi Di Tim Gio|Andrew Ng|NXB Phu Nu|1987|9|Con|
+24|Mat Ma Da Vinci|Yuval Noah Harari|NXB The Gioi|2023|40|Con|
+25|Giao Duc Som Cho Tre|Stephen Hawking|NXB Cong Nghe|2006|18|Con|
+26|Tu Duy Nhanh Va Cham|Nguyen Hoang Nam|NXB Van Hoc|2021|39|Con|
+27|Tu Duy Nhanh Va Cham|Yuval Noah Harari|NXB Kim Dong|2000|44|Con|
+28|Nha Gia Kim|Daniel Kahneman|NXB Phu Nu|1989|14|Con|
+29|Kinh Te Hoc Vi Mo|Nguyen Hoang Nam|NXB Kim Dong|1984|33|Con|
+30|Thuc Duong Duong Sinh|Nguyen Hoang Nam|NXB Khoa Hoc|1988|45|Con|
+31|Lap Trinh Web Fullstack|Paulo Coelho|NXB Lao Dong|1980|19|Con|
+32|Harry Potter Va Hon Da Phu Thuy|Pham Nhat Vuong|NXB Tre|2023|6|Con|
+33|Dac Nhan Tam|Le Thi Thu Ha|NXB Phu Nu|1982|2|Con|
+34|Tieng Viet 1|Tran Van Quang|NXB Lao Dong|1987|12|Con|
+35|Thuc Duong Duong Sinh|Nguyen Van Tan|NXB Van Hoc|1996|25|Con|
+36|100 Mon An Ngon|Nguyen Nhat Anh|NXB Kim Dong|2019|35|Con|
+37|Nghin Le Mot Dem|Stephen Hawking|NXB Lao Dong|1994|14|Con|
+38|Hanh Trinh Ve Phuong Dong|Daniel Kahneman|NXB Van Hoc|1984|23|Con|
+39|Nguoi Di Tim Gio|Trinh Cong Son|NXB Van Hoc|1980|6|Con|
+40|Hanh Trinh Ve Phuong Dong|Nguyen Thi Kim Dung|NXB Van Hoc|2003|39|Con|
+41|Hoc Tot Tieng Anh|Trinh Cong Son|NXB Tre|2015|29|Con|
+42|Khoa Hoc Vui|Nguyen Huy Thiep|NXB Lao Dong|2012|12|Con|
+43|100 Mon An Ngon|Tran Van Quang|NXB Khoa Hoc|1985|4|Con|
+44|Giao Duc Som Cho Tre|Andrew Ng|NXB Y Hoc|2005|47|Con|
+45|Triet Hoc Mac-Lenin|Andrew Ng|NXB Lao Dong|2002|5|Con|
+46|Thiet Ke UX/UI|Nguyen Van Tan|NXB Y Hoc|1996|50|Con|
+47|Nghin Le Mot Dem|Yuval Noah Harari|NXB Y Hoc|2010|20|Con|
+48|Gia Dinh Nha Nhiep Anh|Paulo Coelho|NXB The Gioi|1990|27|Con|
+49|Thiet Ke UX/UI|Nguyen Thi Kim Dung|NXB Khoa Hoc|1982|27|Con|
+50|Nghin Le Mot Dem|Andrew Ng|NXB Tre|2018|37|Con|
+51|Harry Potter Va Hon Da Phu Thuy|Nguyen Du|NXB Cong Nghe|1996|24|Con|
+52|Hanh Trinh Ve Phuong Dong|Nguyen Thi Kim Dung|NXB Phu Nu|1982|49|Con|
+53|Lap Trinh Web Fullstack|Ngo Bao Chau|NXB Khoa Hoc|1998|37|Con|
+54|Hanh Trinh Ve Phuong Dong|Daniel Kahneman|NXB Giao Duc|1997|6|Con|
+55|Du Lich Vong Quanh The Gioi|Bjarne Stroustrup|NXB Giao Duc|2015|30|Con|
+56|Dac Nhan Tam|Bjarne Stroustrup|NXB The Gioi|1981|14|Con|
+57|Hoc Tot Tieng Anh|Pham Nhat Vuong|NXB Lao Dong|2019|10|Con|
+58|Khoa Hoc Vui|Pham Nhat Vuong|NXB Cong Nghe|1980|27|Con|
+59|Lap Trinh Web Fullstack|Bjarne Stroustrup|NXB Cong Nghe|2011|40|Con|
+60|Tu Duy Nhanh Va Cham|Nguyen Huy Thiep|NXB Lao Dong|2008|7|Con|
+61|Mat Ma Da Vinci|Bjarne Stroustrup|NXB Van Hoc|1996|7|Con|
+62|Lap Trinh C++ Nang Cao|Nguyen Du|NXB Giao Duc|1985|28|Con|
+63|100 Mon An Ngon|Tran Van Quang|NXB Van Hoc|1988|22|Con|
+64|Hanh Trinh Ve Phuong Dong|Nguyen Du|NXB Van Hoc|2016|29|Con|
+65|Tam Ly Hoc Dai Cuong|Bjarne Stroustrup|NXB Khoa Hoc|1994|23|Con|
+66|Python Cho Moi Nguoi|Nguyen Hoang Nam|NXB Khoa Hoc|1987|27|Con|
+67|Hoc Tot Tieng Anh|Yuval Noah Harari|NXB The Gioi|1997|12|Con|
+68|Lap Trinh C++ Nang Cao|Nguyen Thi Kim Dung|NXB Van Hoc|2017|45|Con|
+69|Harry Potter Va Hon Da Phu Thuy|Pham Nhat Vuong|NXB Tre|2013|13|Con|
+70|Toan 5 Nang Cao|Stephen Hawking|NXB Khoa Hoc|2010|15|Con|
+71|Lap Trinh Web Fullstack|Nguyen Van Tan|NXB Cong Nghe|1984|24|Con|
+72|Python Cho Moi Nguoi|Nguyen Van Tan|NXB Y Hoc|2009|34|Con|
+73|Lap Trinh C++ Nang Cao|Paulo Coelho|NXB Tre|1988|20|Con|
+74|Lap Trinh Web Fullstack|Daniel Kahneman|NXB Van Hoc|1998|45|Con|
+75|Triet Hoc Mac-Lenin|Trinh Cong Son|NXB Y Hoc|2000|47|Con|
+76|Khoa Hoc Vui|Stephen Hawking|NXB Van Hoc|1984|45|Con|
+77|Gia Dinh Nha Nhiep Anh|Ngo Bao Chau|NXB Khoa Hoc|2005|22|Con|
+78|Nguoi Di Tim Gio|Daniel Kahneman|NXB Cong Nghe|2001|2|Con|
+79|Lich Su Viet Nam|Vo Thi Sau|NXB Cong Nghe|2020|16|Con|
+80|Nghin Le Mot Dem|Nguyen Huy Thiep|NXB Y Hoc|2023|1|Con|
+81|Nha Gia Kim|Dao Duy Anh|NXB Giao Duc|1994|5|Con|
+82|Tai Chinh Ca Nhan|Nguyen Du|NXB Lao Dong|1980|36|Con|
+83|Giao Duc Som Cho Tre|Andrew Ng|NXB Khoa Hoc|2017|9|Con|
+84|Thuc Duong Duong Sinh|Trinh Xuan Thuan|NXB Lao Dong|1981|29|Con|
+85|Harry Potter Va Hon Da Phu Thuy|Paulo Coelho|NXB Kim Dong|1986|38|Con|
+86|Du Lich Vong Quanh The Gioi|Vo Thi Sau|NXB Phu Nu|1997|1|Con|
+87|Toan 5 Nang Cao|Nguyen Van Tan|NXB Phu Nu|1980|49|Con|
+88|Thiet Ke UX/UI|Le Thi Thu Ha|NXB Van Hoc|1997|18|Con|
+89|Khoa Hoc Vui|Nguyen Hoang Nam|NXB Giao Duc|2015|43|Con|
+90|Du Lich Vong Quanh The Gioi|Stephen Hawking|NXB Lao Dong|1991|32|Con|
+91|AI For Everyone|Trinh Xuan Thuan|NXB Kim Dong|1983|38|Con|
+92|100 Mon An Ngon|Nguyen Thi Kim Dung|NXB Khoa Hoc|1982|37|Con|
+93|Toan 5 Nang Cao|Nguyen Nhat Anh|NXB The Gioi|2023|22|Con|
+94|Khoa Hoc Vui|Ngo Bao Chau|NXB Van Hoc|1987|1|Con|
+95|Tu Duy Nhanh Va Cham|Nguyen Du|NXB Cong Nghe|2006|42|Con|
+96|Tieng Viet 1|Nguyen Du|NXB Tre|1980|20|Con|
+97|100 Mon An Ngon|Nguyen Du|NXB Giao Duc|1994|12|Con|
+98|Tieng Viet 1|Ngo Bao Chau|NXB Phu Nu|2009|17|Con|
+99|Mat Ma Da Vinci|Andrew Ng|NXB Giao Duc|2016|41|Con|
+100|Triet Hoc Mac-Lenin|Nguyen Van Tan|NXB The Gioi|2008|15|Con|
+101|Khoa Hoc Vui|Nguyen Huy Thiep|NXB The Gioi|2021|35|Con|
+102|Kinh Te Hoc Vi Mo|Bjarne Stroustrup|NXB Tre|1996|43|Con|
+103|Thuc Duong Duong Sinh|Ngo Bao Chau|NXB Van Hoc|2024|41|Con|
+104|Nguoi Di Tim Gio|Nguyen Thi Kim Dung|NXB Kim Dong|2014|42|Con|
+105|Tai Chinh Ca Nhan|Trinh Xuan Thuan|NXB Khoa Hoc|2005|31|Con|
+106|Y Hoc Thuong Thuc|Bjarne Stroustrup|NXB Kim Dong|2009|41|Con|
+107|Tam Ly Hoc Dai Cuong|Nguyen Du|NXB The Gioi|2010|39|Con|
+108|AI For Everyone|Pham Nhat Vuong|NXB Y Hoc|1984|5|Con|
+109|Thuc Duong Duong Sinh|Trinh Cong Son|NXB Phu Nu|1983|44|Con|
+110|Gia Dinh Nha Nhiep Anh|Andrew Ng|NXB The Gioi|2014|15|Con|
+111|Harry Potter Va Hon Da Phu Thuy|Stephen Hawking|NXB Cong Nghe|2017|23|Con|
+112|Nguoi Di Tim Gio|Ngo Bao Chau|NXB Phu Nu|1987|20|Con|
+113|Hanh Trinh Ve Phuong Dong|Nguyen Hoang Nam|NXB Giao Duc|1986|4|Con|
+114|Hoc Tot Tieng Anh|Stephen Hawking|NXB The Gioi|1998|49|Con|
+115|Gia Dinh Nha Nhiep Anh|Trinh Cong Son|NXB Phu Nu|1983|32|Con|
+116|Tai Chinh Ca Nhan|Trinh Xuan Thuan|NXB Lao Dong|1997|21|Con|
+117|100 Mon An Ngon|Yuval Noah Harari|NXB Lao Dong|1988|22|Con|
+118|Co So Du Lieu Lon|Pham Nhat Vuong|NXB Phu Nu|2000|17|Con|
+119|Python Cho Moi Nguoi|Nguyen Huy Thiep|NXB Tre|1987|4|Con|
+120|Kinh Te Hoc Vi Mo|Ngo Bao Chau|NXB Phu Nu|1996|7|Con|
+121|Co So Du Lieu Lon|Nguyen Du|NXB Giao Duc|1986|24|Con|
+122|Co So Du Lieu Lon|Dao Duy Anh|NXB Phu Nu|2012|27|Con|
+123|Nang|Bjarne Stroustrup|NXB Van Hoc|1995|38|Con|
+124|Thiet Ke UX/UI|Nguyen Du|NXB Giao Duc|2023|46|Con|
+125|Mat Ma Da Vinci|Paulo Coelho|NXB Tre|2019|8|Con|
+126|Python Cho Moi Nguoi|Daniel Kahneman|NXB Van Hoc|2024|3|Con|
+127|Nha Gia Kim|Nguyen Du|NXB Y Hoc|2023|10|Con|
+128|Blockchain Can Ban|Yuval Noah Harari|NXB Van Hoc|1991|30|Con|
+129|Dac Nhan Tam|Marie Curie|NXB Tre|2002|15|Con|
+130|Hoc Tot Tieng Anh|Nguyen Hoang Nam|NXB Khoa Hoc|2007|48|Con|
+131|Lap Trinh Web Fullstack|Stephen Hawking|NXB Khoa Hoc|2013|14|Con|
+132|Hanh Trinh Ve Phuong Dong|Vo Thi Sau|NXB Lao Dong|2000|29|Con|
+133|Gia Dinh Nha Nhiep Anh|Nguyen Huy Thiep|NXB Lao Dong|1992|8|Con|
+134|Tam Ly Hoc Dai Cuong|Ngo Bao Chau|NXB Kim Dong|2012|48|Con|
+135|Thiet Ke UX/UI|Pham Nhat Vuong|NXB Khoa Hoc|2023|40|Con|
+136|Co So Du Lieu Lon|Nguyen Du|NXB Giao Duc|2009|9|Con|
+137|Mat Ma Da Vinci|Andrew Ng|NXB Y Hoc|2002|32|Con|
+138|Lap Trinh Web Fullstack|Nguyen Hoang Nam|NXB Y Hoc|2019|47|Con|
+139|Harry Potter Va Hon Da Phu Thuy|Nguyen Huy Thiep|NXB The Gioi|2016|39|Con|
+140|Giao Duc Som Cho Tre|Yuval Noah Harari|NXB Khoa Hoc|2015|29|Con|
+141|Lap Trinh Web Fullstack|Pham Nhat Vuong|NXB Phu Nu|2016|10|Con|
+142|Dac Nhan Tam|Tran Van Quang|NXB Phu Nu|1997|26|Con|
+143|Thiet Ke UX/UI|Paulo Coelho|NXB Kim Dong|2012|28|Con|
+144|Gia Dinh Nha Nhiep Anh|Paulo Coelho|NXB Khoa Hoc|1980|35|Con|
+145|Mat Ma Da Vinci|Nguyen Hoang Nam|NXB Van Hoc|2020|22|Con|
+146|Nghin Le Mot Dem|Andrew Ng|NXB Van Hoc|1983|49|Con|
+147|Lap Trinh Web Fullstack|Andrew Ng|NXB The Gioi|1988|18|Con|
+148|Gia Dinh Nha Nhiep Anh|Tran Van Quang|NXB The Gioi|1986|17|Con|
+149|Harry Potter Va Hon Da Phu Thuy|Trinh Xuan Thuan|NXB Y Hoc|2014|14|Con|
+150|Gia Dinh Nha Nhiep Anh|Pham Nhat Vuong|NXB Phu Nu|2004|9|Con|
+151|Nghin Le Mot Dem|Nguyen Thi Kim Dung|NXB The Gioi|2023|39|Con|
+152|Dac Nhan Tam|Trinh Cong Son|NXB Van Hoc|1981|46|Con|
+153|Khoa Hoc Vui|Ngo Bao Chau|NXB Lao Dong|1985|11|Con|
+154|Y Hoc Thuong Thuc|Nguyen Du|NXB Kim Dong|1994|27|Con|
+155|Lich Su Viet Nam|Vo Thi Sau|NXB Tre|2019|50|Con|
+156|Lap Trinh Web Fullstack|Yuval Noah Harari|NXB Van Hoc|2013|25|Con|
+157|Thiet Ke UX/UI|Nguyen Du|NXB Lao Dong|2004|9|Con|
+158|Mat Ma Da Vinci|Stephen Hawking|NXB Y Hoc|1993|44|Con|
+159|Khoa Hoc Vui|Nguyen Nhat Anh|NXB Khoa Hoc|2000|29|Con|
+160|Dac Nhan Tam|Tran Van Quang|NXB Y Hoc|2016|36|Con|
+161|Thiet Ke UX/UI|Nguyen Thi Kim Dung|NXB Phu Nu|1999|6|Con|
+162|Thiet Ke UX/UI|Andrew Ng|NXB Van Hoc|2020|11|Con|
+163|Khoa Hoc Vui|Ngo Bao Chau|NXB Tre|2019|36|Con|
+164|Tieng Viet 1|Le Thi Thu Ha|NXB Giao Duc|2005|30|Con|
+165|Nguoi Di Tim Gio|Nguyen Hoang Nam|NXB Tre|2009|37|Con|
+166|Python Cho Moi Nguoi|Vo Thi Sau|NXB Lao Dong|1985|39|Con|
+167|Tai Chinh Ca Nhan|Andrew Ng|NXB The Gioi|1999|39|Con|
+168|Dac Nhan Tam|Nguyen Nhat Anh|NXB The Gioi|2014|7|Con|
+169|100 Mon An Ngon|Trinh Xuan Thuan|NXB Phu Nu|2018|50|Con|
+170|Du Lich Vong Quanh The Gioi|Nguyen Thi Kim Dung|NXB Tre|2002|30|Con|
+171|Lich Su Viet Nam|Nguyen Van Tan|NXB Giao Duc|1999|35|Con|
+172|Toan 5 Nang Cao|Nguyen Thi Kim Dung|NXB Tre|1994|48|Con|
+173|Triet Hoc Mac-Lenin|Ngo Bao Chau|NXB Kim Dong|2009|10|Con|
+174|Gia Dinh Nha Nhiep Anh|Nguyen Hoang Nam|NXB Y Hoc|2018|49|Con|
+175|Co So Du Lieu Lon|Nguyen Van Tan|NXB Lao Dong|2009|29|Con|
+176|Lap Trinh C++ Nang Cao|Ngo Bao Chau|NXB Phu Nu|1996|27|Con|
+177|AI For Everyone|Nguyen Hoang Nam|NXB Lao Dong|2007|13|Con|
+178|Harry Potter Va Hon Da Phu Thuy|Dao Duy Anh|NXB The Gioi|1984|28|Con|
+179|Hoc Tot Tieng Anh|Dao Duy Anh|NXB Khoa Hoc|1998|10|Con|
+180|Dac Nhan Tam|Nguyen Du|NXB The Gioi|1987|2|Con|
+181|Co So Du Lieu Lon|Marie Curie|NXB Phu Nu|1995|24|Con|
+182|Nha Gia Kim|Trinh Cong Son|NXB The Gioi|2001|48|Con|
+183|Gia Dinh Nha Nhiep Anh|Nguyen Thi Kim Dung|NXB Khoa Hoc|2008|32|Con|
+184|Tam Ly Hoc Dai Cuong|Daniel Kahneman|NXB The Gioi|2012|47|Con|
+185|Tieng Viet 1|Nguyen Hoang Nam|NXB Kim Dong|2011|10|Con|
+186|Dac Nhan Tam|Andrew Ng|NXB Van Hoc|2010|23|Con|
+187|Hoc Tot Tieng Anh|Ngo Bao Chau|NXB Van Hoc|2019|35|Con|
+188|Giao Duc Som Cho Tre|Vo Thi Sau|NXB Khoa Hoc|1985|38|Con|
+189|Nguoi Di Tim Gio|Vo Thi Sau|NXB Giao Duc|1992|35|Con|
+190|Blockchain Can Ban|Yuval Noah Harari|NXB Tre|1987|3|Con|
+191|Tai Chinh Ca Nhan|Paulo Coelho|NXB Phu Nu|1998|42|Con|
+192|Y Hoc Thuong Thuc|Andrew Ng|NXB Van Hoc|2023|7|Con|
+193|Hoc Tot Tieng Anh|Marie Curie|NXB Phu Nu|2015|11|Con|
+194|Nang|Nguyen Van Tan|NXB Phu Nu|2021|32|Con|
+195|Nang|Yuval Noah Harari|NXB Tre|2000|29|Con|
+196|Tieng Viet 1|Dao Duy Anh|NXB Tre|2023|26|Con|
+197|Khoa Hoc Vui|Nguyen Hoang Nam|NXB Y Hoc|2012|27|Con|
+198|Thuc Duong Duong Sinh|Nguyen Thi Kim Dung|NXB Khoa Hoc|2009|26|Con|
+199|Hanh Trinh Ve Phuong Dong|Paulo Coelho|NXB Khoa Hoc|2012|30|Con|
+200|Toan 5 Nang Cao|Yuval Noah Harari|NXB Giao Duc|1984|44|Con|
+201|Tam Ly Hoc Dai Cuong|Dao Duy Anh|NXB Lao Dong|2023|26|Con|
+202|Du Lich Vong Quanh The Gioi|Trinh Cong Son|NXB Tre|2003|12|Con|
+203|Du Lich Vong Quanh The Gioi|Nguyen Du|NXB Lao Dong|2021|40|Con|
+204|Lich Su Viet Nam|Yuval Noah Harari|NXB Giao Duc|2013|26|Con|
+205|Triet Hoc Mac-Lenin|Le Thi Thu Ha|NXB Giao Duc|2001|42|Con|
