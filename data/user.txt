@@ -2,3 +2,5 @@ admin1|admin1
 admin|admin
 hoandeptrai|123456|
 tai123|123|
+tung|1234|
+tanson123|123456789|

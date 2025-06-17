@@ -1,4 +1,3 @@
-
 #include "dohoa.h"
 #include <set>
 #include <stdlib.h>
@@ -20,7 +19,7 @@ string Vietthuong(string c){
 }
 
 struct Book {
-    string ID;
+    long ID;
     string ten;
     string tac_gia;
     string nxb;
@@ -46,16 +45,16 @@ void KhoiPhuc_TatCa(Node *head,Node *rac);
 void KhoiPhuc_1Cuon(Node *head, Node *rac);
 void KhoiPhuc(Node* head,Node* rac);
 bool DelByTenSach(Node *head,Node *rac, string ten);
-bool DelByID(Node *head,Node *rac, string ID);
+bool DelByID(Node *head,Node *rac, long ID);
 
 void XoaDau(Node *head,Node *rac);
 void XoaCuoi(Node *head,Node *rac);
-bool XoaSauMa(Node *head,Node *rac,string ID);
+bool XoaSauMa(Node *head,Node *rac,long ID);
 bool DelByTacGia(Node *head,Node *rac, string tg);
 
 
 void showtt(Node *head,int x , int y);
-Book** FindbyID(Node *head,const string& ID);
+Book** FindbyID(Node *head,long ID);
 Node* FindbyTenSach(Node *head,string tensach);
 Node* FindbyTacGia(Node *head,string tg);
 Node* FindbyNXB(Node *head,string NXB);
@@ -72,6 +71,7 @@ void LuuVaoFile(Node *head);
 
 Node* GoiY_TenSach(Node *head,string tensach);
 void clearLine(int x, int y, int length);
+long get_id_max(Node* head);
 
 void MuonSach(const string& Ten,Node *head);
 void TraSach(const string& ten, Node *head);
@@ -79,7 +79,7 @@ void print_user(const string &ten);
 void trang_chu_user(const string& TenDangNhap, Node *head);
 
 // Khởi tạo 1 sách mới
-Book* tao_sach(const string& ID, const string& ten, const string& tac_gia, const string& nxb,long namsx,long soluong) {
+Book* tao_sach(long ID, const string& ten, const string& tac_gia, const string& nxb,long namsx,long soluong) {
     Book* sach_moi = new Book;
     sach_moi->ID = ID;
     sach_moi->ten = ten;
@@ -109,6 +109,16 @@ Node* khoitao_node(Book* sach) {
     node_moi->next = nullptr;
     node_moi->sach = sach;
     return node_moi;
+}
+long get_id_max(Node* head){
+    Node* temp = head->next;
+    long max_id = 0;
+    while (temp != NULL){
+        if (temp->sach->ID > max_id)
+            max_id = temp->sach->ID;
+        temp = temp->next;
+    }
+    return max_id;
 }
 // --------------------Chèn vào danh sách ----------------
 
@@ -230,17 +240,18 @@ void read_file(Node* &head,const string& TenFile) {
     string line;
     while (getline(fi, line)) {
         stringstream ss(line);
-        string ID, ten, tac_gia, nxb, namsx_str, sl,trangthai;
+        string ID_str, ten, tac_gia, nxb, namsx_str, sl_str,trangthai;
 
-        getline(ss, ID, '|');
+        getline(ss, ID_str, '|');
         getline(ss, ten, '|');
         getline(ss, tac_gia, '|');
         getline(ss, nxb, '|');
         getline(ss, namsx_str, '|');
-        getline(ss, sl, '|');
+        getline(ss, sl_str, '|');
 
+        long ID = stol(ID_str);
         long namsx = stol(namsx_str);
-        long soluong =stol(sl);
+        long soluong =stol(sl_str);
     
         Book* sach = tao_sach(ID, ten, tac_gia, nxb, namsx, soluong);
         pushend(head, sach);
@@ -307,7 +318,7 @@ void print_page(Node *start, Node *end, int widths[],int &cnt) {
         for (int j = to_string(cnt).length();j< widths[0];j++) cout << ' ';
         cout << char(186);
         cout << cur->sach->ID;
-        for (int j = cur->sach->ID.length(); j < widths[1]; j++) cout << ' ';
+        for (int j = to_string(cur->sach->ID).length(); j < widths[1]; j++) cout << ' ';
         cout << char(186);
         cout << cur->sach->ten.substr(0,widths[2]);
         for (int j = cur->sach->ten.length(); j < widths[2]; j++) cout << ' ';
@@ -436,13 +447,13 @@ void Add_RecycleBin(Node *rac, Book *b) {
         cout << "Khong the mo file de ghi\n";
         return;
     }
-    fo << b->ID << "|"
-       << b->ten << "|"
-       << b->tac_gia << "|"
-       << b->nxb << "|"
-       << b->namsx << "|"
-       << b->soluong << "|";
-       if (b->Trang_thai) fo << "Con"<<endl;
+    fo  << b->ID << "|"
+        << b->ten << "|"
+        << b->tac_gia << "|"
+        << b->nxb << "|"
+        << b->namsx << "|"
+        << b->soluong << "|";
+        if (b->Trang_thai) fo << "Con"<<endl;
         else fo<<"Het"<<endl;
     fo.close();
 }
@@ -490,7 +501,7 @@ void KhoiPhuc(Node* head, Node* rac) {
             system("cls");
             drawBox(x, y, width, height);
             gotoXY(x + (width - 10) / 2, y + 1);  cout << "KHOI PHUC SACH"; 
-            string ID;
+            long ID;
             gotoXY(x + 2, y + 3);
             cout <<"Nhap ID sach muon khoi phuc : "; cin >> ID;
             Book** Sach = FindbyID(rac,ID);
@@ -519,9 +530,9 @@ void KhoiPhuc(Node* head, Node* rac) {
 }
 
 // --------------------------- Xoa ----------------------------------
-bool DelByID(Node *head,Node *rac, string ID){
+bool DelByID(Node *head,Node *rac, long ID){
 
-    while(head->next!=NULL && Vietthuong(head->next->sach->ID) != Vietthuong(ID)){
+    while(head->next!=NULL && head->next->sach->ID != ID){
         head = head->next;
     }
     if (head->next!=NULL){
@@ -584,9 +595,9 @@ void XoaDau(Node *head,Node *rac){
 
 }
 
-bool XoaSauMa(Node *head,Node *rac,string ID){
+bool XoaSauMa(Node *head,Node *rac,long ID){
     head = head->next;
-    while(head!=NULL && head->next!=NULL && Vietthuong(head->sach->ID) != Vietthuong(ID)){
+    while(head!=NULL && head->next!=NULL && head->sach->ID != ID){
         head = head->next;
     }
     if (head !=NULL && head->next!=NULL){ // node hiện tại và phía sau đều tồn tại
@@ -600,19 +611,19 @@ bool XoaSauMa(Node *head,Node *rac,string ID){
 }
 
 void XoaCuoi(Node *head,Node *rac){
-   if (head->next==NULL) return;
+    if (head->next==NULL) return;
 
-   Node *prev = head;
-   Node *temp = head->next;
+    Node *prev = head;
+    Node *temp = head->next;
 
-   while(temp->next != NULL){
+     while(temp->next != NULL){
         prev = temp;
         temp = temp->next;
-   }
-   Add_RecycleBin(rac,temp->sach);
+    }
+    Add_RecycleBin(rac,temp->sach);
     showtt(temp,74,6);
 
-   prev->next = NULL;
+    prev->next = NULL;
    
 }
 
@@ -629,11 +640,10 @@ void showtt(Node *head, int x , int y){
 
 }
 //-----------------------Tìm Kiếm---------------------
-Book** FindbyID(Node *head,const string& ID){
+Book** FindbyID(Node *head,long ID){
     head = head->next;
-    string t = Vietthuong(ID);
     while(head!=NULL){
-        if (Vietthuong(head->sach->ID) == t){
+        if (head->sach->ID == ID){
             return &(head->sach);
         }
         head = head->next;
@@ -735,31 +745,18 @@ void clearLine(int x, int y, int length) {
 
 void them_sach(Node *head) {
     int x = 70, y = 2, width = 80, height = 20;
-    bool cnt = true;
-    string ID, tensach, tacgia, NXB;
-    long namsx, sluong;
-    while(cnt){
+
+    string tensach, tacgia, NXB;
+    long ID,namsx, sluong;
+    
     system("cls");
     drawBox(x, y, width, height);
 
     gotoXY(x + (width - 20) / 2, y + 1);
     cout << "THEM SACH VAO THU VIEN";
-
-
     gotoXY(x + 2, y + 3);
-    cout << "Nhap ID: ";
-    getline(cin, ID);
-    if (FindbyID(head,ID)){
-        gotoXY(x+2,y+5);
-        cout << "Da ton tai ID ! Vui long nhap lai! ";
-        Sleep(2000);
-    }
-    else{
-        cnt = false;
-    }
-    }
-    clearLine(x + 2, y + 3 , width - 4);
-    gotoXY(x + 2, y + 3);
+
+    ID = get_id_max(head) + 1;
     cout << "ID: " << ID;
 
     gotoXY(x + 2, y + 5);
@@ -767,7 +764,8 @@ void them_sach(Node *head) {
     getline(cin, tensach);
     clearLine(x + 2, y + 5, width - 4);
     gotoXY(x + 2, y + 5);
-    cout << "Ten sach: " << tensach;
+    cout << "Ten sach: " << tensach
+    ;
     Node* check = GoiY_TenSach(head,tensach);
     check = check ->next;
     set <string> DS_tg;
@@ -882,7 +880,8 @@ void xoa_sach(Node *head, Node *rac) {
     }
 
     system("cls");
-    string ID, ts, tg;
+    string  ts, tg;
+    long ID;
     bool ok = false;
     drawBox(x, y, width, height);
     gotoXY(x + (width - 12) / 2, y + 1);
@@ -891,7 +890,7 @@ void xoa_sach(Node *head, Node *rac) {
     switch (tt) {
         case 1:
             cout << "Nhap ma so: ";
-            getline(cin, ID);
+            cin >> ID;
             ok = DelByID(head, rac, ID);
             break;
         case 2:
@@ -910,7 +909,7 @@ void xoa_sach(Node *head, Node *rac) {
             break;
         case 5:
             cout << "Nhap ma so: ";
-            getline(cin, ID);
+            cin >> ID;
             ok = XoaSauMa(head, rac, ID);
             break;
         case 6:
@@ -1101,8 +1100,8 @@ void Sua_sach(Node *head) {
 
     gotoXY(x + 2, y + 3);
     cout << "Nhap ID sach can sua: ";
-    string ID;
-    getline(cin, ID);
+    long ID;
+    cin >> ID;
     Book **Vitri = FindbyID(head, ID);
     if (!Vitri || !*Vitri) {
         gotoXY(x + 2, y + 5);
@@ -1144,7 +1143,8 @@ void Sua_sach(Node *head) {
             case 1: {
                 gotoXY(x + 2, y + 18);
                 cout << "Nhap ID moi: ";
-                string id; getline(cin, id);
+                long id;
+                cin >> id;
                 (*Vitri)->ID = id;
                 break;
             }
@@ -1376,7 +1376,7 @@ void MuonSach(const string& TenDangNhap, Node *head) {
     gotoXY(x + (width - 10) / 2, y + 1);   cout << "MUON SACH";
 
     gotoXY(x + 2, y + 3);                  cout << "Nhap ID sach can muon: ";
-    string ID; 
+    long ID; 
     cin >> ID;
     cin.clear();
     cin.ignore(1000, '\n');
@@ -1425,7 +1425,7 @@ void TraSach(const string& TenDangNhap, Node *head) {
     gotoXY(x + (width - 10) / 2, y + 1);   cout << "TRA SACH";
 
     gotoXY(x + 2, y + 3);                  cout << "Nhap ID sach can tra: ";
-    string ID; 
+    long ID; 
     cin >> ID;
     cin.clear();
     cin.ignore(1000, '\n');
@@ -1444,9 +1444,10 @@ void TraSach(const string& TenDangNhap, Node *head) {
     while (getline(fi, line)) {
         stringstream ss(line);
 
-        string id;
-        getline(ss, id, '|');
-        if ( Vietthuong(id) == Vietthuong(ID)) { 
+        string id_str;
+        getline(ss, id_str, '|');
+        long id = stol(id_str);
+        if ( id == ID) { 
             found = true;
         } else {
             lines.push_back(line);
